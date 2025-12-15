@@ -1,0 +1,279 @@
+QualityReport
+Saturday, 13 December 2025 6:07:16 PM
+
+------ Start build(IMU_CODE_V1.0, DefaultBuild) ------
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_port.c -cpu=S3 -o DefaultBuild\r_cg_port.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_dd5012968b9449fb8bd3dbbfdc608bf3dsb5eyay.q1b -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_adc_user.c -cpu=S3 -o DefaultBuild\r_cg_adc_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_bc514d8e09d14a8984e6a401292967b5klpqxoex.fm5 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe cstart.asm -cpu=S3 -o DefaultBuild\cstart.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_37dde47579b54bd7a86ccc5f336ae796j0wj4t5l.tus -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_cgc.c -cpu=S3 -o DefaultBuild\r_cg_cgc.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_cd08a25336254ef3afc931b9de4fe0c9ckm4f0kk.fkm -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_port_user.c -cpu=S3 -o DefaultBuild\r_cg_port_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_1cdef0a78fa1461eb9d781edaa4899adyv3hevbw.ys3 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_adc.c -cpu=S3 -o DefaultBuild\r_cg_adc.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_ee02ec137ff347269549f8ec36b7e5c0dru2m5vf.qys -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_serial.c -cpu=S3 -o DefaultBuild\r_cg_serial.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_41705cd4d2534f0a9878a209922f0f2beppkbjdg.ihh -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_systeminit.c -cpu=S3 -o DefaultBuild\r_systeminit.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_037fc16315424ca883659ca9e28466e05ptwvfbn.50k -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_main.c -cpu=S3 -o DefaultBuild\r_main.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_22ddd24e0d0a49e0b2a46d8a40a54c991m55lzk2.qvt -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_cgc_user.c -cpu=S3 -o DefaultBuild\r_cg_cgc_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_ceb0c9340fd24eeebdc6ab8a3dd7a885ctncufw3.uzb -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe stkinit.asm -cpu=S3 -o DefaultBuild\stkinit.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_81b0088921624c25ba65eddf90669f87okozdhae.fol -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_serial_user.c -cpu=S3 -o DefaultBuild\r_cg_serial_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_81da5087ca9e4fa2b69566fb38f124f5xvc5pm3c.q21 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\rlink.exe -MAKEUD=DefaultBuild\IMU_CODE_V1.0.lk.ud -subcommand=DefaultBuild\IMU_CODE_V1.0.clnk
+W0561016:The evaluation version is valid for the remaining 51 days
+W0561016:The evaluation version is valid for the remaining 51 days
+Renesas Optimizing Linker Completed
+------ Build ended(Error:0, Warning:2)(IMU_CODE_V1.0, DefaultBuild) ------
+
+--- CommandFile 1 ---
+DefaultBuild\IMU_CODE_V1.0.clnk :
+-Input=DefaultBuild\cstart.obj
+-Input=DefaultBuild\stkinit.obj
+-Input=DefaultBuild\r_main.obj
+-Input=DefaultBuild\r_systeminit.obj
+-Input=DefaultBuild\r_cg_cgc.obj
+-Input=DefaultBuild\r_cg_cgc_user.obj
+-Input=DefaultBuild\r_cg_port.obj
+-Input=DefaultBuild\r_cg_port_user.obj
+-Input=DefaultBuild\r_cg_serial.obj
+-Input=DefaultBuild\r_cg_serial_user.obj
+-Input=DefaultBuild\r_cg_adc.obj
+-Input=DefaultBuild\r_cg_adc_user.obj
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF
+-DEBug
+-NOCOmpress
+-NOOPtimize
+-OUtput=DefaultBuild\IMU_CODE_V1.0.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78em4r.lib
+-OCDBG=84
+-DEBUG_MONITOR=3FE00-3FFFF
+-USER_OPT_BYTE=E9FFF8
+-OCDTR
+-LISt=DefaultBuild\IMU_CODE_V1.0.map
+-AUTO_SECTION_LAYOUT
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-MEMory=High
+-NOLOgo
+-end
+-Input=DefaultBuild\IMU_CODE_V1.0.abs
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF
+-OUtput=DefaultBuild\IMU_CODE_V1.0.mot
+-FOrm=Stype
+-NOMessage
+-exit
+
+
+
+--- System Information ---
+*OS Version
+ Microsoft Windows 11 Home Single Language (-, 10.0.26200, WOW64)
+*Language
+ English (United States)
+*.NET Framework Version
+ Microsoft .NET Framework 4 [.NET 4.6 / .NET 4.6.1] (4.0.30319.42000)
+
+--- Application Information ---
+*Product Name
+ CS+ for CC
+*Package Version
+ V8.06.00  [03 Jun 2021]
+*Version
+ V9.06.00.02 [06 May 2021]
+*Assembly Version
+ 3.12.10.1
+*Sales Area
+ Japan
+*Product License
+ 
+*Execution Place
+ C:\Program Files (x86)\Renesas Electronics\CS+\CC
+*Memory Usage
+ *Private Working Set
+  435 MB
+ *Number of GDI Objects
+  2652
+ *Number of USER Objects
+  2166
+ *Opened Files
+  6 editors, 6 files, 62 KB
+
+--- Build Tool Plug-in Information ---
+RH850 Build tool CC-RH Plug-in(-)
+ *Version
+  -
+ *Assembly Version
+  -
+ *DLL File Name
+  -
+RL78 Build tool CC-RL Plug-in
+ *Version
+  V8.05.00.00 [08 Oct 2020]
+ *Assembly Version
+  1.0.0.0
+ *DLL File Name
+  BuildToolCCRL.dll
+RX Build tool CC-RX Plug-in(-)
+ *Version
+  -
+ *Assembly Version
+  -
+ *DLL File Name
+  -
+RH850 Build tool GHS CCRH850 Plug-in(-)
+ *Version
+  -
+ *Assembly Version
+  -
+ *DLL File Name
+  -
+
+--- Debug Tool Plug-in Information ---
+Debugger Collection Plug-in
+ *Version
+  V8.06.00.03 [21 May 2021]
+ *Assembly Version
+  2.12.10.1
+ *DLL File Name
+  DebugToolCollection.dll
+
+--- Other Plug-in Information ---
+Code Generator Plug-in
+ *Version
+  V4.08.05.01 [14 Aug 2020]
+ *Assembly Version
+  3.0.0.0
+ *DLL File Name
+  CodePart.dll
+Code Generator/PinView Plug-in
+ *Version
+  V2.10.06.01 [14 Aug 2020]
+ *Assembly Version
+  1.0.0.0
+ *DLL File Name
+  CodePart2.dll
+Debug Console Plug-in
+ *Version
+  V7.00.00.01 [06 Apr 2018]
+ *Assembly Version
+  7.0.0.0
+ *DLL File Name
+  DebugConsole.dll
+Quick and Effective tool solution - QE
+ *Version
+  V9.06.00.04 [25 May 2021]
+ *Assembly Version
+  1.15.10.16
+ *DLL File Name
+  InCarTools.dll
+Pin Configurator Plug-in
+ *Version
+  V1.54.01.01 [31 Jul 2014]
+ *Assembly Version
+  1.6.10.23
+ *DLL File Name
+  PinConfig.dll
+Program Analyzer Plug-in
+ *Version
+  V4.12.00.01 [14 Apr 2021]
+ *Assembly Version
+  3.12.11.9
+ *DLL File Name
+  ProgramAnalyzer.dll
+IronPython Console Plug-in
+ *Version
+  V1.42.00.02 [16 Apr 2021]
+ *Assembly Version
+  1.6.10.23
+ *DLL File Name
+  PythonConsole.dll
+Editor plug-in DLL
+ *Version
+  V1.17.00.01 [15 Oct 2020]
+ *Assembly Version
+  1.1.0.0
+ *DLL File Name
+  SEditor.dll
+Smart Configurator for RL78 Communication Plug-in
+ *Version
+  V1.00.11.01 [25 Nov 2024]
+ *Assembly Version
+  1.0.0.0
+ *DLL File Name
+  SmcCodePartRL78.dll
+Stack Usage Tracer
+ *Version
+  V1.05.00.02 [30 Jul 2014]
+ *Assembly Version
+  1.30.11.15
+ *DLL File Name
+  Stk.dll
+Update Manager Plug-in
+ *Version
+  V2.03.00.02 [29 Oct 2018]
+ *Assembly Version
+  1.13.6.20
+ *DLL File Name
+  Update.dll
+
+Debug Tool Common Interface
+ *Version
+  V8.06.00.03 [21 May 2021]
+ *Assembly Version
+  3.12.10.1
+ *DLL File Name
+  CommonDebuggerInterface.dll
+Device Information Common Interface
+ *Version
+  V9.06.00.01 [15 Apr 2021]
+ *Assembly Version
+  3.0.0.0
+ *DLL File Name
+  DeviceInformation.dll
+
+--- Main Project Information ---
+D:\Renesas C Code\IMU_CODE_V1.0\IMU_CODE_V1.0.mtpj
+Microcontroller Information
+ *R5F10PPJ
+  *File Name: Version
+   RL78_Productlist.xml: V8.060000
+   R5F10PPJ_common.xml: V1.13.00.XX.02
+   DR5F10PPJ.DVF: V1.11
+   f14_ppx.ti: V1.02
+   -: -
+  
+
+Build Tool Information
+ *CC-RL
+   * Version of plug-in(*.dll)
+     V8.06.00.02 [21 May 2021]
+   * The Version of the Compiler Package
+     V1.10.00
+  
+ * The version of SMS Assembler
+   V1.00.00.01 [29 May 2020]
+ 
+
+Debug Tool Information
+ *RL78 Simulator
+  Debugger Library V8.06.00.03 [21 May 2021]
+  
+
+Other Tool Information
+ *None
+
+ *Pin Configurator
+ *Program Analyzer
+  *Version
+   V4.12.00.01 [14 Apr 2021]
+
+ *None
+
+ *Code Generator
+Other Information
+ *RL78/F14 Code Library
+  *Version
+   V2.03.06.01 [25 Nov 2020]
+  *Description
+   Code library for RL78/F14 code generation plugin.
+
+

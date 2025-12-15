@@ -1,0 +1,223 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
+* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
+* applicable laws, including copyright laws. 
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
+* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIuint8_tED BY
+* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
+* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
+* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
+* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2012, 2020 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* File Name    : r_cg_adc.h
+* Version      : CodeGenerator for RL78/F14 V2.03.06.01 [25 Nov 2020]
+* Device(s)    : R5F10PPJ
+* Tool-Chain   : CCRL
+* Description  : This file implements device driver for ADC module.
+* Creation Date: 13/12/2025
+***********************************************************************************************************************/
+
+#ifndef ADC_H
+#define ADC_H
+
+/***********************************************************************************************************************
+Macro definitions (Register uint8_t)
+***********************************************************************************************************************/
+/*
+    Peripheral enable register 0 (PER0)
+*/
+/* Control of AD converter input clock (ADCEN) */
+#define _00_AD_CLOCK_STOP               (0x00U) /* stop supply of input clock */
+#define _20_AD_CLOCK_SUPPLY             (0x20U) /* supply input clock */
+
+/*
+    AD converter mode register 0 (ADM0)
+*/
+#define _00_AD_ADM0_INITIALVALUE        (0x00U)
+/* AD conversion operation control (ADCS) */
+#define _80_AD_CONVERSION_ENABLE        (0x80U) /* enable AD conversion operation control */
+#define _00_AD_CONVERSION_DISABLE       (0x00U) /* disable AD conversion operation control */
+/* Specification of AD conversion operation mode (ADMD) */
+#define _00_AD_OPERMODE_SELECT          (0x00U) /* select operation mode */
+#define _40_AD_OPERMODE_SCAN            (0x40U) /* scan operation mode */
+/* AD conversion clock selection (FR2 - FR0) */
+#define _00_AD_CONVERSION_CLOCK_64      (0x00U) /* fCLK/64 */
+#define _08_AD_CONVERSION_CLOCK_32      (0x08U) /* fCLK/32 */
+#define _10_AD_CONVERSION_CLOCK_16      (0x10U) /* fCLK/16 */
+#define _18_AD_CONVERSION_CLOCK_8       (0x18U) /* fCLK/8 */
+#define _20_AD_CONVERSION_CLOCK_6       (0x20U) /* fCLK/6 */
+#define _28_AD_CONVERSION_CLOCK_5       (0x28U) /* fCLK/5 */
+#define _30_AD_CONVERSION_CLOCK_4       (0x30U) /* fCLK/4 */
+#define _38_AD_CONVERSION_CLOCK_2       (0x38U) /* fCLK/2 */
+/* Specification AD conversion time mode (LV1, LV0) */
+#define _00_AD_TIME_MODE_NORMAL_1       (0x00U) /* normal 1 mode */
+#define _02_AD_TIME_MODE_NORMAL_2       (0x02U) /* normal 2 mode */
+/* AD comparator operation control (ADCE) */
+#define _01_AD_COMPARATOR_ENABLE        (0x01U) /* enable comparator operation control */
+#define _00_AD_COMPARATOR_DISABLE       (0x00U) /* disable comparator operation control */
+
+/*
+    Analog input channel specification register (ADS)
+*/
+/* Specification of analog input channel (ADISS, ADS4 - ADS0) */
+/* Select mode */
+#define _00_AD_INPUT_CHANNEL_0          (0x00U) /* ANI0 */
+#define _01_AD_INPUT_CHANNEL_1          (0x01U) /* ANI1 */
+#define _02_AD_INPUT_CHANNEL_2          (0x02U) /* ANI2 */
+#define _03_AD_INPUT_CHANNEL_3          (0x03U) /* ANI3 */
+#define _04_AD_INPUT_CHANNEL_4          (0x04U) /* ANI4 */
+#define _05_AD_INPUT_CHANNEL_5          (0x05U) /* ANI5 */
+#define _06_AD_INPUT_CHANNEL_6          (0x06U) /* ANI6 */
+#define _07_AD_INPUT_CHANNEL_7          (0x07U) /* ANI7 */
+#define _08_AD_INPUT_CHANNEL_8          (0x08U) /* ANI8 */
+#define _09_AD_INPUT_CHANNEL_9          (0x09U) /* ANI9 */
+#define _0A_AD_INPUT_CHANNEL_10         (0x0AU) /* ANI10 */
+#define _0B_AD_INPUT_CHANNEL_11         (0x0BU) /* ANI11 */
+#define _0C_AD_INPUT_CHANNEL_12         (0x0CU) /* ANI12 */
+#define _0D_AD_INPUT_CHANNEL_13         (0x0DU) /* ANI13 */
+#define _0E_AD_INPUT_CHANNEL_14         (0x0EU) /* ANI14 */
+#define _0F_AD_INPUT_CHANNEL_15         (0x0FU) /* ANI15 */
+#define _10_AD_INPUT_CHANNEL_16         (0x10U) /* ANI16 */
+#define _11_AD_INPUT_CHANNEL_17         (0x11U) /* ANI17 */
+#define _12_AD_INPUT_CHANNEL_18         (0x12U) /* ANI18 */
+#define _13_AD_INPUT_CHANNEL_19         (0x13U) /* ANI19 */
+#define _14_AD_INPUT_CHANNEL_20         (0x14U) /* ANI20 */
+#define _15_AD_INPUT_CHANNEL_21         (0x15U) /* ANI21 */
+#define _16_AD_INPUT_CHANNEL_22         (0x16U) /* ANI22 */
+#define _17_AD_INPUT_CHANNEL_23         (0x17U) /* ANI23 */
+#define _18_AD_INPUT_CHANNEL_24         (0x18U) /* ANI24 */
+#define _19_AD_INPUT_CHANNEL_25         (0x19U) /* ANI25 */
+#define _1A_AD_INPUT_CHANNEL_26         (0x1AU) /* ANI26 */
+#define _1B_AD_INPUT_CHANNEL_27         (0x1BU) /* ANI27 */
+#define _1C_AD_INPUT_CHANNEL_28         (0x1CU) /* ANI28 */
+#define _1D_AD_INPUT_CHANNEL_29         (0x1DU) /* ANI29 */
+#define _1E_AD_INPUT_CHANNEL_30         (0x1EU) /* ANI30 */
+#define _80_AD_INPUT_TEMPERSENSOR_0     (0x80U) /* temperature sensor 0 output is used to be the input channel */
+#define _81_AD_INPUT_INTERREFVOLT       (0x81U) /* internal reference voltage output is used to be the input channel */
+/* Scan mode */
+#define _00_AD_INPUT_CHANNEL_0_3        (0x00U) /* ANI0 - ANI3 */
+#define _01_AD_INPUT_CHANNEL_1_4        (0x01U) /* ANI1 - ANI4 */
+#define _02_AD_INPUT_CHANNEL_2_5        (0x02U) /* ANI2 - ANI5 */
+#define _03_AD_INPUT_CHANNEL_3_6        (0x03U) /* ANI3 - ANI6 */
+#define _04_AD_INPUT_CHANNEL_4_7        (0x04U) /* ANI4 - ANI7 */
+#define _05_AD_INPUT_CHANNEL_5_8        (0x05U) /* ANI5 - ANI8 */
+#define _06_AD_INPUT_CHANNEL_6_9        (0x06U) /* ANI6 - ANI9 */
+#define _07_AD_INPUT_CHANNEL_7_10       (0x07U) /* ANI7 - ANI10 */
+#define _08_AD_INPUT_CHANNEL_8_11       (0x08U) /* ANI8 - ANI11 */
+#define _09_AD_INPUT_CHANNEL_9_12       (0x09U) /* ANI9 - ANI12 */
+#define _0A_AD_INPUT_CHANNEL_10_13      (0x0AU) /* ANI10 - ANI13 */
+#define _0B_AD_INPUT_CHANNEL_11_14      (0x0BU) /* ANI11 - ANI14 */
+#define _0C_AD_INPUT_CHANNEL_12_15      (0x0CU) /* ANI12 - ANI15 */
+#define _0D_AD_INPUT_CHANNEL_13_16      (0x0DU) /* ANI13 - ANI16 */
+#define _0E_AD_INPUT_CHANNEL_14_17      (0x0EU) /* ANI14 - ANI17 */
+#define _0F_AD_INPUT_CHANNEL_15_18      (0x0FU) /* ANI15 - ANI18 */
+#define _10_AD_INPUT_CHANNEL_16_19      (0x10U) /* ANI16 - ANI19 */
+#define _11_AD_INPUT_CHANNEL_17_20      (0x11U) /* ANI17 - ANI20 */
+#define _12_AD_INPUT_CHANNEL_18_21      (0x12U) /* ANI18 - ANI21 */
+#define _13_AD_INPUT_CHANNEL_19_22      (0x13U) /* ANI19 - ANI22 */
+#define _14_AD_INPUT_CHANNEL_20_23      (0x14U) /* ANI20 - ANI23 */
+
+/*
+    AD converter mode register 1 (ADM1)
+*/
+/* AD trigger mode selection (ADTMD1, ADTMD0) */
+#define _00_AD_TRIGGER_SOFTWARE         (0x00U) /* software trigger mode */
+#define _80_AD_TRIGGER_HARDWARE_NOWAIT  (0x80U) /* hardware trigger mode (no wait) */
+#define _C0_AD_TRIGGER_HARDWARE_WAIT    (0xC0U) /* hardware trigger mode (wait) */
+/* AD convertion mode selection (ADSCM) */
+#define _00_AD_CONVMODE_CONSELECT       (0x00U) /* continuous convertion mode */
+#define _20_AD_CONVMODE_ONESELECT       (0x20U) /* oneshot convertion mode */
+/* Trigger signal selection (ADTRS1, ADTRS0) */
+#define _00_AD_TRIGGER_INTTM01          (0x00U) /* INTTM01 */
+#define _01_AD_TRIGGER_ELC              (0x01U) /* ELC */
+#define _01_AD_TRIGGER_TIMER            (0x01U) /* INTTRD0,INTTRJ0 */
+#define _02_AD_TRIGGER_INTRTC           (0x02U) /* INTRTC */
+/*
+    AD converter mode register 2 (ADM2)
+*/
+/* AD VREF(+) selection (ADREFP1, ADREFP0) */
+#define _00_AD_POSITIVE_VDD             (0x00U) /* use VDD as VREF(+) */
+#define _40_AD_POSITIVE_AVREFP          (0x40U) /* use AVREFP as VREF(+) */
+#define _80_AD_POSITIVE_INTERVOLT       (0x80U) /* use internal voltage as VREF(+) */
+/* AD VREF(-) selection (ADREFM) */
+#define _00_AD_NEGATIVE_VSS             (0x00U) /* use VSS as VREF(-) */
+#define _20_AD_NEGATIVE_AVREFM          (0x20U) /* use AVREFM as VREF(-) */
+/* AD conversion result upper/lower bound value selection (ADRCK) */
+#define _00_AD_AREA_MODE_1              (0x00U) /* generates INTAD when ADLL <= ADCRH <= ADUL */
+#define _08_AD_AREA_MODE_2_3            (0x08U) /* generates INTAD when ADUL < ADCRH or ADLL > ADCRH */
+/* AD wakeup function selection (AWC) */
+#define _00_AD_WAKEUP_OFF               (0x00U) /* stop wakeup function */
+#define _04_AD_WAKEUP_ON                (0x04U) /* use wakeup function */
+/* AD resolution selection (ADTYP) */
+#define _00_AD_RESOLUTION_10uint8_t         (0x00U) /* 10 uint8_ts */
+#define _01_AD_RESOLUTION_8uint8_t          (0x01U) /* 8 uint8_ts */
+
+/*
+    AD test function register (ADTES)
+*/
+/* AD test mode signal (ADTES2 - ADTES0) */
+#define _00_AD_NORMAL_INPUT             (0x00U) /* normal mode */
+#define _02_AD_TEST_AVREFM              (0x02U) /* use AVREFM as test signal */
+#define _03_AD_TEST_AVREFP              (0x03U) /* use AVREFP as test signal */
+/*
+    Format of A/D Converter Trigger Select Register 0 (ADTRGS0)(F13 only)
+*/
+/* Selection of the operation trigger of the A/D converter when the timer RD0 input capture B/compare match B
+interrupt request is generated (ADTRGS00) */
+#define _01_AD_TRIGGER_INTTRD0          (0x01U) /* A/D conversion is started when the interrupt request is generated */
+
+/*
+    Format of A/D Converter Trigger Select Register 1 (ADTRGS1)(F13 only)
+*/
+/* Selection of the operation trigger of the A/D converter when the timer RJ0 interrupt request is generated (ADTRGS10) */
+#define _01_AD_TRIGGER_INTTRJ0          (0x01U) /* A/D conversion is started when the interrupt request is generated */
+
+/***********************************************************************************************************************
+Macro definitions
+***********************************************************************************************************************/
+/* Upper bound (ADUL) value */
+#define _FF_AD_ADUL_VALUE               (0xFFU)
+/* Upper bound (ADLL) value */
+#define _00_AD_ADLL_VALUE               (0x00U)
+
+/***********************************************************************************************************************
+Typedef definitions
+***********************************************************************************************************************/
+typedef enum
+{
+    ADCHANNEL0, ADCHANNEL1, ADCHANNEL2, ADCHANNEL3, ADCHANNEL4, ADCHANNEL5, ADCHANNEL6,
+    ADCHANNEL7, ADCHANNEL8, ADCHANNEL9, ADCHANNEL10, ADCHANNEL11, ADCHANNEL12,
+    ADCHANNEL13, ADCHANNEL14, ADCHANNEL15, ADCHANNEL16, ADCHANNEL17, ADCHANNEL18, 
+    ADCHANNEL19, ADCHANNEL20, ADCHANNEL21, ADCHANNEL22, ADCHANNEL23, ADCHANNEL24 = 24U,
+    ADCHANNEL25, ADCHANNEL26, ADCHANNEL27, ADCHANNEL28, ADCHANNEL29, ADCHANNEL30,
+    ADTEMPERSENSOR0 = 128U, ADINTERREFVOLT
+} ad_channel_t;
+typedef enum
+{
+    ADNORMALINPUT,
+    ADAVREFM = 2U,
+    ADAVREFP
+} test_channel_t;
+
+/***********************************************************************************************************************
+Global functions
+***********************************************************************************************************************/
+void R_ADC_Create(void);
+void R_ADC_Start(void);
+void R_ADC_Stop(void);
+void R_ADC_Set_OperationOn(void);
+void R_ADC_Set_OperationOff(void);
+void R_ADC_Get_Result(uint16_t * const buffer);
+
+/* Start user code for function. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+#endif
