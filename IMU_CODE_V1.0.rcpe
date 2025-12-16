@@ -38,10 +38,11 @@
       <Path>rscan_p.h</Path>
       <Path>rscan.h</Path>
       <Path>realMain.c</Path>
-      <Path>standardpports.h</Path>
+      <Path>standard_ports.h</Path>
       <Path>realMain.h</Path>
       <Path>rscan_a.c</Path>
       <Path>rscan_p.c</Path>
+      <Path>rscan_s.h</Path>
     </Files>
     <DebugOptions>
       <DebugTool>Simulator</DebugTool>

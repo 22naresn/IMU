@@ -18,3 +18,5 @@ uint8_t test_mode_status = 0U;
 
 #define TEST_MODE_PIN_READ()   ((P7 & 0x01U) != 0U)
 
+#define CONTACTOR_PIN_READ()   ((P12 & 0x01U) != 0U)
+

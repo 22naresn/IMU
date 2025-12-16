@@ -1,18 +1,21 @@
 #include <stdbool.h>
 #include <stddef.h>
+#include <math.h>
 #include "r_cg_macrodriver.h"
 #include "iodefine.h"
 #include "r_cg_userdefine.h"
-#include "map_rscan.h"
-#include "rscan.h"
-#include "rscan_p.h"
-#include "rscan_a.h"
-#include "addl_types.h"
-#include "realMain.h"
 #include "r_cg_adc.h"
 #include "r_cg_port.h"
 #include "r_cg_serial.h"
 #include "r_cg_cgc.h"
+#include "map_rscan.h"
+#include "addl_types.h"
+#include "rscan_a.h"
+#include "rscan_p.h"
+#include "rscan.h"
+#include "standard_ports.h"
+#include "realMain.h"
+#include "rscan_s.h"
 
 
 // FUNCTION TO READ POSITIVE ISOLATION VALUE
@@ -105,7 +108,7 @@ uint16_t ADC_Read_V_BATT(void)
 uint8_t Contactor_Read_Feedback(void)
 {
     /* Read P12.0 */
-    if (P12_uint8_t.no0 == 1U)
+    if (CONTACTOR_PIN_READ())
     {
         return 1U;   /* Contactor closed */
     }
