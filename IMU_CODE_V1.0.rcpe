@@ -37,6 +37,9 @@
       <Path>rscan_a.h</Path>
       <Path>rscan_p.h</Path>
       <Path>rscan.h</Path>
+      <Path>realMain.c</Path>
+      <Path>standardpports.h</Path>
+      <Path>realMain.h</Path>
     </Files>
     <DebugOptions>
       <DebugTool>Simulator</DebugTool>
@@ -63,6 +66,7 @@
           <Path>DefaultBuild\r_cg_adc_user.obj</Path>
           <Path>DefaultBuild\candriver.obj</Path>
           <Path>DefaultBuild\can_user.obj</Path>
+          <Path>DefaultBuild\realMain.obj</Path>
         </LinkOrder>
         <CommonOptions>
           <IncludePathForC>.</IncludePathForC>
@@ -525,7 +529,7 @@
           &lt;P00 Name="P00/TI05/TO05/INTP9" AltFunc="" Point="I/O" /&gt;
           &lt;P01 Name="P01/TI04/TO04" AltFunc="" Point="I/O" /&gt;
           &lt;P02 Name="P02/TI06/TO06" AltFunc="" Point="I/O" /&gt;
-          &lt;P03 Name="P03" AltFunc="" Point="I/O" /&gt;
+          &lt;P03 Name="P03" AltFunc="P03" Point="I/O" /&gt;
         &lt;/Port0&gt;
         &lt;Port1 Pullup="true"&gt;
           &lt;P10 Name="P10/TI13/TO13/TRJO0/_SCK10/SCL10/LTXD1/CTXD0" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
@@ -538,9 +542,9 @@
           &lt;P17 Name="P17/TI00/TO00/TRDIOB1/_SCK00/SCL00/INTP3" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
         &lt;/Port1&gt;
         &lt;Port3 Chip="RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin"&gt;
-          &lt;P30 Name="P30/TI01/TO01/TRDIOD1/_SSI00/INTP2/SNZOUT0" TTL="true" PITHL="true" Pullup="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P30 Name="P30/TI01/TO01/TRDIOD1/_SSI00/INTP2/SNZOUT0" TTL="true" PITHL="true" Pullup="true" AltFunc="P30" Point="I/O" /&gt;
           &lt;P31 Name="P31/TI14/TO14/STOPST/INTP2" Pullup="true" AltFunc="" Point="I/O" /&gt;
-          &lt;P32 Name="P32/TI16/TO16/INTP7" Pullup="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P32 Name="P32/TI16/TO16/INTP7" Pullup="true" AltFunc="P32" Point="I/O" /&gt;
           &lt;P33 Name="P33/AVREFP/ANI00" AltFunc="ANI0" Point="I/O" /&gt;
           &lt;P34 Name="P34/AVREFM/ANI01" AltFunc="ANI1" Point="I/O" /&gt;
         &lt;/Port3&gt;
@@ -575,14 +579,14 @@
           &lt;P67 Name="P67/TI02/TO02" AltFunc="" Point="I/O" /&gt;
         &lt;/Port6&gt;
         &lt;Port7 Chip="R5F10PLG,R5F10PLH,R5F10PLJ,R5F10PMG,R5F10PMH,R5F10PMJ,RL78F14_100pin" Pullup="true"&gt;
-          &lt;P70 Name="P70/ANI26/KR0/TI15/TO15/INTP8/SI11/SDA11/SNZOUT4/KR0" DIN="true" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P70 Name="P70/ANI26/KR0/TI15/TO15/INTP8/SI11/SDA11/SNZOUT4/KR0" DIN="true" TTL="true" PITHL="true" Nch="true" AltFunc="P70" Point="I/O" /&gt;
           &lt;P71 Name="P71/ANI27/KR1/TI17/TO17/INTP6/_SCK11/SCL11/SNZOUT5/KR1" DIN="true" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
           &lt;P72 Name="P72/ANI28/KR2/CTXD0/SO11/SNZOUT6/KR2" DIN="true" Nch="true" AltFunc="" Point="I/O" /&gt;
           &lt;P73 Name="P73/ANI29/KR3/CRXD0/_SSI11/SNZOUT7/KR3" DIN="true" TTL="true" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P74 Name="P74/ANI30/KR4/SO10/TXD1/KR4" DIN="true" AltFunc="" Point="I/O" /&gt;
           &lt;P75 Name="P75/KR5/SI10/SDA10/RXD1/KR5" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P76 Name="P76/KR6/_SCK10/SCL10/KR6" PITHL="true" AltFunc="" Point="I/O" /&gt;
-          &lt;P77 Name="P77/KR7/_SSI10/INTP12/KR7" PITHL="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P77 Name="P77/KR7/_SSI10/INTP12/KR7" PITHL="true" AltFunc="P77" Point="I/O" /&gt;
         &lt;/Port7&gt;
         &lt;Port8 Chip="RL78F14_30pin,RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin"&gt;
           &lt;P80 Name="P80/ANI02/ANO0" AltFunc="ANI2" Point="I/O" /&gt;
@@ -629,7 +633,7 @@
           &lt;P137 Name="P137/INTP0" AltFunc="" Point="I" /&gt;
         &lt;/Port13&gt;
         &lt;Port14 Chip="RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin" Pullup="true"&gt;
-          &lt;P140 Name="P140/PCLBUZ0" AltFunc="" Point="I/O" /&gt;
+          &lt;P140 Name="P140/PCLBUZ0" AltFunc="P140" Point="I/O" /&gt;
         &lt;/Port14&gt;
         &lt;Port15 Chip="RL78F14_100pin" Pullup="true"&gt;
           &lt;P150 Name="P150/_SSI11" PITHL="true" AltFunc="" Point="I/O" /&gt;
@@ -637,9 +641,9 @@
           &lt;P152 Name="P152/SI11/SDA11" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P153 Name="P153/_SCK11/SCL11" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P154 Name="P154/SNZOUT7" AltFunc="" Point="I/O" /&gt;
-          &lt;P155 Name="P155/SNZOUT6" AltFunc="" Point="I/O" /&gt;
+          &lt;P155 Name="P155/SNZOUT6" AltFunc="P155" Point="I/O" /&gt;
           &lt;P156 Name="P156/SNZOUT5" AltFunc="" Point="I/O" /&gt;
-          &lt;P157 Name="P157/SNZOUT4" AltFunc="" Point="I/O" /&gt;
+          &lt;P157 Name="P157/SNZOUT4" AltFunc="P157" Point="I/O" /&gt;
         &lt;/Port15&gt;
       &lt;/PORT&gt;
       &lt;INTC&gt;
@@ -1919,13 +1923,13 @@
     &lt;TAG&gt;
       &lt;GlobleUserTag&gt;
         &lt;rrm Name="rrm" Value="3FE00" /&gt;
-        &lt;pior_value7 Name="pior_value7" Value="00" /&gt;
         &lt;cg_ocd_trace_size Name="cg_ocd_trace_size" Value="512" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;wdt_option Name="wdt_option" Value="E9" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
+        &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="84" /&gt;
@@ -1941,7 +1945,7 @@
         &lt;pior_value0 Name="pior_value0" Value="00" /&gt;
         &lt;pior_value1 Name="pior_value1" Value="00" /&gt;
         &lt;pior_value6 Name="pior_value6" Value="00" /&gt;
-        &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
+        &lt;pior_value7 Name="pior_value7" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;ocdstart Name="ocdstart" Value="3FE00" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
@@ -2113,9 +2117,9 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P02&gt;
         &lt;P03&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -2207,9 +2211,9 @@
       &lt;/PortP1&gt;
       &lt;PortP3&gt;
         &lt;P30&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -2227,9 +2231,9 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P31&gt;
         &lt;P32&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -2505,8 +2509,8 @@
       &lt;/PortP6&gt;
       &lt;PortP7&gt;
         &lt;P70&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
-          &lt;setting name="INPUT_MODE" value="false" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
+          &lt;setting name="INPUT_MODE" value="true" /&gt;
           &lt;setting name="OUTPUT_MODE" value="false" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
@@ -2575,8 +2579,8 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P76&gt;
         &lt;P77&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
-          &lt;setting name="INPUT_MODE" value="false" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
+          &lt;setting name="INPUT_MODE" value="true" /&gt;
           &lt;setting name="OUTPUT_MODE" value="false" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
@@ -2937,9 +2941,9 @@
       &lt;/PortP13&gt;
       &lt;PortP14&gt;
         &lt;P140&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -2999,8 +3003,8 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P154&gt;
         &lt;P155&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
-          &lt;setting name="INPUT_MODE" value="false" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
+          &lt;setting name="INPUT_MODE" value="true" /&gt;
           &lt;setting name="OUTPUT_MODE" value="false" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
@@ -3019,9 +3023,9 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P156&gt;
         &lt;P157&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;

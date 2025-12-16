@@ -1,36 +1,8 @@
-/***********************************************************************************************************************
-* DISCLAIMER
-* This software is supplied by Renesas Electronics Corporation and is only intended for use with Renesas products.
-* No other uses are authorized. This software is owned by Renesas Electronics Corporation and is protected under all
-* applicable laws, including copyright laws. 
-* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
-* OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIuint8_tED BY
-* LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
-* INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
-* ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-* Renesas reserves the right, without notice, to make changes to this software and to discontinue the availability 
-* of this software. By using this software, you agree to the additional terms and conditions found by accessing the 
-* following link:
-* http://www.renesas.com/disclaimer
-*
-* Copyright (C) 2012, 2020 Renesas Electronics Corporation. All rights reserved.
-***********************************************************************************************************************/
-
-/***********************************************************************************************************************
-* File Name    : r_cg_adc.h
-* Version      : CodeGenerator for RL78/F14 V2.03.06.01 [25 Nov 2020]
-* Device(s)    : R5F10PPJ
-* Tool-Chain   : CCRL
-* Description  : This file implements device driver for ADC module.
-* Creation Date: 13/12/2025
-***********************************************************************************************************************/
-
 #ifndef ADC_H
 #define ADC_H
 
 /***********************************************************************************************************************
-Macro definitions (Register uint8_t)
+Macro definitions (Register bit)
 ***********************************************************************************************************************/
 /*
     Peripheral enable register 0 (PER0)
@@ -158,8 +130,8 @@ Macro definitions (Register uint8_t)
 #define _00_AD_WAKEUP_OFF               (0x00U) /* stop wakeup function */
 #define _04_AD_WAKEUP_ON                (0x04U) /* use wakeup function */
 /* AD resolution selection (ADTYP) */
-#define _00_AD_RESOLUTION_10uint8_t         (0x00U) /* 10 uint8_ts */
-#define _01_AD_RESOLUTION_8uint8_t          (0x01U) /* 8 uint8_ts */
+#define _00_AD_RESOLUTION_10BIT         (0x00U) /* 10 bits */
+#define _01_AD_RESOLUTION_8BIT          (0x01U) /* 8 bits */
 
 /*
     AD test function register (ADTES)

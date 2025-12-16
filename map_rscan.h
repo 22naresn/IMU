@@ -109,8 +109,8 @@
 #define EE_RSCAN_PORT_M0RX0       PORT_1
 #define EE_RSCAN_PORT_M0TX0       PORT_1
 
-#define EE_RSCAN_PORT_uint8_t_M0RX0   uint8_t_1
-#define EE_RSCAN_PORT_uint8_t_M0TX0   uint8_t_0
+#define EE_RSCAN_PORT_BIT_M0RX0   BIT_1
+#define EE_RSCAN_PORT_BIT_M0TX0   BIT_0
 
 #define EE_RSCAN_PORT_FUNC_M0RX0  PORT_FUNCTION_ALTERN   // set Px
 #define EE_RSCAN_PORT_FUNC_M0TX0  PORT_FUNCTION_ALTERN   // set Px
@@ -130,13 +130,13 @@
 #define EE_RSCAN_INT_M0RXCF0    ( CAN0CFRMK )
 #define EE_RSCAN_INT_M0TXCF0    ( CAN0TRMMK )
 
-#define EE_RSCAN_INTCLEAR         ( 0x01 )        // Interrupt mask uint8_t
+#define EE_RSCAN_INTCLEAR         ( 0x01 )        // Interrupt mask bit
 #define EE_RSCAN_INTENABLEDEFAULT ( 0x00 )
 
 /* The RSCAN Memory Mapping */  
 
 #define EE_RSCAN_RAMTEST_PAGES          ( 3 )
-#define EE_RSCAN_RAMTEST_LASTPGENTRIES  ( 16 )     /* short words (16-uint8_t) */
+#define EE_RSCAN_RAMTEST_LASTPGENTRIES  ( 16 )     /* short words (16-BIT) */
 
 static const uint8_t ee_rscan_channels[ EE_RSCAN_MACROS ] =
 {

@@ -5,7 +5,7 @@
 * applicable laws, including copyright laws. 
 * THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING THIS SOFTWARE, WHETHER EXPRESS, IMPLIED
 * OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIuint8_tED BY
+* NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY
 * LAW, NEITHER RENESAS ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE FOR ANY DIRECT,
 * INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR
 * ITS AFFILIATES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
@@ -23,14 +23,14 @@
 * Device(s)    : R5F10PPJ
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 13/12/2025
+* Creation Date: 15/12/2025
 ***********************************************************************************************************************/
 
 #ifndef SERIAL_H
 #define SERIAL_H
 
 /***********************************************************************************************************************
-Macro definitions (Register uint8_t)
+Macro definitions (Register bit)
 ***********************************************************************************************************************/
 /*
     Serial Clock Select Register m (SPSm)
@@ -78,14 +78,14 @@ Macro definitions (Register uint8_t)
 #define _0000_SAU_CLOCK_SELECT_CK00              (0x0000U) /* operation clock CK0 set by PRS register */ 
 #define _8000_SAU_CLOCK_SELECT_CK01              (0x8000U) /* operation clock CK1 set by PRS register */
 /* Selection of transfer clock (TCLK) of channel n (CCSmn) */
-#define _0000_SAU_CLOCK_MODE_CKS                 (0x0000U) /* divided operation clock MCK specified by CKSmn uint8_t */  
+#define _0000_SAU_CLOCK_MODE_CKS                 (0x0000U) /* divided operation clock MCK specified by CKSmn bit */  
 #define _4000_SAU_CLOCK_MODE_TI0N                (0x4000U) /* clock input from SCK pin (slave transfer in CSI mode) */
 /* Selection of start trigger source (STSmn) */
 #define _0000_SAU_TRIGGER_SOFTWARE               (0x0000U) /* only software trigger is valid */
 #define _0100_SAU_TRIGGER_RXD                    (0x0100U) /* valid edge of RXD pin */
 /* Controls inversion of level of receive data of channel n in UART mode (SISmn0) */
-#define _0000_SAU_EDGE_FALL                      (0x0000U) /* falling edge is detected as the start uint8_t */
-#define _0040_SAU_EDGE_RISING                    (0x0040U) /* rising edge is detected as the start uint8_t */
+#define _0000_SAU_EDGE_FALL                      (0x0000U) /* falling edge is detected as the start bit */
+#define _0040_SAU_EDGE_RISING                    (0x0040U) /* rising edge is detected as the start bit */
 /* Setting of operation mode of channel n (MDmn2, MDmn1) */
 #define _0000_SAU_MODE_CSI                       (0x0000U) /* CSI mode */
 #define _0002_SAU_MODE_UART                      (0x0002U) /* UART mode */
@@ -107,7 +107,7 @@ Macro definitions (Register uint8_t)
 #define _1000_SAU_TIMING_2                       (0x1000U) /* type 2 */
 #define _2000_SAU_TIMING_3                       (0x2000U) /* type 3 */
 #define _3000_SAU_TIMING_4                       (0x3000U) /* type 4 */
-/* Setting of parity uint8_t in UART mode (PTCmn1 - PTCmn0) */
+/* Setting of parity bit in UART mode (PTCmn1 - PTCmn0) */
 #define _0000_SAU_PARITY_NONE                    (0x0000U) /* none parity */
 #define _0100_SAU_PARITY_ZERO                    (0x0100U) /* zero parity */
 #define _0200_SAU_PARITY_EVEN                    (0x0200U) /* even parity */
@@ -115,28 +115,28 @@ Macro definitions (Register uint8_t)
 /* Selection of data transfer sequence in CSI and UART modes (DIRmn) */
 #define _0000_SAU_MSB                            (0x0000U) /* MSB */
 #define _0080_SAU_LSB                            (0x0080U) /* LSB */
-/* Setting of stop uint8_t in UART mode (SLCmn1, SLCmn0) */
-#define _0000_SAU_STOP_NONE                      (0x0000U) /* none stop uint8_t */
-#define _0010_SAU_STOP_1                         (0x0010U) /* 1 stop uint8_t */
-#define _0020_SAU_STOP_2                         (0x0020U) /* 2 stop uint8_ts */
+/* Setting of stop bit in UART mode (SLCmn1, SLCmn0) */
+#define _0000_SAU_STOP_NONE                      (0x0000U) /* none stop bit */
+#define _0010_SAU_STOP_1                         (0x0010U) /* 1 stop bit */
+#define _0020_SAU_STOP_2                         (0x0020U) /* 2 stop bits */
 /* Setting of data length in CSI and UART modes (DLSmn3 - DLSmn0) (m = 0, 1) */
-#define _0006_SAU_LENGTH_7                       (0x0006U) /* 07-uint8_t data length */
-#define _0007_SAU_LENGTH_8                       (0x0007U) /* 08-uint8_t data length */
-#define _0008_SAU_LENGTH_9                       (0x0008U) /* 09-uint8_t data length */
-#define _0009_SAU_LENGTH_10                      (0x0009U) /* 10-uint8_t data length */
-#define _000A_SAU_LENGTH_11                      (0x000AU) /* 11-uint8_t data length */
-#define _000B_SAU_LENGTH_12                      (0x000BU) /* 12-uint8_t data length */
-#define _000C_SAU_LENGTH_13                      (0x000CU) /* 13-uint8_t data length */
-#define _000D_SAU_LENGTH_14                      (0x000DU) /* 14-uint8_t data length */
-#define _000E_SAU_LENGTH_15                      (0x000EU) /* 15-uint8_t data length */
-#define _000F_SAU_LENGTH_16                      (0x000FU) /* 16-uint8_t data length */
+#define _0006_SAU_LENGTH_7                       (0x0006U) /* 07-bit data length */
+#define _0007_SAU_LENGTH_8                       (0x0007U) /* 08-bit data length */
+#define _0008_SAU_LENGTH_9                       (0x0008U) /* 09-bit data length */
+#define _0009_SAU_LENGTH_10                      (0x0009U) /* 10-bit data length */
+#define _000A_SAU_LENGTH_11                      (0x000AU) /* 11-bit data length */
+#define _000B_SAU_LENGTH_12                      (0x000BU) /* 12-bit data length */
+#define _000C_SAU_LENGTH_13                      (0x000CU) /* 13-bit data length */
+#define _000D_SAU_LENGTH_14                      (0x000DU) /* 14-bit data length */
+#define _000E_SAU_LENGTH_15                      (0x000EU) /* 15-bit data length */
+#define _000F_SAU_LENGTH_16                      (0x000FU) /* 16-bit data length */
 
 /*
     Serial Output Level Register m (SOLm)
 */
 /* Selects inversion of the level of the transmit data of channel n in UART mode */
-#define _0000_SAU_CHANNEL0_NORMAL                (0x0000U) /* normal uint8_t level */
-#define _0001_SAU_CHANNEL0_INVERTED              (0x0001U) /* inverted uint8_t level */
+#define _0000_SAU_CHANNEL0_NORMAL                (0x0000U) /* normal bit level */
+#define _0001_SAU_CHANNEL0_INVERTED              (0x0001U) /* inverted bit level */
 
 /*
     Noise Filter Enable Register 0 (NFEN0)
@@ -220,7 +220,7 @@ Macro definitions (Register uint8_t)
 /*
     SAU Standby Control Register m (SSCm)
 */
-/* SAU Standby Wakeup Control uint8_t (SWC) */
+/* SAU Standby Wakeup Control Bit (SWC) */
 #define _0000_SAU_CH0_SNOOZE_OFF                 (0x0000U) /* disable start function from STOP state of chip */
 #define _0001_SAU_CH0_SNOOZE_ON                  (0x0001U) /* enable start function from STOP state of chip */
 
@@ -281,9 +281,9 @@ Macro definitions (Register uint8_t)
 /* Master device status (MSTSn) */
 #define _00_IICA_STATUS_NOTMASTER                (0x00U)   /* slave device status or communication standby status */
 #define _80_IICA_STATUS_MASTER                   (0x80U)   /* master device communication status */
-/* Detection of aruint8_tration loss (ALDn) */
-#define _00_IICA_ARuint8_tRATION_NO                  (0x00U)   /* aruint8_tration win or no aruint8_tration */
-#define _40_IICA_ARuint8_tRATION_LOSS                (0x40U)   /* aruint8_tration loss */
+/* Detection of arbitration loss (ALDn) */
+#define _00_IICA_ARBITRATION_NO                  (0x00U)   /* arbitration win or no arbitration */
+#define _40_IICA_ARBITRATION_LOSS                (0x40U)   /* arbitration loss */
 /* Detection of extension code reception (EXCn) */
 #define _00_IICA_EXTCODE_NOT                     (0x00U)   /* extension code not received */
 #define _20_IICA_EXTCODE_RECEIVED                (0x20U)   /* extension code received */
@@ -315,7 +315,7 @@ Macro definitions (Register uint8_t)
 /* Initial start enable trigger (STCENn) */
 #define _00_IICA_START_WITHSTOP                  (0x00U)   /* generate start upon detecting stop condition */
 #define _02_IICA_START_WITHOUTSTOP               (0x02U)   /* generate start without detecting stop condition */
-/* Communication reservation function disable uint8_t (IICRSVn) */
+/* Communication reservation function disable bit (IICRSVn) */
 #define _00_IICA_RESERVATION_ENABLE              (0x00U)   /* enable communication reservation */
 #define _01_IICA_RESERVATION_DISABLE             (0x01U)   /* disable communication reservation */
 

@@ -99,6 +99,27 @@
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
       <ParentItem>e02620cb-c7ea-4d98-a6fd-6c4867f0f0e3</ParentItem>
     </Instance>
+    <Instance Guid="58173f8a-7fe9-47f1-a78d-cd5ef7782d3d">
+      <Name>realMain.c</Name>
+      <Type>File</Type>
+      <RelativePath>realMain.c</RelativePath>
+      <TreeImageGuid>941832c1-fc3b-4e1b-94e8-01ea17128b42</TreeImageGuid>
+      <ParentItem>e02620cb-c7ea-4d98-a6fd-6c4867f0f0e3</ParentItem>
+    </Instance>
+    <Instance Guid="94a1f219-340e-453a-b496-0c0f75346420">
+      <Name>standardpports.h</Name>
+      <Type>File</Type>
+      <RelativePath>standardpports.h</RelativePath>
+      <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
+      <ParentItem>e02620cb-c7ea-4d98-a6fd-6c4867f0f0e3</ParentItem>
+    </Instance>
+    <Instance Guid="00211314-2775-4c92-81d0-b6010d380fa3">
+      <Name>realMain.h</Name>
+      <Type>File</Type>
+      <RelativePath>realMain.h</RelativePath>
+      <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
+      <ParentItem>e02620cb-c7ea-4d98-a6fd-6c4867f0f0e3</ParentItem>
+    </Instance>
     <Instance Guid="99e62af9-8841-4569-9bdd-53950a803b7e">
       <Name>r_main.c</Name>
       <Type>File</Type>
@@ -284,7 +305,9 @@
       <SourceItemType12>CSource</SourceItemType12>
       <SourceItemGuid13>621599fb-3468-4883-9e31-1e2095c66a4b</SourceItemGuid13>
       <SourceItemType13>CSource</SourceItemType13>
-      <SourceItemCount>14</SourceItemCount>
+      <SourceItemGuid14>58173f8a-7fe9-47f1-a78d-cd5ef7782d3d</SourceItemGuid14>
+      <SourceItemType14>CSource</SourceItemType14>
+      <SourceItemCount>15</SourceItemCount>
       <LastDeviceChangedCounter>0</LastDeviceChangedCounter>
     </Instance>
     <Instance Guid="6bb7060d-7e24-4135-bd9b-7db166417523">
@@ -1040,6 +1063,18 @@
       <ItemAddTime>639013983169979196</ItemAddTime>
       <ItemAddTimeCount>0</ItemAddTimeCount>
     </Instance>
+    <Instance Guid="58173f8a-7fe9-47f1-a78d-cd5ef7782d3d">
+      <ItemAddTime>639014115927895263</ItemAddTime>
+      <ItemAddTimeCount>0</ItemAddTimeCount>
+    </Instance>
+    <Instance Guid="94a1f219-340e-453a-b496-0c0f75346420">
+      <ItemAddTime>639014124826619453</ItemAddTime>
+      <ItemAddTimeCount>0</ItemAddTimeCount>
+    </Instance>
+    <Instance Guid="00211314-2775-4c92-81d0-b6010d380fa3">
+      <ItemAddTime>639014703930439404</ItemAddTime>
+      <ItemAddTimeCount>0</ItemAddTimeCount>
+    </Instance>
     <Instance Guid="0b7e78c3-aadd-45ee-9f9d-ffac6141eeb2">
       <TimeTagModified-SourceItem0--0>-8584359878027997752</TimeTagModified-SourceItem0--0>
       <SourceItem0-IsLockedByUser>False</SourceItem0-IsLockedByUser>
@@ -1099,6 +1134,10 @@
       <SourceItem13-IsLockedByUser>False</SourceItem13-IsLockedByUser>
       <SourceItem13-BuildingTarget-0>True</SourceItem13-BuildingTarget-0>
       <SourceItem13-IndividualCompileOption-0>False</SourceItem13-IndividualCompileOption-0>
+      <TimeTagModified-SourceItem14--0>-8584358118926880545</TimeTagModified-SourceItem14--0>
+      <SourceItem14-IsLockedByUser>False</SourceItem14-IsLockedByUser>
+      <SourceItem14-BuildingTarget-0>True</SourceItem14-BuildingTarget-0>
+      <SourceItem14-IndividualCompileOption-0>False</SourceItem14-IndividualCompileOption-0>
     </Instance>
   </Class>
   <Class Guid="44fa27c9-0aa0-4297-bd3b-2c5c5bdb8881">
@@ -2759,24 +2798,24 @@
       <KeyPinGridData29>Free,-,-,,</KeyPinGridData29>
       <KeyPinGridData30>Free,-,-,,</KeyPinGridData30>
       <KeyPinGridData31>Free,-,-,,</KeyPinGridData31>
-      <KeyPinGridData32>Free,-,-,,</KeyPinGridData32>
+      <KeyPinGridData32>P155,I,-,,</KeyPinGridData32>
       <KeyPinGridData33>Free,-,-,,</KeyPinGridData33>
       <KeyPinGridData34>Free,-,-,,</KeyPinGridData34>
-      <KeyPinGridData35>Free,-,-,,</KeyPinGridData35>
-      <KeyPinGridData36>Free,-,-,,</KeyPinGridData36>
+      <KeyPinGridData35>P157,O,-,,</KeyPinGridData35>
+      <KeyPinGridData36>P140,O,-,,</KeyPinGridData36>
       <KeyPinGridData37>Free,-,-,,</KeyPinGridData37>
-      <KeyPinGridData38>Free,-,-,,</KeyPinGridData38>
+      <KeyPinGridData38>P77,I,-,,</KeyPinGridData38>
       <KeyPinGridData39>Free,-,-,,</KeyPinGridData39>
       <KeyPinGridData40>Free,-,-,,</KeyPinGridData40>
       <KeyPinGridData41>Free,-,-,,</KeyPinGridData41>
       <KeyPinGridData42>EVSS1,-,-,,</KeyPinGridData42>
-      <KeyPinGridData43>CRXD0,I,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyPinGridData43>
-      <KeyPinGridData44>CTXD0,O,No,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyPinGridData44>
+      <KeyPinGridData43>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyPinGridData43>
+      <KeyPinGridData44>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyPinGridData44>
       <KeyPinGridData45>Free,-,-,,</KeyPinGridData45>
-      <KeyPinGridData46>Free,-,-,,</KeyPinGridData46>
-      <KeyPinGridData47>Free,-,-,,</KeyPinGridData47>
-      <KeyPinGridData48>Free,-,-,,</KeyPinGridData48>
-      <KeyPinGridData49>Free,-,-,,</KeyPinGridData49>
+      <KeyPinGridData46>P70,I,-,,</KeyPinGridData46>
+      <KeyPinGridData47>P03,O,-,,</KeyPinGridData47>
+      <KeyPinGridData48>P32,O,-,,</KeyPinGridData48>
+      <KeyPinGridData49>P30,O,-,,</KeyPinGridData49>
       <KeyPinGridData50>Free,-,-,,</KeyPinGridData50>
       <KeyPinGridData51>RXD0,I,-,,</KeyPinGridData51>
       <KeyPinGridData52>EVDD1,-,-,,</KeyPinGridData52>
@@ -2827,8 +2866,8 @@
       <KeyPinGridData97>Free,-,-,,</KeyPinGridData97>
       <KeyPinGridData98>P125,I,-,,</KeyPinGridData98>
       <KeyPinGridData99>P120,I,-,,</KeyPinGridData99>
-      <KeyMacGridData0>CRXD0,I,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData0>
-      <KeyMacGridData1>CTXD0,O,No,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData1>
+      <KeyMacGridData0>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData0>
+      <KeyMacGridData1>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData1>
       <KeyMacGridData2>Free,-,-,,</KeyMacGridData2>
       <KeyMacGridData3>Free,-,-,,</KeyMacGridData3>
       <KeyMacGridData4>_RESET,I,-,,</KeyMacGridData4>
@@ -2848,22 +2887,22 @@
       <KeyMacGridData18>P125,I,-,,</KeyMacGridData18>
       <KeyMacGridData19>P120,I,-,,</KeyMacGridData19>
       <KeyMacGridData20>Free,-,-,,</KeyMacGridData20>
-      <KeyMacGridData21>Free,-,-,,</KeyMacGridData21>
+      <KeyMacGridData21>P03,O,-,,</KeyMacGridData21>
       <KeyMacGridData22>Free,-,-,,</KeyMacGridData22>
       <KeyMacGridData23>Free,-,-,,</KeyMacGridData23>
       <KeyMacGridData24>Free,-,-,,</KeyMacGridData24>
       <KeyMacGridData25>Free,-,-,,</KeyMacGridData25>
       <KeyMacGridData26>Free,-,-,,</KeyMacGridData26>
       <KeyMacGridData27>Free,-,-,,</KeyMacGridData27>
-      <KeyMacGridData28>Free,-,-,,</KeyMacGridData28>
+      <KeyMacGridData28>P155,I,-,,</KeyMacGridData28>
       <KeyMacGridData29>Free,-,-,,</KeyMacGridData29>
-      <KeyMacGridData30>Free,-,-,,</KeyMacGridData30>
+      <KeyMacGridData30>P157,O,-,,</KeyMacGridData30>
       <KeyMacGridData31>Free,-,-,,</KeyMacGridData31>
-      <KeyMacGridData32>CRXD0,I,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData32>
-      <KeyMacGridData33>CTXD0,O,No,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData33>
+      <KeyMacGridData32>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData32>
+      <KeyMacGridData33>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData33>
       <KeyMacGridData34>Free,-,-,,</KeyMacGridData34>
-      <KeyMacGridData35>Free,-,-,,</KeyMacGridData35>
-      <KeyMacGridData36>Free,-,-,,</KeyMacGridData36>
+      <KeyMacGridData35>P70,I,-,,</KeyMacGridData35>
+      <KeyMacGridData36>P30,O,-,,</KeyMacGridData36>
       <KeyMacGridData37>Free,-,-,,</KeyMacGridData37>
       <KeyMacGridData38>Free,-,-,,</KeyMacGridData38>
       <KeyMacGridData39>Free,-,-,,</KeyMacGridData39>
@@ -2872,14 +2911,14 @@
       <KeyMacGridData42>P125,I,-,,</KeyMacGridData42>
       <KeyMacGridData43>Free,-,-,,</KeyMacGridData43>
       <KeyMacGridData44>Free,-,-,,</KeyMacGridData44>
-      <KeyMacGridData45>Free,-,-,,</KeyMacGridData45>
+      <KeyMacGridData45>P77,I,-,,</KeyMacGridData45>
       <KeyMacGridData46>Free,-,-,,</KeyMacGridData46>
       <KeyMacGridData47>Free,-,-,,</KeyMacGridData47>
       <KeyMacGridData48>Free,-,-,,</KeyMacGridData48>
-      <KeyMacGridData49>CRXD0,I,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData49>
-      <KeyMacGridData50>CTXD0,O,No,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData50>
+      <KeyMacGridData49>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData49>
+      <KeyMacGridData50>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData50>
       <KeyMacGridData51>Free,-,-,,</KeyMacGridData51>
-      <KeyMacGridData52>Free,-,-,,</KeyMacGridData52>
+      <KeyMacGridData52>P70,I,-,,</KeyMacGridData52>
       <KeyMacGridData53>Free,-,-,,</KeyMacGridData53>
       <KeyMacGridData54>Free,-,-,,</KeyMacGridData54>
       <KeyMacGridData55>Free,-,-,,</KeyMacGridData55>
@@ -2895,9 +2934,9 @@
       <KeyMacGridData65>Free,-,-,,</KeyMacGridData65>
       <KeyMacGridData66>Free,-,-,,</KeyMacGridData66>
       <KeyMacGridData67>Free,-,-,,</KeyMacGridData67>
-      <KeyMacGridData68>Free,-,-,,</KeyMacGridData68>
+      <KeyMacGridData68>P155,I,-,,</KeyMacGridData68>
       <KeyMacGridData69>Free,-,-,,</KeyMacGridData69>
-      <KeyMacGridData70>Free,-,-,,</KeyMacGridData70>
+      <KeyMacGridData70>P157,O,-,,</KeyMacGridData70>
       <KeyMacGridData71>Free,-,-,,</KeyMacGridData71>
       <KeyMacGridData72>Free,-,-,,</KeyMacGridData72>
       <KeyMacGridData73>Free,-,-,,</KeyMacGridData73>
@@ -2918,7 +2957,7 @@
       <KeyMacGridData88>Free,-,-,,</KeyMacGridData88>
       <KeyMacGridData89>Free,-,-,,</KeyMacGridData89>
       <KeyMacGridData90>Free,-,-,,</KeyMacGridData90>
-      <KeyMacGridData91>Free,-,-,,</KeyMacGridData91>
+      <KeyMacGridData91>P30,O,-,,</KeyMacGridData91>
       <KeyMacGridData92>Free,-,-,,</KeyMacGridData92>
       <KeyMacGridData93>RXD0,I,-,,</KeyMacGridData93>
       <KeyMacGridData94>TXD0,O,No,,</KeyMacGridData94>
@@ -2929,10 +2968,10 @@
       <KeyMacGridData99>P125,I,-,,</KeyMacGridData99>
       <KeyMacGridData100>P120,I,-,,</KeyMacGridData100>
       <KeyMacGridData101>Free,-,-,,</KeyMacGridData101>
-      <KeyMacGridData102>CRXD0,I,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData102>
-      <KeyMacGridData103>CTXD0,O,No,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData103>
+      <KeyMacGridData102>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData102>
+      <KeyMacGridData103>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData103>
       <KeyMacGridData104>Free,-,-,,</KeyMacGridData104>
-      <KeyMacGridData105>Free,-,-,,</KeyMacGridData105>
+      <KeyMacGridData105>P70,I,-,,</KeyMacGridData105>
       <KeyMacGridData106>Free,-,-,,</KeyMacGridData106>
       <KeyMacGridData107>Free,-,-,,</KeyMacGridData107>
       <KeyMacGridData108>ANI0,I,-,,</KeyMacGridData108>
@@ -2963,14 +3002,14 @@
       <KeyMacGridData133>Free,-,-,,</KeyMacGridData133>
       <KeyMacGridData134>Free,-,-,,</KeyMacGridData134>
       <KeyMacGridData135>Free,-,-,,</KeyMacGridData135>
-      <KeyMacGridData136>Free,-,-,,</KeyMacGridData136>
+      <KeyMacGridData136>P77,I,-,,</KeyMacGridData136>
       <KeyMacGridData137>Free,-,-,,</KeyMacGridData137>
       <KeyMacGridData138>Free,-,-,,</KeyMacGridData138>
       <KeyMacGridData139>Free,-,-,,</KeyMacGridData139>
-      <KeyMacGridData140>CRXD0,I,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData140>
-      <KeyMacGridData141>CTXD0,O,No,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData141>
+      <KeyMacGridData140>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData140>
+      <KeyMacGridData141>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData141>
       <KeyMacGridData142>Free,-,-,,</KeyMacGridData142>
-      <KeyMacGridData143>Free,-,-,,</KeyMacGridData143>
+      <KeyMacGridData143>P70,I,-,,</KeyMacGridData143>
       <KeyMacGridData144>Free,-,-,,</KeyMacGridData144>
       <KeyMacGridData145>Free,-,-,,</KeyMacGridData145>
       <KeyMacGridData146>Free,-,-,,</KeyMacGridData146>
@@ -2981,8 +3020,8 @@
       <KeyMacGridData151>Free,-,-,,</KeyMacGridData151>
       <KeyMacGridData152>Free,-,-,,</KeyMacGridData152>
       <KeyMacGridData153>Free,-,-,,</KeyMacGridData153>
-      <KeyMacGridData154>Free,-,-,,</KeyMacGridData154>
-      <KeyMacGridData155>Free,-,-,,</KeyMacGridData155>
+      <KeyMacGridData154>P70,I,-,,</KeyMacGridData154>
+      <KeyMacGridData155>P32,O,-,,</KeyMacGridData155>
       <KeyMacGridData156>Free,-,-,,</KeyMacGridData156>
       <KeyMacGridData157>Free,-,-,,</KeyMacGridData157>
       <KeyMacGridData158>Free,-,-,,</KeyMacGridData158>
@@ -2999,12 +3038,12 @@
       <KeyMacGridData169>Free,-,-,,</KeyMacGridData169>
       <KeyMacGridData170>Free,-,-,,</KeyMacGridData170>
       <KeyMacGridData171>Free,-,-,,</KeyMacGridData171>
-      <KeyMacGridData172>Free,-,-,,</KeyMacGridData172>
-      <KeyMacGridData173>Free,-,-,,</KeyMacGridData173>
+      <KeyMacGridData172>P32,O,-,,</KeyMacGridData172>
+      <KeyMacGridData173>P30,O,-,,</KeyMacGridData173>
       <KeyMacGridData174>Free,-,-,,</KeyMacGridData174>
       <KeyMacGridData175>ANI0,I,-,,</KeyMacGridData175>
       <KeyMacGridData176>ANI1,I,-,,</KeyMacGridData176>
-      <KeyMacGridData177>Free,-,-,,</KeyMacGridData177>
+      <KeyMacGridData177>P140,O,-,,</KeyMacGridData177>
       <KeyMacGridData178>Free,-,-,,</KeyMacGridData178>
       <KeyMacGridData179>Free,-,-,,</KeyMacGridData179>
       <KeyMacGridData180>Free,-,-,,</KeyMacGridData180>
@@ -3013,7 +3052,7 @@
       <KeyMacGridData183>Free,-,-,,</KeyMacGridData183>
       <KeyMacGridData184>Free,-,-,,</KeyMacGridData184>
       <KeyMacGridData185>Free,-,-,,</KeyMacGridData185>
-      <KeyMacGridData186>Free,-,-,,</KeyMacGridData186>
+      <KeyMacGridData186>P30,O,-,,</KeyMacGridData186>
       <KeyMacGridData187>Free,-,-,,</KeyMacGridData187>
       <KeyMacGridData188>RXD0,I,-,,</KeyMacGridData188>
       <KeyMacGridData189>TXD0,O,No,,</KeyMacGridData189>
@@ -3034,7 +3073,7 @@
       <KeyMacGridData204>Free,-,-,,</KeyMacGridData204>
       <KeyMacGridData205>Free,-,-,,</KeyMacGridData205>
       <KeyMacGridData206>Free,-,-,,</KeyMacGridData206>
-      <KeyMacGridData207>Free,-,-,,</KeyMacGridData207>
+      <KeyMacGridData207>P30,O,-,,</KeyMacGridData207>
       <KeyMacGridData208>Free,-,-,,</KeyMacGridData208>
       <KeyMacGridData209>RXD0,I,-,,</KeyMacGridData209>
       <KeyMacGridData210>TXD0,O,No,,</KeyMacGridData210>
@@ -3049,11 +3088,11 @@
       <KeyMacGridData219>Free,-,-,,</KeyMacGridData219>
       <KeyMacGridData220>Free,-,-,,</KeyMacGridData220>
       <KeyMacGridData221>Free,-,-,,</KeyMacGridData221>
-      <KeyMacGridData222>Free,-,-,,</KeyMacGridData222>
+      <KeyMacGridData222>P77,I,-,,</KeyMacGridData222>
       <KeyMacGridData223>Free,-,-,,</KeyMacGridData223>
-      <KeyMacGridData224>Free,-,-,,</KeyMacGridData224>
-      <KeyMacGridData225>Free,-,-,,</KeyMacGridData225>
-      <KeyMacGridData226>Free,-,-,,</KeyMacGridData226>
+      <KeyMacGridData224>P70,I,-,,</KeyMacGridData224>
+      <KeyMacGridData225>P32,O,-,,</KeyMacGridData225>
+      <KeyMacGridData226>P30,O,-,,</KeyMacGridData226>
       <KeyMacGridData227>Free,-,-,,</KeyMacGridData227>
       <KeyMacGridData228>Free,-,-,,</KeyMacGridData228>
       <KeyMacGridData229>Free,-,-,,</KeyMacGridData229>
@@ -3084,14 +3123,14 @@
       <KeyMacGridData254>Free,-,-,,</KeyMacGridData254>
       <KeyMacGridData255>Free,-,-,,</KeyMacGridData255>
       <KeyMacGridData256>Free,-,-,,</KeyMacGridData256>
-      <KeyMacGridData257>Free,-,-,,</KeyMacGridData257>
+      <KeyMacGridData257>P77,I,-,,</KeyMacGridData257>
       <KeyMacGridData258>Free,-,-,,</KeyMacGridData258>
       <KeyMacGridData259>Free,-,-,,</KeyMacGridData259>
       <KeyMacGridData260>Free,-,-,,</KeyMacGridData260>
-      <KeyMacGridData261>CRXD0,I,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData261>
-      <KeyMacGridData262>CTXD0,O,No,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData262>
+      <KeyMacGridData261>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData261>
+      <KeyMacGridData262>Free,-,-,,b823c1c0-3e54-4b56-8154-c39c95e55e39</KeyMacGridData262>
       <KeyMacGridData263>Free,-,-,,</KeyMacGridData263>
-      <KeyMacGridData264>Free,-,-,,</KeyMacGridData264>
+      <KeyMacGridData264>P70,I,-,,</KeyMacGridData264>
       <KeyMacGridData265>ANI2,I,-,,</KeyMacGridData265>
       <KeyMacGridData266>Free,-,-,,</KeyMacGridData266>
       <KeyMacGridData267>Free,-,-,,</KeyMacGridData267>
@@ -3101,8 +3140,8 @@
       <KeyMacGridData271>Free,-,-,,</KeyMacGridData271>
       <KeyMacGridData272>Free,-,-,,</KeyMacGridData272>
       <KeyMacGridData273>Free,-,-,,</KeyMacGridData273>
-      <KeyMacGridData274>Free,-,-,,</KeyMacGridData274>
-      <KeyMacGridData275>Free,-,-,,</KeyMacGridData275>
+      <KeyMacGridData274>P140,O,-,,</KeyMacGridData274>
+      <KeyMacGridData275>P03,O,-,,</KeyMacGridData275>
       <KeyMacGridData276>TXD0,O,No,,</KeyMacGridData276>
       <KeyMacGridData277>Free,-,-,,</KeyMacGridData277>
       <KeyMacGridData278>Free,-,-,,</KeyMacGridData278>
@@ -3666,7 +3705,7 @@
           &lt;P00 Name="P00/TI05/TO05/INTP9" AltFunc="" Point="I/O" /&gt;
           &lt;P01 Name="P01/TI04/TO04" AltFunc="" Point="I/O" /&gt;
           &lt;P02 Name="P02/TI06/TO06" AltFunc="" Point="I/O" /&gt;
-          &lt;P03 Name="P03" AltFunc="" Point="I/O" /&gt;
+          &lt;P03 Name="P03" AltFunc="P03" Point="I/O" /&gt;
         &lt;/Port0&gt;
         &lt;Port1 Pullup="true"&gt;
           &lt;P10 Name="P10/TI13/TO13/TRJO0/_SCK10/SCL10/LTXD1/CTXD0" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
@@ -3679,9 +3718,9 @@
           &lt;P17 Name="P17/TI00/TO00/TRDIOB1/_SCK00/SCL00/INTP3" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
         &lt;/Port1&gt;
         &lt;Port3 Chip="RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin"&gt;
-          &lt;P30 Name="P30/TI01/TO01/TRDIOD1/_SSI00/INTP2/SNZOUT0" TTL="true" PITHL="true" Pullup="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P30 Name="P30/TI01/TO01/TRDIOD1/_SSI00/INTP2/SNZOUT0" TTL="true" PITHL="true" Pullup="true" AltFunc="P30" Point="I/O" /&gt;
           &lt;P31 Name="P31/TI14/TO14/STOPST/INTP2" Pullup="true" AltFunc="" Point="I/O" /&gt;
-          &lt;P32 Name="P32/TI16/TO16/INTP7" Pullup="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P32 Name="P32/TI16/TO16/INTP7" Pullup="true" AltFunc="P32" Point="I/O" /&gt;
           &lt;P33 Name="P33/AVREFP/ANI00" AltFunc="ANI0" Point="I/O" /&gt;
           &lt;P34 Name="P34/AVREFM/ANI01" AltFunc="ANI1" Point="I/O" /&gt;
         &lt;/Port3&gt;
@@ -3716,14 +3755,14 @@
           &lt;P67 Name="P67/TI02/TO02" AltFunc="" Point="I/O" /&gt;
         &lt;/Port6&gt;
         &lt;Port7 Chip="R5F10PLG,R5F10PLH,R5F10PLJ,R5F10PMG,R5F10PMH,R5F10PMJ,RL78F14_100pin" Pullup="true"&gt;
-          &lt;P70 Name="P70/ANI26/KR0/TI15/TO15/INTP8/SI11/SDA11/SNZOUT4/KR0" DIN="true" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P70 Name="P70/ANI26/KR0/TI15/TO15/INTP8/SI11/SDA11/SNZOUT4/KR0" DIN="true" TTL="true" PITHL="true" Nch="true" AltFunc="P70" Point="I/O" /&gt;
           &lt;P71 Name="P71/ANI27/KR1/TI17/TO17/INTP6/_SCK11/SCL11/SNZOUT5/KR1" DIN="true" TTL="true" PITHL="true" Nch="true" AltFunc="" Point="I/O" /&gt;
           &lt;P72 Name="P72/ANI28/KR2/CTXD0/SO11/SNZOUT6/KR2" DIN="true" Nch="true" AltFunc="" Point="I/O" /&gt;
           &lt;P73 Name="P73/ANI29/KR3/CRXD0/_SSI11/SNZOUT7/KR3" DIN="true" TTL="true" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P74 Name="P74/ANI30/KR4/SO10/TXD1/KR4" DIN="true" AltFunc="" Point="I/O" /&gt;
           &lt;P75 Name="P75/KR5/SI10/SDA10/RXD1/KR5" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P76 Name="P76/KR6/_SCK10/SCL10/KR6" PITHL="true" AltFunc="" Point="I/O" /&gt;
-          &lt;P77 Name="P77/KR7/_SSI10/INTP12/KR7" PITHL="true" AltFunc="" Point="I/O" /&gt;
+          &lt;P77 Name="P77/KR7/_SSI10/INTP12/KR7" PITHL="true" AltFunc="P77" Point="I/O" /&gt;
         &lt;/Port7&gt;
         &lt;Port8 Chip="RL78F14_30pin,RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin"&gt;
           &lt;P80 Name="P80/ANI02/ANO0" AltFunc="ANI2" Point="I/O" /&gt;
@@ -3770,7 +3809,7 @@
           &lt;P137 Name="P137/INTP0" AltFunc="" Point="I" /&gt;
         &lt;/Port13&gt;
         &lt;Port14 Chip="RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin" Pullup="true"&gt;
-          &lt;P140 Name="P140/PCLBUZ0" AltFunc="" Point="I/O" /&gt;
+          &lt;P140 Name="P140/PCLBUZ0" AltFunc="P140" Point="I/O" /&gt;
         &lt;/Port14&gt;
         &lt;Port15 Chip="RL78F14_100pin" Pullup="true"&gt;
           &lt;P150 Name="P150/_SSI11" PITHL="true" AltFunc="" Point="I/O" /&gt;
@@ -3778,9 +3817,9 @@
           &lt;P152 Name="P152/SI11/SDA11" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P153 Name="P153/_SCK11/SCL11" PITHL="true" AltFunc="" Point="I/O" /&gt;
           &lt;P154 Name="P154/SNZOUT7" AltFunc="" Point="I/O" /&gt;
-          &lt;P155 Name="P155/SNZOUT6" AltFunc="" Point="I/O" /&gt;
+          &lt;P155 Name="P155/SNZOUT6" AltFunc="P155" Point="I/O" /&gt;
           &lt;P156 Name="P156/SNZOUT5" AltFunc="" Point="I/O" /&gt;
-          &lt;P157 Name="P157/SNZOUT4" AltFunc="" Point="I/O" /&gt;
+          &lt;P157 Name="P157/SNZOUT4" AltFunc="P157" Point="I/O" /&gt;
         &lt;/Port15&gt;
       &lt;/PORT&gt;
       &lt;INTC&gt;
@@ -5060,13 +5099,13 @@
     &lt;TAG&gt;
       &lt;GlobleUserTag&gt;
         &lt;rrm Name="rrm" Value="3FE00" /&gt;
-        &lt;pior_value7 Name="pior_value7" Value="00" /&gt;
         &lt;cg_ocd_trace_size Name="cg_ocd_trace_size" Value="512" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;wdt_option Name="wdt_option" Value="E9" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
+        &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="84" /&gt;
@@ -5082,7 +5121,7 @@
         &lt;pior_value0 Name="pior_value0" Value="00" /&gt;
         &lt;pior_value1 Name="pior_value1" Value="00" /&gt;
         &lt;pior_value6 Name="pior_value6" Value="00" /&gt;
-        &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
+        &lt;pior_value7 Name="pior_value7" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;ocdstart Name="ocdstart" Value="3FE00" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
@@ -5254,9 +5293,9 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P02&gt;
         &lt;P03&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -5348,9 +5387,9 @@
       &lt;/PortP1&gt;
       &lt;PortP3&gt;
         &lt;P30&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -5368,9 +5407,9 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P31&gt;
         &lt;P32&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -5646,8 +5685,8 @@
       &lt;/PortP6&gt;
       &lt;PortP7&gt;
         &lt;P70&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
-          &lt;setting name="INPUT_MODE" value="false" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
+          &lt;setting name="INPUT_MODE" value="true" /&gt;
           &lt;setting name="OUTPUT_MODE" value="false" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
@@ -5716,8 +5755,8 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P76&gt;
         &lt;P77&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
-          &lt;setting name="INPUT_MODE" value="false" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
+          &lt;setting name="INPUT_MODE" value="true" /&gt;
           &lt;setting name="OUTPUT_MODE" value="false" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
@@ -6078,9 +6117,9 @@
       &lt;/PortP13&gt;
       &lt;PortP14&gt;
         &lt;P140&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -6140,8 +6179,8 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P154&gt;
         &lt;P155&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
-          &lt;setting name="INPUT_MODE" value="false" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
+          &lt;setting name="INPUT_MODE" value="true" /&gt;
           &lt;setting name="OUTPUT_MODE" value="false" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
@@ -6160,9 +6199,9 @@
           &lt;setting name="PSRSEL" value="false" /&gt;
         &lt;/P156&gt;
         &lt;P157&gt;
-          &lt;setting name="MODULE_UNUSED" value="true" /&gt;
+          &lt;setting name="MODULE_UNUSED" value="false" /&gt;
           &lt;setting name="INPUT_MODE" value="false" /&gt;
-          &lt;setting name="OUTPUT_MODE" value="false" /&gt;
+          &lt;setting name="OUTPUT_MODE" value="true" /&gt;
           &lt;setting name="PULLUP_ON" value="false" /&gt;
           &lt;setting name="NCH_ON" value="false" /&gt;
           &lt;setting name="OUTPUT_1" value="false" /&gt;
@@ -6768,6 +6807,7 @@
 &lt;/RL78F14&gt;</CodeGenerator>
       <FormatVersion>1.0</FormatVersion>
       <ToolGUID>f9ccde76-bc96-44ff-8da5-476333716648</ToolGUID>
+      <CodeGeneratorItem>40b0e0c8-7f4f-4795-bc34-d8ff5f042ef9</CodeGeneratorItem>
     </Instance>
   </Class>
   <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
