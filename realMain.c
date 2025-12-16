@@ -188,6 +188,41 @@ void Relay_Off(relay_t relay)
     }
 }
 
+// Delay function for LED:
+static void LED_Delay(void)
+{
+    volatile uint32_t i;
+    for (i = 0; i < 50000UL; i++)
+    {
+        __nop();
+    }
+}
+
+// LED Red/Green Status Blink
+void LED_IndicateIsolationStatus(iso_status_t status)
+{
+    if (status == ISO_STATUS_GOOD)
+    {
+        /* Green blink */
+        RED_LED_OFF();
+
+        GREEN_LED_ON();
+        LED_Delay();
+        GREEN_LED_OFF();
+        LED_Delay();
+    }
+    else
+    {
+        /* Red blink */
+        GREEN_LED_OFF();
+
+        RED_LED_ON();
+        LED_Delay();
+        RED_LED_OFF();
+        LED_Delay();
+    }
+}
+
 
 // Comparator Function
 
@@ -231,43 +266,6 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
         LED_IndicateIsolationStatus(ISO_STATUS_GOOD);
     }
 }
-
-
-// Delay function for LED:
-static void LED_Delay(void)
-{
-    volatile uint32_t i;
-    for (i = 0; i < 50000UL; i++)
-    {
-        __nop();
-    }
-}
-
-// LED Red/Green Status Blink
-void LED_IndicateIsolationStatus(iso_status_t status)
-{
-    if (status == ISO_STATUS_GOOD)
-    {
-        /* Green blink */
-        RED_LED_OFF();
-
-        GREEN_LED_ON();
-        LED_Delay();
-        GREEN_LED_OFF();
-        LED_Delay();
-    }
-    else
-    {
-        /* Red blink */
-        GREEN_LED_OFF();
-
-        RED_LED_ON();
-        LED_Delay();
-        RED_LED_OFF();
-        LED_Delay();
-    }
-}
-
 
 /* **********************************************************
 

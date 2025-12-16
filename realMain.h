@@ -1,6 +1,6 @@
-typedef enum { RELAY_ISO_POS = 0, RELAY_ISO_NEG} relay_t;
+typedef enum { RELAY_ISO_POS = 0U, RELAY_ISO_NEG = 1U} relay_t;
 
-typedef enum {ISO_STATUS_GOOD = 0, ISO_STATUS_FAULT = 1} iso_status_t;
+typedef enum {ISO_STATUS_GOOD = 0U, ISO_STATUS_FAULT = 1U} iso_status_t;
 
 uint8_t test_mode_status = 0U;
 
