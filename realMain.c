@@ -12,6 +12,7 @@
 #include "r_cg_adc.h"
 #include "r_cg_port.h"
 #include "r_cg_serial.h"
+#include "r_cg_cgc.h"
 
 
 // FUNCTION TO READ POSITIVE ISOLATION VALUE
@@ -134,6 +135,19 @@ void UART_SendStatus(const char *str)
 
 // Test mode function
 
+void TestMode_Update(void)
+{
+    if (TEST_MODE_PIN_READ())
+    {
+        test_mode_status = 1U;
+    }
+    else
+    {
+        test_mode_status = 0U;
+    }
+}
+
+
 // Relay ON function:
 
 void Relay_On(relay_t relay)
@@ -211,3 +225,22 @@ void LED_IndicateIsolationStatus(iso_status_t status)
 }
 
 
+/* **********************************************************
+
+
+
+========================MAIN STARTS HERE======================
+
+
+
+*********************************************************** */
+
+
+uint8_t infiloop = 1;
+
+while(infiloop)
+
+{
+	
+	
+	
