@@ -175,7 +175,7 @@ uint8_t EE_RSCAN_SetGlobalConfiguration( uint8_t UnitNumber_u08,
   ee_rscan_common_p[ UnitNumber_u08 ]->gaflcfg.rnc1 = Config->rnc[ 1 ];
 
   return( EE_RSCAN_OK );
-}
+}    
 
 //=============================================================================
 // FunctionName: EE_RSCAN_SetChannelConfiguration
@@ -190,7 +190,7 @@ uint8_t EE_RSCAN_SetChannelConfiguration( uint8_t UnitNumber_u08,
                                       const struct ee_rscan_cfg_channel *Config )
 {  
   uint32_t ClockFrequency_u32;
-  uint32_t BRPSetting_u16;
+  uint16_t BRPSetting_u16;
   uint8_t TSEG1Setting_u08;
   uint8_t TSEG2Setting_u08;
   uint8_t SJWSetting_u08;
@@ -283,6 +283,7 @@ uint8_t EE_RSCAN_SetChannelConfiguration( uint8_t UnitNumber_u08,
   
 	return( EE_RSCAN_OK );
 }
+
 
 
 

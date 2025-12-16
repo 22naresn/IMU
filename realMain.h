@@ -1,18 +1,17 @@
-typedef enum
-{
-    RELAY_ISO_POS = 0,
-    RELAY_ISO_NEG
-} relay_t;
+typedef enum { RELAY_ISO_POS = 0, RELAY_ISO_NEG} relay_t;
 
-
-typedef enum
-{
-    ISO_STATUS_GOOD = 0,
-    ISO_STATUS_FAULT
-} iso_status_t;
-
+typedef enum {ISO_STATUS_GOOD = 0, ISO_STATUS_FAULT = 1} iso_status_t;
 
 uint8_t test_mode_status = 0U;
 
-
 #define TEST_MODE_PIN_READ()   (P1 & (1U << 0))   /* P1.0 */
+
+#define ADC_MAX_COUNTS        1023U
+#define ADC_REF_VOLTAGE_MV    5000U
+#define ISO_REF_VOLTAGE_MV    2500U
+
+#define ISO_REF_ADC_COUNTS \
+    ((ISO_REF_VOLTAGE_MV * ADC_MAX_COUNTS) / ADC_REF_VOLTAGE_MV)
+
+/* Allowed delta from 2.5 V (example: ±100 counts) */
+#define ISO_THRESHOLD_COUNTS  100U

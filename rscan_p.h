@@ -89,11 +89,11 @@ extern uint8_t EE_RSCAN_GetError( uint8_t  Unit_uint8_t,
                               puint16_t InterruptErrorFlag_pint16_t,
                               puint16_t LastErrorFlag_pint16_t );
                              
-extern uint8_t EE_RSCAN_Start( uint8_t UnitNumber_uint8_t,
-                           uint8_t ChannelNumber_uint8_t,
-                           uint8_t OperationMode_uint8_t,
-                           uint8_t ClearErrorCounter_uint8_t,
-                           int16_t TimeStampSetting_int16_t );
+extern uint8_t EE_RSCAN_Start( uint8_t UnitNumber_u08,
+                           uint8_t ChannelNumber_u08,
+                           uint8_t OperationMode_u08,
+                           uint8_t ClearErrorCounter_u08,
+                           uint16_t TimeStampSetting_u16 );
                            
 extern uint8_t EE_RSCAN_Stop( uint8_t UnitNumber_uint8_t,
                           uint8_t ChannelNumber_uint8_t,

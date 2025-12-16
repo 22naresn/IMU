@@ -82,35 +82,35 @@
 #define EE_RSCAN_CHANNEL1      	( 1 )
 #define EE_RSCAN_GLOBAL        	( 0xFF ) /* for ALL channels */
 
-#define EE_RSCAN_CHANNELS       ( ee_rscan_channels[ UnitNumber_uint8_t ] )
+#define EE_RSCAN_CHANNELS       ( ee_rscan_channels[ UnitNumber_u08 ] )
 
 #define EE_RSCAN_MAXREGWIDTH    ( 16 )
 
-#define EE_RSCAN_COMREGSS	  ( EE_RSCAN_MAXREGWIDTH )
-#define EE_RSCAN_COMSPARES   ( 4 )
+#define EE_RSCAN_COMREGSBITS	  ( EE_RSCAN_MAXREGWIDTH )
+#define EE_RSCAN_COMSPAREBITS   ( 4 )
 #define EE_RSCAN_COMTXREGS     	( 1 )
-#define EE_RSCAN_COMTXREG( N )  ( EE_RSCAN_MAXTXBUFFERS * N / EE_RSCAN_COMREGSS ) 
-#define EE_RSCAN_COMRXREGS     	( EE_RSCAN_MAXRXBUFFERS / EE_RSCAN_COMREGSS )
-#define EE_RSCAN_COMRXREG( N ) 	( N / EE_RSCAN_COMREGSS )
-#define EE_RSCAN_COMRX( N ) 	( N % EE_RSCAN_COMREGSS )
+#define EE_RSCAN_COMTXREG( N )  ( EE_RSCAN_MAXTXBUFFERS * N / EE_RSCAN_COMREGSBITS ) 
+#define EE_RSCAN_COMRXREGS     	( EE_RSCAN_MAXRXBUFFERS / EE_RSCAN_COMREGSBITS )
+#define EE_RSCAN_COMRXREG( N ) 	( N / EE_RSCAN_COMREGSBITS )
+#define EE_RSCAN_COMRXBIT( N ) 	( N % EE_RSCAN_COMREGSBITS )
 
 #define EE_RSCAN_GTINT_MSGBOX_TR  ( 0x01 )
 #define EE_RSCAN_GTINT_MSGBOX_AR  ( 0x02 )
 #define EE_RSCAN_GTINT_FIFO       ( 0x04 )
 #define EE_RSCAN_GTINT_THL        ( 0x08 )
 
-#define EE_RSCAN_COMGTINTS      ( EE_RSCAN_MAXREGWIDTH )
-#define EE_RSCAN_COMGTINTSPERCH ( 8 )
-#define EE_RSCAN_COMGTINTREGS      ( ( ( EE_RSCAN_COMGTINTSPERCH * EE_RSCAN_MAXCHANNELS ) / EE_RSCAN_COMGTINTS ) + 1 )
+#define EE_RSCAN_COMGTINTBITS      ( EE_RSCAN_MAXREGWIDTH )
+#define EE_RSCAN_COMGTINTBITSPERCH ( 8 )
+#define EE_RSCAN_COMGTINTREGS      ( ( ( EE_RSCAN_COMGTINTBITSPERCH * EE_RSCAN_MAXCHANNELS ) / EE_RSCAN_COMGTINTBITS ) + 1 )
 #define EE_RSCAN_COMGTINTREG( N )  ( 0 )
-#define EE_RSCAN_COMGTINT( N )  ( ( N % ( EE_RSCAN_COMGTINTS / EE_RSCAN_COMGTINTSPERCH ) ) * EE_RSCAN_COMGTINTSPERCH )
+#define EE_RSCAN_COMGTINTBIT( N )  ( ( N % ( EE_RSCAN_COMGTINTBITS / EE_RSCAN_COMGTINTBITSPERCH ) ) * EE_RSCAN_COMGTINTBITSPERCH )
 
 #define EE_RSCAN_COMCFINT_FLAG     ( 0x01 )
 
-#define EE_RSCAN_COMCFINTS      ( 8 )
-#define EE_RSCAN_COMCFINTREGS      ( ( ( EE_RSCAN_MAXCOMFIFOS * EE_RSCAN_MAXCHANNELS ) / EE_RSCAN_COMCFINTS ) + 1 )
+#define EE_RSCAN_COMCFINTBITS      ( 8 )
+#define EE_RSCAN_COMCFINTREGS      ( ( ( EE_RSCAN_MAXCOMFIFOS * EE_RSCAN_MAXCHANNELS ) / EE_RSCAN_COMCFINTBITS ) + 1 )
 #define EE_RSCAN_COMCFINTREG( N )  ( 0 )
-#define EE_RSCAN_COMCFINT( N )  ( N )
+#define EE_RSCAN_COMCFINTBIT( N )  ( N )
 
 #define EE_RSCAN_ID_STD        ( 0 )
 #define EE_RSCAN_ID_EXT        ( 1 )
@@ -150,7 +150,7 @@
 #define EE_RSCAN_INT_CHANNEL ( 6 )
 #define EE_RSCFD_INT_MACRO   ( EE_RSCAN_INT_GLOBAL + EE_RSCAN_INT_CHANNEL )
 
-/* timing settings */
+/* Bittiming settings */
 
 #define EE_RSCAN_BT_MAXTQ           ( 25 )
 #define EE_RSCAN_BT_MINTQ           ( 8 )
@@ -225,7 +225,7 @@
 #define EE_RSCAN_CLOCK_SYS        ( 0x00 )
 #define EE_RSCAN_CLOCK_MOSC       ( 0x01 )
 #define EE_RSCAN_CLOCK_TSMACRO    ( 0x00 )
-#define EE_RSCAN_CLOCK_TS      ( 0x01 )
+#define EE_RSCAN_CLOCK_TSBIT      ( 0x01 )
 #define EE_RSCAN_CLOCK_FIFO_OFF   ( 0x0000 )
 
 
@@ -281,8 +281,8 @@
 #define EE_RSCAN_ERROR_FORM       ( 0x0200 )
 #define EE_RSCAN_ERROR_ACK        ( 0x0400 )
 #define EE_RSCAN_ERROR_CRC        ( 0x0800 )
-#define EE_RSCAN_ERROR_LEV1    ( 0x1000 )
-#define EE_RSCAN_ERROR_LEV0    ( 0x2000 )
+#define EE_RSCAN_ERROR_BITLEV1    ( 0x1000 )
+#define EE_RSCAN_ERROR_BITLEV0    ( 0x2000 )
 #define EE_RSCAN_ERROR_ACKDELIM   ( 0x4000 )
 
 #define EE_RSCAN_ERROR_CLEARALL   ( 0x0000 )
@@ -425,7 +425,7 @@
 
 #define EE_RSCAN_RAMTEST_KEY1     ( 0x7575 )
 #define EE_RSCAN_RAMTEST_KEY2     ( 0x8A8A )
-#define EE_RSCAN_RAMTEST_ENTRIES  ( 128 )    /* short words access (16-): 256/2 */
+#define EE_RSCAN_RAMTEST_ENTRIES  ( 128 )    /* short words access (16-bit): 256/2 */
 #define EE_RSCAN_RAMTEST_MODE     ( 0x04 )
 
 #define EE_RSCAN_COMTEST_ALLON    ( 0x03 )
@@ -1002,10 +1002,10 @@ typedef struct ee_rscan_ram
 
 typedef struct ee_rscan_cfg_channel
 {
-  uint32_t                     rate;
-  uint8_t                     tq_per;                  /* optional Parameter, can be 0 */
+  uint32_t                     bitrate;
+  uint8_t                     tq_perbit;                  /* optional Parameter, can be 0 */
   uint8_t                     syncjumpwidth;              /* optional Parameter, can be 0 */
-  float32_t                     samplingpointpos;         /* optional Parameter, can be 0.0 */
+  float                     samplingpointpos;         /* optional Parameter, can be 0.0 */
   struct ee_rscan_c_ctrl  ctrl;
   struct ee_rscan_c_ctrh  ctrh;
   uint16_t                     tmiec;                   /* TX Interrupt Enable per channel */
