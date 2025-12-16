@@ -15,3 +15,6 @@ uint8_t test_mode_status = 0U;
 
 /* Allowed delta from 2.5 V (example: ±100 counts) */
 #define ISO_THRESHOLD_COUNTS  100U
+
+#define TEST_MODE_PIN_READ()   ((P7 & 0x01U) != 0U)
+

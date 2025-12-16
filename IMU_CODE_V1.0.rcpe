@@ -40,6 +40,8 @@
       <Path>realMain.c</Path>
       <Path>standardpports.h</Path>
       <Path>realMain.h</Path>
+      <Path>rscan_a.c</Path>
+      <Path>rscan_p.c</Path>
     </Files>
     <DebugOptions>
       <DebugTool>Simulator</DebugTool>
@@ -67,6 +69,8 @@
           <Path>DefaultBuild\candriver.obj</Path>
           <Path>DefaultBuild\can_user.obj</Path>
           <Path>DefaultBuild\realMain.obj</Path>
+          <Path>DefaultBuild\rscan_a.obj</Path>
+          <Path>DefaultBuild\rscan_p.obj</Path>
         </LinkOrder>
         <CommonOptions>
           <IncludePathForC>.</IncludePathForC>

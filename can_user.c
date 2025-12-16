@@ -28,7 +28,7 @@ uint8_t CAN_SendStatus(uint16_t can_id, uint8_t *data, uint8_t dlc)
     msg.hdr.id  = can_id;   /* 11-bit or 29-bit ID */
     msg.hdr.ide = 0U;       /* 0 = Standard ID, 1 = Extended ID */
     msg.hdr.rtr = 0U;       /* 0 = Data frame, 1 = Remote frame */
-    msg.hdr.dlc = dlc;      /* 0–8 */
+    msg.flag.dlc = dlc;      /* 0–8 */
 
 
     for (uint8_t i = 0U; i < dlc; i++)

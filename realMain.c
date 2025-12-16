@@ -282,13 +282,14 @@ void main(void)
 {
     uint16_t iso_pos_val;
     uint16_t iso_neg_val;
-    uint16_t vbatt_val;     //might not be needed if everything lives in comparator function
+    uint16_t vbatt_val;  
 
     // 1. initialise ADC ports
     R_ADC_Create();
 
     // 2. initialise GPIO ports 
     R_PORT_Create();
+    TestMode_Update();
 
     // 3. initialise CAN peripheral
     //R_CAN_Create();          /* DRIVER NEEDS WORK */
@@ -297,8 +298,9 @@ void main(void)
     // 4. initialise UART peripheral
     R_UART0_Create();
     R_UART0_Start();
+    TestMode_Update();
+    Contactor_Read_Feedback();
 
-    // Optional status print 
     UART_SendStatus("System init complete\r\n");
 
     while (1)
@@ -306,35 +308,59 @@ void main(void)
         // 5. measure ISO_POS 
         iso_pos_val = ADC_Read_ISO_POS();
         UART_SendStatus("ISO_POS read\r\n");
+	TestMode_Update();
+	Contactor_Read_Feedback();
+	
 
         // 6. measure ISO_NEG
         iso_neg_val = ADC_Read_ISO_NEG();
         UART_SendStatus("ISO_NEG read\r\n");
+	TestMode_Update();
+	Contactor_Read_Feedback();
 
         // 7. measure V_BATT
-        vbatt_val = ADC_Read_V_BATT();
-        UART_SendStatus("VBATT read, reading = vbatt_val\r\n");
-
+	if (test_mode_status != 1)
+	{
+	        vbatt_val = ADC_Read_V_BATT();
+	        UART_SendStatus("VBATT read, reading = vbatt_val\r\n");
+	}
+	else
+	{
+		UART_SendStatus("Testing Mode ON, VBATT reading paused");
+	}
+	
         // 8. send GPIO out to RELAY_POS enable pin 
         Relay_On(RELAY_ISO_POS);
         UART_SendStatus("Relay POS ON\r\n");
-
-        // 9. run the values through comparator function 
+	TestMode_Update();
+	Contactor_Read_Feedback();
+	
+        // 9. run the values through comparator 
         Comparator_Check(iso_pos_val, iso_neg_val);
-
+	TestMode_Update();
+	Contactor_Read_Feedback();
+	
         // 10. send GPIO out to RELAY_NEG enable pin 
         Relay_On(RELAY_ISO_NEG);
         UART_SendStatus("Relay NEG ON\r\n");
-
+	TestMode_Update();
+	Contactor_Read_Feedback();
+	
         // 11. run the values through comparator function 
         Comparator_Check(iso_pos_val, iso_neg_val);
+	TestMode_Update();
+	Contactor_Read_Feedback();
 
         // 12. send GPIO out to RELAY_POS (relay pos off) 
         Relay_Off(RELAY_ISO_POS);
         UART_SendStatus("Relay POS OFF\r\n");
+	TestMode_Update();
+	Contactor_Read_Feedback();
 
         // 13. run the values through the comparator function 
         Comparator_Check(iso_pos_val, iso_neg_val);
+	TestMode_Update();
+	Contactor_Read_Feedback();
 
         /* 14. loop all over again forever*/
     }

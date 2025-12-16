@@ -3,10 +3,7 @@
 * Version      : 1.0
 * Device(s)    : R5F10PPJ
 * Description  : Ground up CAN Driver for the Renesas R5F10PPJ microcontroller.
-***********************************************************************************************************************/
-
-// GLOBAL VARIABLES HERE IF NEEDED???
-// TF GLOBAL VARIABLES DOES THIS NEED??
+***********************************************************************************************************************
 
 #include <stdbool.h>
 #include <stddef.h>
@@ -144,7 +141,7 @@ uint8_t EE_RSCAN_SetGlobalConfiguration( uint8_t UnitNumber_u08,
 {    
   if( UnitNumber_u08 >= EE_RSCAN_MACROS ) return( EE_RSCAN_ERROR );
 
-  /* Must be in global reset to set the global configuration! */
+  /* Must be in global reset to set the global configuration! *
   
   while( ee_rscan_common_p[ UnitNumber_u08 ]->gsts.rsts );
 
@@ -203,7 +200,7 @@ uint8_t EE_RSCAN_SetChannelConfiguration( uint8_t UnitNumber_u08,
   if( ee_rscan_common_p[ UnitNumber_u08 ]->ch[ ChannelNumber_u08 ].stsl.mds != EE_RSCAN_OPMODE_RESET )
     return( EE_RSCAN_ERROR );
 
-  /* first, clear any sleep mode */
+  /* first, clear any sleep mode *
   ee_rscan_common_p[ UnitNumber_u08 ]->ch[ ChannelNumber_u08 ].ctrl.cslpr = Config->ctrl.cslpr;
 
   if( ee_rscan_common_p[ UnitNumber_u08 ]->gcfgl.dcs == EE_RSCAN_CLOCK_SYS )
@@ -269,7 +266,7 @@ uint8_t EE_RSCAN_SetChannelConfiguration( uint8_t UnitNumber_u08,
     }
   }
 
-	/* Set Channel to HALT mode, in order to configure lists */
+	/* Set Channel to HALT mode, in order to configure lists *
 
 	ee_rscan_common_p[ UnitNumber_u08 ]->ch[ ChannelNumber_u08 ].ctrl.chmdc =
 		EE_RSCAN_OPMODE_HALT;
@@ -283,8 +280,6 @@ uint8_t EE_RSCAN_SetChannelConfiguration( uint8_t UnitNumber_u08,
   
 	return( EE_RSCAN_OK );
 }
-
-
 
 
 //=============================================================================
@@ -307,12 +302,12 @@ uint8_t EE_RSCAN_Start( uint8_t UnitNumber_u08,
     
   while( ee_rscan_common_p[ UnitNumber_u08 ]->gsts.rsts );
     
-  if( ee_rscan_common_p[ UnitNumber_u08 ]->gsts.slps )  /* activate the unit */
+  if( ee_rscan_common_p[ UnitNumber_u08 ]->gsts.slps )  /* activate the unit *
   {
     ee_rscan_common_p[ UnitNumber_u08 ]->gctrl.gslpr = EE_RSCAN_SLEEP_DISABLE;
   }
 
-  /* go globally to OPERATION */
+  /* go globally to OPERATION *
 
   if( ee_rscan_common_p[ UnitNumber_u08 ]->gsts.mds != EE_RSCAN_RSTATUS_OPERATION )
   {                                               
@@ -345,7 +340,7 @@ uint8_t EE_RSCAN_Start( uint8_t UnitNumber_u08,
     if( ChannelNumber_u08 >= ee_rscan_channels[ UnitNumber_u08 ] ) 
       return( EE_RSCAN_ERROR );
       
-    /* channels: cancel any sleep states */
+    /* channels: cancel any sleep states *
     
     ee_rscan_common_p[ UnitNumber_u08 ]->ch
                      [ ChannelNumber_u08 ].ctrl.cslpr = EE_RSCAN_CLEAR;
@@ -413,7 +408,7 @@ uint8_t EE_RSCAN_Start( uint8_t UnitNumber_u08,
            && ( --AccessTimeout_u32 > 0 ) );
     if( AccessTimeout_u32 == 0L ) return( EE_RSCAN_ERROR );
       
-    if( OperationMode_u08 == EE_RSCAN_OPMODE_OPER )    /* verify communication ready state */
+    if( OperationMode_u08 == EE_RSCAN_OPMODE_OPER )    /* verify communication ready state *
     {
       AccessTimeout_u32 = EE_RSCAN_SHUTDOWNTIMEOUT;
       while( ( ee_rscan_common_p[ UnitNumber_u08 ]->ch
@@ -528,7 +523,7 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
 
   switch( Message->path )
   {
-    case EE_RSCAN_PATH_MSGBOX:      /* search a free SendBox, if required */
+    case EE_RSCAN_PATH_MSGBOX:      /* search a free SendBox, if required *
     {
       if( Message->pathdetail != EE_RSCAN_PATHDETAIL_ANY )
       {
@@ -554,11 +549,11 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
                   [ ( EE_RSCAN_MAXTXBUFFERS * ChannelNumber_u08 + 
                       SendBox_u08 ) ] ) )
                 & EE_RSCAN_TMSTS_STSMSK ) == 
-                EE_RSCAN_TMSTS_CLEAR )    /* check pending TRQ */
+                EE_RSCAN_TMSTS_CLEAR )    /* check pending TRQ *
         {
           for( FIFONumber_u08 = 0;
                FIFONumber_u08 < EE_RSCAN_MAXCOMFIFOS;
-               FIFONumber_u08++ )   /* check any COM FIFO assignment */
+               FIFONumber_u08++ )   /* check any COM FIFO assignment *
           
           {
             if( ( ( uint8_t )( ee_rscan_common_p[ UnitNumber_u08 ]->cfcc
@@ -581,7 +576,7 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
 
         if( SendBoxOccupied_u08 == EE_RSCAN_CLEAR )
         {
-          /* Initiate Sending with this box and exit the box searching */
+          /* Initiate Sending with this box and exit the box searching *
           
           EE_RSCAN_SetIDData( &ee_rscan_txmsg_p[ UnitNumber_u08 ]
                                                [ ChannelNumber_u08 ]->
@@ -601,7 +596,7 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
         }
         else
         {
-          SendBoxOccupied_u08 = EE_RSCAN_CLEAR;   /* test next SendBox */
+          SendBoxOccupied_u08 = EE_RSCAN_CLEAR;   /* test next SendBox *
         }
       }
       
@@ -613,7 +608,7 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
       break;
     }
     
-    case EE_RSCAN_PATH_COMFIFO:                    /* use dedicated FIFO */
+    case EE_RSCAN_PATH_COMFIFO:                    /* use dedicated FIFO *
     {
       if( Message->pathdetail != EE_RSCAN_PATHDETAIL_ANY )
       {
@@ -634,7 +629,7 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
           }
         }
       }
-      else                                  /* search enabled, non-full FIFO */
+      else                                  /* search enabled, non-full FIFO *
       {
         SendBox_u08 = EE_RSCAN_FIFO_NEXTELEMENT;
         
@@ -649,14 +644,14 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
               SendBox_u08 = FIFONumber_u08;
               if( ee_rscan_common_p[ UnitNumber_u08 ]->cfsts[ FIFONumber_u08 ].cfemp )
               {
-                break;             /* an empty FIFO can be used immediately */
+                break;             /* an empty FIFO can be used immediately *
               }
             }
           }
         }
       }
       
-      if( SendBox_u08 != EE_RSCAN_FIFO_NEXTELEMENT ) /* feed message into FIFO */
+      if( SendBox_u08 != EE_RSCAN_FIFO_NEXTELEMENT ) /* feed message into FIFO *
       {
         SendBox_u08 %= EE_RSCAN_MAXCOMFIFOS;
         
@@ -669,7 +664,7 @@ uint8_t EE_RSCAN_SendMessage( uint8_t  UnitNumber_u08,
                          [ EE_RSCAN_MAXCOMFIFOS * ChannelNumber_u08 + 
                            SendBox_u08 ].fpc = EE_RSCAN_FIFO_NEXTELEMENT;      
       }
-      else                  /* free and enabled FIFO was not found */
+      else                  /* free and enabled FIFO was not found *
       {
         *Status_pu08 = EE_RSCAN_FAULT_BUSY;
         return( EE_RSCAN_OK );        
@@ -710,14 +705,14 @@ uint8_t EE_RSCAN_ReceiveMessage( uint8_t                      UnitNumber_u08,
   *Status_pu08 = EE_RSCAN_FAULT_NODATA;
   
   if( ( Message->path == EE_RSCAN_PATH_MSGBOX ) ||
-      ( Message->path == EE_RSCAN_PATH_ANY ) ) /* check within message boxes */
+      ( Message->path == EE_RSCAN_PATH_ANY ) ) /* check within message boxes *
   {
-    if( Message->pathdetail == EE_RSCAN_GLOBAL )    /* read first filled box */
+    if( Message->pathdetail == EE_RSCAN_GLOBAL )    /* read first filled box *
     {
       SearchBegin_u08 = 0;
       SearchEnd_u08   = EE_RSCAN_MAXRXBUFFERS - 1;
     }
-    else                             /* read dedicated box (typical polling) */
+    else                             /* read dedicated box (typical polling) *
     {
       SearchBegin_u08 = Message->pathdetail;
       SearchEnd_u08   = Message->pathdetail;
@@ -739,7 +734,7 @@ uint8_t EE_RSCAN_ReceiveMessage( uint8_t                      UnitNumber_u08,
                                 EE_RSCAN_SET )
       {
         *Status_pu08 = EE_RSCAN_FAULT_NONE;
-                                                      /* Clear new data flag */
+                                                      /* Clear new data flag *
         ee_rscan_common_p[ UnitNumber_u08 ]->rmnd
                          [ EE_RSCAN_COMRXREG( ReceiveBox_u08 ) ] = ( uint32_t ) 
                          ( ~( 1 << EE_RSCAN_COMRXBIT( ReceiveBox_u08 ) ) );
@@ -754,14 +749,14 @@ uint8_t EE_RSCAN_ReceiveMessage( uint8_t                      UnitNumber_u08,
 
   if( ( Message->path == EE_RSCAN_PATH_RXFIFO ) ||
       ( ( Message->path == EE_RSCAN_PATH_ANY ) &&
-        ( *Status_pu08 == EE_RSCAN_FAULT_NODATA ) ) ) /* check within RX FIFO */
+        ( *Status_pu08 == EE_RSCAN_FAULT_NODATA ) ) ) /* check within RX FIFO *
   {
-    if( Message->pathdetail == EE_RSCAN_GLOBAL )    /* read first filled FIFO */
+    if( Message->pathdetail == EE_RSCAN_GLOBAL )    /* read first filled FIFO *
     {
       SearchBegin_u08 = 0;
       SearchEnd_u08   = EE_RSCAN_MAXRXFIFOS - 1;
     }
-    else                                               /* read dedicated FIFO */
+    else                                               /* read dedicated FIFO *
     {
       SearchBegin_u08 = Message->pathdetail;
       SearchEnd_u08   = Message->pathdetail;
@@ -795,14 +790,14 @@ uint8_t EE_RSCAN_ReceiveMessage( uint8_t                      UnitNumber_u08,
 
   if( ( Message->path == EE_RSCAN_PATH_COMFIFO ) ||
       ( ( Message->path == EE_RSCAN_PATH_ANY ) &&
-        ( *Status_pu08 == EE_RSCAN_FAULT_NODATA ) ) ) /* check within COMFIFO */
+        ( *Status_pu08 == EE_RSCAN_FAULT_NODATA ) ) ) /* check within COMFIFO *
   {
-    if( Message->pathdetail == EE_RSCAN_GLOBAL )    /* read first filled FIFO */
+    if( Message->pathdetail == EE_RSCAN_GLOBAL )    /* read first filled FIFO *
     {
       SearchBegin_u08 = 0;
       SearchEnd_u08   = EE_RSCAN_MAXCOMFIFOS * ee_rscan_channels[ UnitNumber_u08 ] - 1;
     }
-    else                                               /* read dedicated FIFO */
+    else                                               /* read dedicated FIFO *
     {
       SearchBegin_u08 = Message->pathdetail;
       SearchEnd_u08   = Message->pathdetail;
@@ -932,5 +927,5 @@ uint8_t EE_RSCAN_PortDisable( uint8_t UnitNumber_u08,
 
   } // switch( UnitNumber )
   
-  return( EE_RSCAN_OK );
+  return( EE_RSCAN_OK );*/
 }
