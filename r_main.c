@@ -37,6 +37,7 @@ Includes
 /* Start user code for include. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
+#include "realMain.h"
 
 /***********************************************************************************************************************
 Pragma directive
@@ -47,9 +48,8 @@ Pragma directive
 /***********************************************************************************************************************
 Global variables and functions
 ***********************************************************************************************************************/
-/* Start user code for global. Do not edit comment generated here */
-/* End user code. Do not edit comment generated here */
-void R_MAIN_UserInit(void);
+uint8_t test_mode_button = 0U;
+
 
 /***********************************************************************************************************************
 * Function Name: main
@@ -63,23 +63,9 @@ void main(void)
     /* Start user code. Do not edit comment generated here */
     while (1U)
     {
-        ;
+        realMain();
     }
     /* End user code. Do not edit comment generated here */
 }
 
-/***********************************************************************************************************************
-* Function Name: R_MAIN_UserInit
-* Description  : This function adds user code before implementing main function.
-* Arguments    : None
-* Return Value : None
-***********************************************************************************************************************/
-void R_MAIN_UserInit(void)
-{
-    /* Start user code. Do not edit comment generated here */
-    EI();
-    /* End user code. Do not edit comment generated here */
-}
 
-/* Start user code for adding. Do not edit comment generated here */
-/* End user code. Do not edit comment generated here */

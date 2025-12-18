@@ -15,7 +15,7 @@
 #include "rscan.h"
 #include "standard_ports.h"
 #include "realMain.h"
-#include "rscan_s.h"
+//#include "rscan_s.h"
 
 
 // FUNCTION TO READ POSITIVE ISOLATION VALUE
@@ -135,6 +135,8 @@ void UART_SendStatus(const char *str)
 
 
 // CAN send frame function: (pending)
+/************
+*************/
 
 // Test mode function
 
@@ -142,11 +144,11 @@ void TestMode_Update(void)
 {
     if (TEST_MODE_PIN_READ())
     {
-        test_mode_status = 1U;
+        test_mode_button = 1U;
     }
     else
     {
-        test_mode_status = 0U;
+        test_mode_button = 0U;
     }
 }
 
@@ -234,6 +236,7 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
     uint16_t delta_pos;
     uint16_t delta_neg;
 
+
     /* Compute absolute deltas from 2.5 V reference */
     if (iso_pos > ISO_REF_ADC_COUNTS)
     {
@@ -261,7 +264,7 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
         LED_IndicateIsolationStatus(ISO_STATUS_FAULT);
 
         UART_SendStatus("ISOLATION FAULT DETECTED\r\n");
-        // CAN_SendError(ISO_FAULT_CODE);  <-- laters
+        EE_RSCAN_SendMessage(); // YOO ADD PARAMETERS
     }
     else
     {
@@ -270,18 +273,18 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
     }
 }
 
-/* **********************************************************
+/* *************************************************************************
 
 
 
-========================MAIN STARTS HERE======================
+==============================MAIN STARTS HERE===============================
 
 
 
-*********************************************************** */
+*************************************************************************** */
 
 
-void main(void)
+void realMain(void)
 {
     uint16_t iso_pos_val;
     uint16_t iso_neg_val;
@@ -295,9 +298,12 @@ void main(void)
     TestMode_Update();
 
     // 3. initialise CAN peripheral
-    //R_CAN_Create();          /* DRIVER NEEDS WORK */
-    //R_CAN_Start();           /* DRIVER NEEDS WORK */
-
+    EE_RSCAN_PortEnable();            /// ADD PARAMETERS TO PASS!
+    EE_RSCAN_Start();         
+    EE_RSCAN_SetGlobalConfiguration();
+    EE_RSCAN_SetBittiming();
+    EE_RSCAN_SetChannelConfiguration();
+    
     // 4. initialise UART peripheral
     R_UART0_Create();
     R_UART0_Start();
@@ -322,7 +328,7 @@ void main(void)
 	Contactor_Read_Feedback();
 
         // 7. measure V_BATT
-	if (test_mode_status != 1)
+	if (test_mode_button != 1)
 	{
 	        vbatt_val = ADC_Read_V_BATT();
 	        UART_SendStatus("VBATT read, reading = vbatt_val\r\n");

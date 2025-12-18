@@ -194,7 +194,7 @@ const struct ee_rscan_cfg_channel EE_RSCAN_A_CHCFG_FDPNW =
   }
 };
 
-const struct ee_rscan_cfg_global EE_RSCAN_A_GCFG_FDPNW = 
+extern const struct ee_rscan_cfg_global EE_RSCAN_A_GCFG_FDPNW = 
 {
   {
     EE_RSCAN_TXPRIO_ID,                      /* TX priority by ID (standard) */

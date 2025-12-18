@@ -28,7 +28,6 @@
         <Path>r_cg_serial.h</Path>
         <Path>r_cg_adc.h</Path>
       </Category>
-      <Path>candriver.c</Path>
       <Path>can_user.c</Path>
       <Path>map_rscan.h</Path>
       <Path>map_device.h</Path>
@@ -67,7 +66,6 @@
           <Path>DefaultBuild\r_cg_serial_user.obj</Path>
           <Path>DefaultBuild\r_cg_adc.obj</Path>
           <Path>DefaultBuild\r_cg_adc_user.obj</Path>
-          <Path>DefaultBuild\candriver.obj</Path>
           <Path>DefaultBuild\can_user.obj</Path>
           <Path>DefaultBuild\realMain.obj</Path>
           <Path>DefaultBuild\rscan_a.obj</Path>
