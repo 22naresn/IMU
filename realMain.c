@@ -17,7 +17,6 @@
 #include "realMain.h"
 //#include "rscan_s.h"
 
-
 // FUNCTION TO READ POSITIVE ISOLATION VALUE
 uint16_t ADC_Read_ISO_POS(void)
 {
@@ -289,6 +288,7 @@ void realMain(void)
     uint16_t iso_pos_val;
     uint16_t iso_neg_val;
     uint16_t vbatt_val;  
+    
 
     // 1. initialise ADC ports
     R_ADC_Create();
@@ -371,10 +371,20 @@ void realMain(void)
 	TestMode_Update();
 	Contactor_Read_Feedback();
 
-        /* 14. loop all over again forever*/
+        /* 14. called by the main program to loop all over again forever*/
     }
 }
 
-	
+
+void main(void)
+{
+    EI();   /* enables interrupts */
+
+    while (1)
+    {
+        realMain();
+    }
+}
+
 	
 	

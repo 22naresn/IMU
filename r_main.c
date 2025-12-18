@@ -23,7 +23,7 @@
 * Device(s)    : R5F10PPJ
 * Tool-Chain   : CCRL
 * Description  : This file implements main function.
-* Creation Date: 15/12/2025
+* Creation Date: 18/12/2025
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -37,7 +37,6 @@ Includes
 /* Start user code for include. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
-#include "realMain.h"
 
 /***********************************************************************************************************************
 Pragma directive
@@ -48,8 +47,9 @@ Pragma directive
 /***********************************************************************************************************************
 Global variables and functions
 ***********************************************************************************************************************/
-uint8_t test_mode_button = 0U;
-
+/* Start user code for global. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
+void R_MAIN_UserInit(void);
 
 /***********************************************************************************************************************
 * Function Name: main
@@ -68,4 +68,18 @@ void main(void)
     /* End user code. Do not edit comment generated here */
 }
 
+/***********************************************************************************************************************
+* Function Name: R_MAIN_UserInit
+* Description  : This function adds user code before implementing main function.
+* Arguments    : None
+* Return Value : None
+***********************************************************************************************************************/
+void R_MAIN_UserInit(void)
+{
+    /* Start user code. Do not edit comment generated here */
+    EI();
+    /* End user code. Do not edit comment generated here */
+}
 
+/* Start user code for adding. Do not edit comment generated here */
+/* End user code. Do not edit comment generated here */
