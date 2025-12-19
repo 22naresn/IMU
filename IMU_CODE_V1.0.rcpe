@@ -42,6 +42,8 @@
       <Path>rscan_p.c</Path>
       <Path>rscan_s.h</Path>
       <Path>standardports_p.c</Path>
+      <Path>franken_functions.c</Path>
+      <Path>franken_functions.h</Path>
     </Files>
     <DebugOptions>
       <DebugTool>Simulator</DebugTool>
@@ -51,7 +53,7 @@
       <DebugToolSettings />
     </DebugOptions>
     <Device Series="RL78">R5F10PPJ</Device>
-    <BuildOptions Name="CC-RL" Version="V1.10.00">
+    <BuildOptions Name="CC-RL" Version="V1.15.01">
       <BuildMode Name="DefaultBuild" Active="True">
         <LinkOrder>
           <Path>DefaultBuild\cstart.obj</Path>
@@ -70,9 +72,11 @@
           <Path>DefaultBuild\rscan_a.obj</Path>
           <Path>DefaultBuild\rscan_p.obj</Path>
           <Path>DefaultBuild\standardports_p.obj</Path>
+          <Path>DefaultBuild\franken_functions.obj</Path>
         </LinkOrder>
         <CommonOptions>
-          <IncludePathForC>.</IncludePathForC>
+          <IncludePathForC>D:\Renesas C Code\IMU_CODE_V1.0</IncludePathForC>
+          <IncludePathForAsm>D:\Renesas C Code\IMU_CODE_V1.0</IncludePathForAsm>
         </CommonOptions>
         <GeneralOptions>
           <SimultaneouslyBuild>False</SimultaneouslyBuild>
@@ -83,7 +87,7 @@
           <Option>-dev=%MicomToolPath%\Device\RL78\Devicefile\DR5F10PPJ.DVF</Option>
           <Option>-g</Option>
           <Option>-g_line</Option>
-          <Option>-I .</Option>
+          <Option>-I "D:\Renesas C Code\IMU_CODE_V1.0"</Option>
           <Option>-lang=c99</Option>
           <Option>-c</Option>
         </CompileOptions>
@@ -92,6 +96,7 @@
           <Option>-obj_path=%BuildModeName%</Option>
           <Option>-dev=%MicomToolPath%\Device\RL78\Devicefile\DR5F10PPJ.DVF</Option>
           <Option>-g</Option>
+          <Option>-I "D:\Renesas C Code\IMU_CODE_V1.0"</Option>
           <Option>-c</Option>
         </AssembleOptions>
         <LinkOptions>
@@ -101,9 +106,9 @@
           <Option>-NOCOmpress</Option>
           <Option>-NOOPtimize</Option>
           <Option>-OUtput=%BuildModeName%\%ProjectName%.abs</Option>
-          <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.10.00\lib\rl78em4s99.lib</Option>
-          <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.10.00\lib\malloc_n.lib</Option>
-          <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.10.00\lib\rl78em4r.lib</Option>
+          <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.15.01\lib\rl78em4s99.lib</Option>
+          <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.15.01\lib\malloc_n.lib</Option>
+          <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.15.01\lib\rl78em4r.lib</Option>
           <Option>-OCDBG=84</Option>
           <Option>-DEBUG_MONITOR=3FE00-3FFFF</Option>
           <Option>-USER_OPT_BYTE=E9FFF8</Option>

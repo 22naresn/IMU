@@ -1,43 +1,71 @@
 QualityReport
-Friday, 19 December 2025 12:16:28 PM
+Friday, 19 December 2025 2:12:45 PM
 
 ------ Start build(IMU_CODE_V1.0, DefaultBuild) ------
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe can_user.c -cpu=S3 -o DefaultBuild\can_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_413b3dc8a50c4734bf442f73b666ecbfmonawbfy.ypq -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe realMain.c -cpu=S3 -o DefaultBuild\realMain.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_233e3d1493a4491eaf9a87405c21c826ygqr0jg0.0fm -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe rscan_a.c -cpu=S3 -o DefaultBuild\rscan_a.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_25efdb1aba30425bb41efdfa8c511d2ahk2a4bvt.dqj -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_f57a1a1c60d64790a097b627b69a445ao5vgsn5n.tty -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe can_user.c -cpu=S3 -o DefaultBuild\can_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_bba7044b1dcc4269b45288ceacdf0852ao3wo30r.grp -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe realMain.c -cpu=S3 -o DefaultBuild\realMain.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_c4c95122c35b41f09cba826f40a184f2wlyoewby.zv3 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe standardports_p.c -cpu=S3 -o DefaultBuild\standardports_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_b14f01d698de482da3ffda94b8cf8a5bkgfnb2j2.l25 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_serial.c -cpu=S3 -o DefaultBuild\r_cg_serial.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_9a16b85f36234f26b7c49b6a57de41cebdoqrpgb.yyi -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_serial_user.c -cpu=S3 -o DefaultBuild\r_cg_serial_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_7523a476a05e4e2f9838c2bdfd9116aeo4x0x2ao.ttt -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_port_user.c -cpu=S3 -o DefaultBuild\r_cg_port_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_507352c711f342cc8b9c7f857834a8a3tylhbiu2.zbh -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe cstart.asm -cpu=S3 -o DefaultBuild\cstart.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -I "D:\Renesas C Code\IMU_CODE_V1.0" -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_21cea4f7f6c44c65b6c9a2e4bf14365fe0nmwo2f.gsv -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_cgc.c -cpu=S3 -o DefaultBuild\r_cg_cgc.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_0b9b2036db6e4956894466951448825baaa2wmqb.nub -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_systeminit.c -cpu=S3 -o DefaultBuild\r_systeminit.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_6abf5745de984b878bc549f9da9b909coeyrim0i.bnr -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe stkinit.asm -cpu=S3 -o DefaultBuild\stkinit.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -I "D:\Renesas C Code\IMU_CODE_V1.0" -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_558e5c5c1b984bfc947a2a527be48f08cvyd1bz0.kj0 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_port.c -cpu=S3 -o DefaultBuild\r_cg_port.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_e8db964bd89f4b6eb8b3ba50800a9abfti11ntc3.hok -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe franken_functions.c -cpu=S3 -o DefaultBuild\franken_functions.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_1578157dfc404fedac28d89c429e18bf5zn2xqvr.mfp -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_1fefd4047439449abc997c725bd64b76lwdwlzp3.gzx -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_cgc_user.c -cpu=S3 -o DefaultBuild\r_cg_cgc_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_5a267098f7664d09aa744816ef2f8f71inw4zd5k.nv3 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_adc.c -cpu=S3 -o DefaultBuild\r_cg_adc.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_b4e9ac932a3e46368a94478882c925acrmaqavjl.slr -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe r_cg_adc_user.c -cpu=S3 -o DefaultBuild\r_cg_adc_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_693777c8bdc94c19af819068736e3504s3qeyytm.vii -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_a.c -cpu=S3 -o DefaultBuild\rscan_a.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_b549869effef4620a6e99bc153f2e7b1qicufp1w.gsc -msg_lang=english
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+map_rscan.h(148):W0520171:Invalid type conversion
 map_rscan.h(148):W0520171:Invalid type conversion
 map_rscan.h(154):W0520171:Invalid type conversion
-map_rscan.h(148):W0520171:Invalid type conversion
+map_rscan.h(154):W0520171:Invalid type conversion
 map_rscan.h(160):W0520171:Invalid type conversion
-map_rscan.h(154):W0520171:Invalid type conversion
-map_rscan.h(148):W0520171:Invalid type conversion
+map_rscan.h(160):W0520171:Invalid type conversion
 map_rscan.h(167):W0520171:Invalid type conversion
-map_rscan.h(160):W0520171:Invalid type conversion
-map_rscan.h(154):W0520171:Invalid type conversion
+map_rscan.h(167):W0520171:Invalid type conversion
 map_rscan.h(174):W0520171:Invalid type conversion
-map_rscan.h(167):W0520171:Invalid type conversion
-map_rscan.h(160):W0520171:Invalid type conversion
+map_rscan.h(174):W0520171:Invalid type conversion
 map_rscan.h(181):W0520171:Invalid type conversion
-map_rscan.h(148):W0520171:Invalid type conversion
-map_rscan.h(174):W0520171:Invalid type conversion
-map_rscan.h(167):W0520171:Invalid type conversion
+map_rscan.h(181):W0520171:Invalid type conversion
 map_rscan.h(189):W0520171:Invalid type conversion
-map_rscan.h(154):W0520171:Invalid type conversion
-map_rscan.h(181):W0520171:Invalid type conversion
-map_rscan.h(174):W0520171:Invalid type conversion
+map_rscan.h(189):W0520171:Invalid type conversion
 map_rscan.h(196):W0520171:Invalid type conversion
-map_rscan.h(160):W0520171:Invalid type conversion
-map_rscan.h(189):W0520171:Invalid type conversion
-map_rscan.h(181):W0520171:Invalid type conversion
-map_rscan.h(167):W0520171:Invalid type conversion
 map_rscan.h(196):W0520171:Invalid type conversion
-map_rscan.h(189):W0520171:Invalid type conversion
-map_rscan.h(174):W0520171:Invalid type conversion
 realMain.c(295):W0520550:Variable "vbatt_val" was set but never used
-map_rscan.h(196):W0520171:Invalid type conversion
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+map_rscan.h(148):W0520171:Invalid type conversion
+map_rscan.h(154):W0520171:Invalid type conversion
+map_rscan.h(160):W0520171:Invalid type conversion
+map_rscan.h(167):W0520171:Invalid type conversion
+map_rscan.h(174):W0520171:Invalid type conversion
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
 map_rscan.h(181):W0520171:Invalid type conversion
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+map_rscan.h(148):W0520171:Invalid type conversion
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+map_rscan.h(189):W0520171:Invalid type conversion
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+W0511186:The evaluation period for the option "-Odefault" of CC-RL V1 is valid for the remaining 44 days. After that, it will be implicitly changed to "-Olite". Please consider purchasing the product to continue using "-Odefault". 
+map_rscan.h(154):W0520171:Invalid type conversion
+map_rscan.h(196):W0520171:Invalid type conversion
+map_rscan.h(160):W0520171:Invalid type conversion
 rscan_a.c(103):W0520550:Variable "PNWChannel_u08" was set but never used
+map_rscan.h(167):W0520171:Invalid type conversion
+map_rscan.h(174):W0520171:Invalid type conversion
+map_rscan.h(181):W0520171:Invalid type conversion
 map_rscan.h(189):W0520171:Invalid type conversion
 map_rscan.h(196):W0520171:Invalid type conversion
 rscan_p.c(78):W0523076:Function declarations should have prototype
@@ -66,11 +94,11 @@ rscan_p.c(569):W0523077:Called function should have prototype
 rscan_p.c(675):W0520223:Function "PORT_Disable" declared implicitly
 rscan_p.c(675):W0523077:Called function should have prototype
 rscan_p.c(676):W0523077:Called function should have prototype
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\rlink.exe -MAKEUD=DefaultBuild\IMU_CODE_V1.0.lk.ud -subcommand=DefaultBuild\IMU_CODE_V1.0.clnk
-W0561016:The evaluation version is valid for the remaining 45 days
-W0561016:The evaluation version is valid for the remaining 45 days
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\rlink.exe -MAKEUD=DefaultBuild\IMU_CODE_V1.0.lk.ud -subcommand=DefaultBuild\IMU_CODE_V1.0.clnk
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 45 days. After that, functional limit will be applied. Please consider purchasing the product.
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 45 days. After that, functional limit will be applied. Please consider purchasing the product.
 Renesas Optimizing Linker Completed
------- Build ended(Error:0, Warning:62)(IMU_CODE_V1.0, DefaultBuild) ------
+------ Build ended(Error:0, Warning:77)(IMU_CODE_V1.0, DefaultBuild) ------
 
 --- CommandFile 1 ---
 DefaultBuild\IMU_CODE_V1.0.clnk :
@@ -97,9 +125,9 @@ DefaultBuild\IMU_CODE_V1.0.clnk :
 -NOCOmpress
 -NOOPtimize
 -OUtput=DefaultBuild\IMU_CODE_V1.0.abs
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78em4s99.lib
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\malloc_n.lib
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78em4r.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\rl78em4s99.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\rl78em4r.lib
 -OCDBG=84
 -DEBUG_MONITOR=3FE00-3FFFF
 -USER_OPT_BYTE=E9FFF8
@@ -146,13 +174,13 @@ DefaultBuild\IMU_CODE_V1.0.clnk :
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *Memory Usage
  *Private Working Set
-  477 MB
+  356 MB
  *Number of GDI Objects
-  2549
+  2361
  *Number of USER Objects
-  2203
+  1483
  *Opened Files
-  16 editors, 16 files, 235 KB
+  17 editors, 17 files, 238 KB
 
 --- Build Tool Plug-in Information ---
 RH850 Build tool CC-RH Plug-in(-)
@@ -304,7 +332,7 @@ Build Tool Information
    * Version of plug-in(*.dll)
      V8.06.00.02 [21 May 2021]
    * The Version of the Compiler Package
-     V1.10.00
+     V1.15.01
   
  * The version of SMS Assembler
    V1.00.00.01 [29 May 2020]

@@ -293,28 +293,28 @@ void main(void)
 	uint16_t iso_pos_val;
 	uint16_t iso_neg_val;
 	uint16_t vbatt_val;  
+	// 1. initialise ADC ports
+	R_ADC_Create();
+
+	// 2. initialise GPIO ports 
+	R_PORT_Create();
+	
+	// 3. initialise CAN peripheral
+	//EE_RSCAN_PortEnable();            /// ADD PARAMETERS TO PASS!
+	//EE_RSCAN_Start();         
+	//EE_RSCAN_SetGlobalConfiguration();
+	//EE_RSCAN_SetBittiming();
+	//EE_RSCAN_SetChannelConfiguration();
+
+	// 4. initialise UART peripheral
+	R_UART0_Create();
+	R_UART0_Start();
+	
 	while(1)
 	
 	{
 		
 
-		// 1. initialise ADC ports
-		R_ADC_Create();
-
-		// 2. initialise GPIO ports 
-		R_PORT_Create();
-		TestMode_Update();
-
-		// 3. initialise CAN peripheral
-		//EE_RSCAN_PortEnable();            /// ADD PARAMETERS TO PASS!
-		//EE_RSCAN_Start();         
-		//EE_RSCAN_SetGlobalConfiguration();
-		//EE_RSCAN_SetBittiming();
-		//EE_RSCAN_SetChannelConfiguration();
-
-		// 4. initialise UART peripheral
-		R_UART0_Create();
-		R_UART0_Start();
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
