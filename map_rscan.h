@@ -117,7 +117,7 @@
 
 /* INTERRUPT REGISTER MAPPING */
 
-#define EE_RSCAN_INT_BUNDLINGHOOK ( RSCAN_IntBundlingDecode )  // external bundling decoder
+//#define EE_RSCAN_INT_BUNDLINGHOOK ( RSCAN_IntBundlingDecode )  // external bundling decoder
 
 #define EE_RSCAN_INT_M0GERR     ( CANGERRMK )
 #define EE_RSCAN_INT_M0RXF0     ( CANGRFRMK )

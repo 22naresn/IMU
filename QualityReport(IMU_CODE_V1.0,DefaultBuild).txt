@@ -1,30 +1,81 @@
 QualityReport
-Saturday, 13 December 2025 6:07:16 PM
+Friday, 19 December 2025 12:16:28 PM
 
 ------ Start build(IMU_CODE_V1.0, DefaultBuild) ------
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_port.c -cpu=S3 -o DefaultBuild\r_cg_port.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_dd5012968b9449fb8bd3dbbfdc608bf3dsb5eyay.q1b -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_adc_user.c -cpu=S3 -o DefaultBuild\r_cg_adc_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_bc514d8e09d14a8984e6a401292967b5klpqxoex.fm5 -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe cstart.asm -cpu=S3 -o DefaultBuild\cstart.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_37dde47579b54bd7a86ccc5f336ae796j0wj4t5l.tus -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_cgc.c -cpu=S3 -o DefaultBuild\r_cg_cgc.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_cd08a25336254ef3afc931b9de4fe0c9ckm4f0kk.fkm -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_port_user.c -cpu=S3 -o DefaultBuild\r_cg_port_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_1cdef0a78fa1461eb9d781edaa4899adyv3hevbw.ys3 -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_adc.c -cpu=S3 -o DefaultBuild\r_cg_adc.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_ee02ec137ff347269549f8ec36b7e5c0dru2m5vf.qys -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_serial.c -cpu=S3 -o DefaultBuild\r_cg_serial.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_41705cd4d2534f0a9878a209922f0f2beppkbjdg.ihh -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_systeminit.c -cpu=S3 -o DefaultBuild\r_systeminit.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_037fc16315424ca883659ca9e28466e05ptwvfbn.50k -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_main.c -cpu=S3 -o DefaultBuild\r_main.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_22ddd24e0d0a49e0b2a46d8a40a54c991m55lzk2.qvt -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_cgc_user.c -cpu=S3 -o DefaultBuild\r_cg_cgc_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_ceb0c9340fd24eeebdc6ab8a3dd7a885ctncufw3.uzb -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe stkinit.asm -cpu=S3 -o DefaultBuild\stkinit.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_81b0088921624c25ba65eddf90669f87okozdhae.fol -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe r_cg_serial_user.c -cpu=S3 -o DefaultBuild\r_cg_serial_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_81da5087ca9e4fa2b69566fb38f124f5xvc5pm3c.q21 -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe can_user.c -cpu=S3 -o DefaultBuild\can_user.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_413b3dc8a50c4734bf442f73b666ecbfmonawbfy.ypq -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe realMain.c -cpu=S3 -o DefaultBuild\realMain.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_233e3d1493a4491eaf9a87405c21c826ygqr0jg0.0fm -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe rscan_a.c -cpu=S3 -o DefaultBuild\rscan_a.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_25efdb1aba30425bb41efdfa8c511d2ahk2a4bvt.dqj -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -I . -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_f57a1a1c60d64790a097b627b69a445ao5vgsn5n.tty -msg_lang=english
+map_rscan.h(148):W0520171:Invalid type conversion
+map_rscan.h(154):W0520171:Invalid type conversion
+map_rscan.h(148):W0520171:Invalid type conversion
+map_rscan.h(160):W0520171:Invalid type conversion
+map_rscan.h(154):W0520171:Invalid type conversion
+map_rscan.h(148):W0520171:Invalid type conversion
+map_rscan.h(167):W0520171:Invalid type conversion
+map_rscan.h(160):W0520171:Invalid type conversion
+map_rscan.h(154):W0520171:Invalid type conversion
+map_rscan.h(174):W0520171:Invalid type conversion
+map_rscan.h(167):W0520171:Invalid type conversion
+map_rscan.h(160):W0520171:Invalid type conversion
+map_rscan.h(181):W0520171:Invalid type conversion
+map_rscan.h(148):W0520171:Invalid type conversion
+map_rscan.h(174):W0520171:Invalid type conversion
+map_rscan.h(167):W0520171:Invalid type conversion
+map_rscan.h(189):W0520171:Invalid type conversion
+map_rscan.h(154):W0520171:Invalid type conversion
+map_rscan.h(181):W0520171:Invalid type conversion
+map_rscan.h(174):W0520171:Invalid type conversion
+map_rscan.h(196):W0520171:Invalid type conversion
+map_rscan.h(160):W0520171:Invalid type conversion
+map_rscan.h(189):W0520171:Invalid type conversion
+map_rscan.h(181):W0520171:Invalid type conversion
+map_rscan.h(167):W0520171:Invalid type conversion
+map_rscan.h(196):W0520171:Invalid type conversion
+map_rscan.h(189):W0520171:Invalid type conversion
+map_rscan.h(174):W0520171:Invalid type conversion
+realMain.c(295):W0520550:Variable "vbatt_val" was set but never used
+map_rscan.h(196):W0520171:Invalid type conversion
+map_rscan.h(181):W0520171:Invalid type conversion
+rscan_a.c(103):W0520550:Variable "PNWChannel_u08" was set but never used
+map_rscan.h(189):W0520171:Invalid type conversion
+map_rscan.h(196):W0520171:Invalid type conversion
+rscan_p.c(78):W0523076:Function declarations should have prototype
+rscan_p.c(139):W0523076:Function declarations should have prototype
+rscan_p.c(164):W0520177:Variable "FlagFirst_u08" was declared but never referenced
+rscan_p.c(344):W0523076:Function declarations should have prototype
+rscan_p.c(387):W0523077:Called function should have prototype
+rscan_p.c(395):W0523077:Called function should have prototype
+rscan_p.c(417):W0523077:Called function should have prototype
+rscan_p.c(428):W0523077:Called function should have prototype
+rscan_p.c(435):W0523077:Called function should have prototype
+rscan_p.c(444):W0523077:Called function should have prototype
+rscan_p.c(447):W0523077:Called function should have prototype
+rscan_p.c(454):W0523077:Called function should have prototype
+rscan_p.c(461):W0523077:Called function should have prototype
+rscan_p.c(482):W0523077:Called function should have prototype
+rscan_p.c(494):W0523077:Called function should have prototype
+rscan_p.c(501):W0523077:Called function should have prototype
+rscan_p.c(510):W0523077:Called function should have prototype
+rscan_p.c(513):W0523077:Called function should have prototype
+rscan_p.c(520):W0523077:Called function should have prototype
+rscan_p.c(527):W0523077:Called function should have prototype
+rscan_p.c(564):W0520223:Function "PORT_Enable" declared implicitly
+rscan_p.c(566):W0523077:Called function should have prototype
+rscan_p.c(569):W0523077:Called function should have prototype
+rscan_p.c(675):W0520223:Function "PORT_Disable" declared implicitly
+rscan_p.c(675):W0523077:Called function should have prototype
+rscan_p.c(676):W0523077:Called function should have prototype
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\Bin\rlink.exe -MAKEUD=DefaultBuild\IMU_CODE_V1.0.lk.ud -subcommand=DefaultBuild\IMU_CODE_V1.0.clnk
-W0561016:The evaluation version is valid for the remaining 51 days
-W0561016:The evaluation version is valid for the remaining 51 days
+W0561016:The evaluation version is valid for the remaining 45 days
+W0561016:The evaluation version is valid for the remaining 45 days
 Renesas Optimizing Linker Completed
------- Build ended(Error:0, Warning:2)(IMU_CODE_V1.0, DefaultBuild) ------
+------ Build ended(Error:0, Warning:62)(IMU_CODE_V1.0, DefaultBuild) ------
 
 --- CommandFile 1 ---
 DefaultBuild\IMU_CODE_V1.0.clnk :
 -Input=DefaultBuild\cstart.obj
 -Input=DefaultBuild\stkinit.obj
--Input=DefaultBuild\r_main.obj
 -Input=DefaultBuild\r_systeminit.obj
 -Input=DefaultBuild\r_cg_cgc.obj
 -Input=DefaultBuild\r_cg_cgc_user.obj
@@ -34,13 +85,19 @@ DefaultBuild\IMU_CODE_V1.0.clnk :
 -Input=DefaultBuild\r_cg_serial_user.obj
 -Input=DefaultBuild\r_cg_adc.obj
 -Input=DefaultBuild\r_cg_adc_user.obj
+-Input=DefaultBuild\can_user.obj
+-Input=DefaultBuild\realMain.obj
+-Input=DefaultBuild\rscan_a.obj
+-Input=DefaultBuild\rscan_p.obj
+-Input=DefaultBuild\standardports_p.obj
+-Input=DefaultBuild\franken_functions.obj
 -SECURITY_ID=00000000000000000000
 -DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF
 -DEBug
 -NOCOmpress
 -NOOPtimize
 -OUtput=DefaultBuild\IMU_CODE_V1.0.abs
--LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78em4s.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78em4s99.lib
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\malloc_n.lib
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.10.00\lib\rl78em4r.lib
 -OCDBG=84
@@ -89,13 +146,13 @@ DefaultBuild\IMU_CODE_V1.0.clnk :
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *Memory Usage
  *Private Working Set
-  435 MB
+  477 MB
  *Number of GDI Objects
-  2652
+  2549
  *Number of USER Objects
-  2166
+  2203
  *Opened Files
-  6 editors, 6 files, 62 KB
+  16 editors, 16 files, 235 KB
 
 --- Build Tool Plug-in Information ---
 RH850 Build tool CC-RH Plug-in(-)

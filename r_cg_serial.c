@@ -61,10 +61,11 @@ volatile uint16_t  g_uart0_rx_length;          /* uart0 receive data length */
 void R_SAU0_Create(void)
 {
     SAU0EN = 1U;    /* supply SAU0 clock */
-    NOP();
-    NOP();
-    NOP();
-    NOP();
+    __nop();
+    __nop();
+    __nop();
+    __nop();
+    __nop();
     SPS0 = _0004_SAU_CK00_FCLK_4 | _0040_SAU_CK01_FCLK_4;
     R_UART0_Create();
 }

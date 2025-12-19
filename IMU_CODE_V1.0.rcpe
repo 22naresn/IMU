@@ -11,7 +11,6 @@
       <Path>stkinit.asm</Path>
       <Path>iodefine.h</Path>
       <Category Name="Code Generator">
-        <Path>r_main.c</Path>
         <Path>r_systeminit.c</Path>
         <Path>r_cg_cgc.c</Path>
         <Path>r_cg_cgc_user.c</Path>
@@ -42,6 +41,7 @@
       <Path>rscan_a.c</Path>
       <Path>rscan_p.c</Path>
       <Path>rscan_s.h</Path>
+      <Path>standardports_p.c</Path>
     </Files>
     <DebugOptions>
       <DebugTool>Simulator</DebugTool>
@@ -56,7 +56,6 @@
         <LinkOrder>
           <Path>DefaultBuild\cstart.obj</Path>
           <Path>DefaultBuild\stkinit.obj</Path>
-          <Path>DefaultBuild\r_main.obj</Path>
           <Path>DefaultBuild\r_systeminit.obj</Path>
           <Path>DefaultBuild\r_cg_cgc.obj</Path>
           <Path>DefaultBuild\r_cg_cgc_user.obj</Path>
@@ -70,6 +69,7 @@
           <Path>DefaultBuild\realMain.obj</Path>
           <Path>DefaultBuild\rscan_a.obj</Path>
           <Path>DefaultBuild\rscan_p.obj</Path>
+          <Path>DefaultBuild\standardports_p.obj</Path>
         </LinkOrder>
         <CommonOptions>
           <IncludePathForC>.</IncludePathForC>
@@ -205,7 +205,7 @@
         &lt;ADC /&gt;
       &lt;/Effect&gt;
     &lt;/VDDValue&gt;
-    &lt;COMP_ADPC_USEDPIN Name="COMP_ADPC_USEDPIN" Text="false" /&gt;
+    &lt;COMP_ADPC_USEDPIN Name="COMP_ADPC_USEDPIN" Text="" /&gt;
     &lt;DA_ADPC_USEDPIN Name="DA_ADPC_USEDPIN" Text="" /&gt;
     &lt;DA_INUSE Name="DA_INUSE" Text="false" /&gt;
     &lt;AD_ADPC_USEDPIN Name="AD_ADPC_USEDPIN" Text="ANI0,ANI1,ANI2,ANI3,ANI4," /&gt;
@@ -1880,22 +1880,22 @@
         &lt;r_cg_pclbuz.h UserName="r_cg_pclbuz.h" LibName=".h" InUse="" /&gt;
       &lt;/PCLBUZ&gt;
       &lt;COMP&gt;
-        &lt;r_cg_comp.c UserName="r_cg_comp.c" LibName=".c" InUse=""&gt;
+        &lt;r_cg_comp.c UserName="r_cg_comp.c" LibName=".c" InUse="0"&gt;
           &lt;Type R_COMP_Create="void R_COMP_Create(void)" R_COMP0_Start="void R_COMP0_Start(void)" R_COMP0_Stop="void R_COMP0_Stop(void)" /&gt;
-          &lt;R_COMP_Create UserName="R_COMP_Create" LibName="R_COMP_Create" InUse="" Init="1" InitMode="" /&gt;
+          &lt;R_COMP_Create UserName="R_COMP_Create" LibName="R_COMP_Create" InUse="0" Init="1" InitMode="" /&gt;
           &lt;COMP0 InUse=""&gt;
-            &lt;R_COMP0_Start UserName="R_COMP0_Start" NotSubMacro="" LibName="R_COMP0_Start" InUse="" /&gt;
-            &lt;R_COMP0_Stop UserName="R_COMP0_Stop" NotSubMacro="" LibName="R_COMP0_Stop" InUse="" /&gt;
+            &lt;R_COMP0_Start UserName="R_COMP0_Start" NotSubMacro="" LibName="R_COMP0_Start" InUse="0" /&gt;
+            &lt;R_COMP0_Stop UserName="R_COMP0_Stop" NotSubMacro="" LibName="R_COMP0_Stop" InUse="0" /&gt;
           &lt;/COMP0&gt;
         &lt;/r_cg_comp.c&gt;
-        &lt;r_cg_comp_user.c UserName="r_cg_comp_user.c" LibName="_user.c" InUse=""&gt;
+        &lt;r_cg_comp_user.c UserName="r_cg_comp_user.c" LibName="_user.c" InUse="0"&gt;
           &lt;Type R_COMP_Create_UserInit="void R_COMP_Create_UserInit(void)" r_comp0_interrupt="__interrupt static void r_comp0_interrupt(void)" /&gt;
-          &lt;R_COMP_Create_UserInit UserName="R_COMP_Create_UserInit" LibName="R_COMP_Create_UserInit" InUse="" /&gt;
+          &lt;R_COMP_Create_UserInit UserName="R_COMP_Create_UserInit" LibName="R_COMP_Create_UserInit" InUse="0" /&gt;
           &lt;COMP0 InUse=""&gt;
-            &lt;r_comp0_interrupt UserName="r_comp0_interrupt" NotSubMacro="" LibName="r_comp0_interrupt" INTHandle="" InUse="" /&gt;
+            &lt;r_comp0_interrupt UserName="r_comp0_interrupt" NotSubMacro="" LibName="r_comp0_interrupt" INTHandle="" InUse="0" /&gt;
           &lt;/COMP0&gt;
         &lt;/r_cg_comp_user.c&gt;
-        &lt;r_cg_comp.h UserName="r_cg_comp.h" LibName=".h" InUse="" /&gt;
+        &lt;r_cg_comp.h UserName="r_cg_comp.h" LibName=".h" InUse="0" /&gt;
       &lt;/COMP&gt;
       &lt;ELC&gt;
         &lt;r_cg_elc.c UserName="r_cg_elc.c" LibName=".c" InUse=""&gt;
@@ -2006,8 +2006,8 @@
     &lt;PCLBUZ Chip="RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin" SetFlag="" HelpID="PCLBUZ" NeedRefresh="False"&gt;
       &lt;PCLBUZ0 MacroName="PCLBUZ" Channel="0" /&gt;
     &lt;/PCLBUZ&gt;
-    &lt;COMP SetFlag="" HelpID="comparator" NeedRefresh="False"&gt;
-      &lt;COMP SetFlag="" MacroName="COMP" /&gt;
+    &lt;COMP SetFlag="False" HelpID="comparator" NeedRefresh="False"&gt;
+      &lt;COMP SetFlag="False" MacroName="COMP" /&gt;
     &lt;/COMP&gt;
     &lt;ELC SetFlag="" HelpID="elc" NeedRefresh="False"&gt;
       &lt;ELC Accelerate="No" MacroName="ELC" /&gt;
@@ -3580,7 +3580,7 @@
       &lt;setting name="COMPARATOR_STOPMODE_DISABLE" value="true" /&gt;
       &lt;setting name="COMPARATOR_STOPMODE_ENABLE" value="false" /&gt;
       &lt;setting name="COMPARATOR_NEGATIVE_INPUT" value="0" /&gt;
-      &lt;setting name="COMPARATOR_POSITIVE_INPUT" value="0" /&gt;
+      &lt;setting name="COMPARATOR_POSITIVE_INPUT" value="1" /&gt;
     &lt;/COMP&gt;
     &lt;ELC&gt;
       &lt;ELSELR0&gt;

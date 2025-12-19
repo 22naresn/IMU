@@ -134,12 +134,12 @@
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
       <ParentItem>e02620cb-c7ea-4d98-a6fd-6c4867f0f0e3</ParentItem>
     </Instance>
-    <Instance Guid="99e62af9-8841-4569-9bdd-53950a803b7e">
-      <Name>r_main.c</Name>
+    <Instance Guid="96209cab-cb10-4563-87b2-6d0db8445f0d">
+      <Name>standardports_p.c</Name>
       <Type>File</Type>
-      <RelativePath>r_main.c</RelativePath>
+      <RelativePath>standardports_p.c</RelativePath>
       <TreeImageGuid>941832c1-fc3b-4e1b-94e8-01ea17128b42</TreeImageGuid>
-      <ParentItem>40b0e0c8-7f4f-4795-bc34-d8ff5f042ef9</ParentItem>
+      <ParentItem>e02620cb-c7ea-4d98-a6fd-6c4867f0f0e3</ParentItem>
     </Instance>
     <Instance Guid="5f1ffe68-644c-4309-bfad-48d5f2246278">
       <Name>r_systeminit.c</Name>
@@ -303,7 +303,7 @@
       <SourceItemType4>CSource</SourceItemType4>
       <SourceItemGuid5>c790d3c3-0ac5-4678-8461-98104fa05ff3</SourceItemGuid5>
       <SourceItemType5>CSource</SourceItemType5>
-      <SourceItemGuid6>99e62af9-8841-4569-9bdd-53950a803b7e</SourceItemGuid6>
+      <SourceItemGuid6>96209cab-cb10-4563-87b2-6d0db8445f0d</SourceItemGuid6>
       <SourceItemType6>CSource</SourceItemType6>
       <SourceItemGuid7>5f1ffe68-644c-4309-bfad-48d5f2246278</SourceItemGuid7>
       <SourceItemType7>CSource</SourceItemType7>
@@ -709,7 +709,7 @@
       <LinkOptionShowCFI-DefaultValue>False</LinkOptionShowCFI-DefaultValue>
       <LinkOptionRrmValue-DefaultValue />
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8584357183795978802</TimeTagModified--0>
+      <TimeTagModified--0>-8584355625477354116</TimeTagModified--0>
       <LinkOptionAutoSectionLayout-0>True</LinkOptionAutoSectionLayout-0>
       <LinkOptionCpu-0>False</LinkOptionCpu-0>
       <LinkOptionDebug-0>Debug</LinkOptionDebug-0>
@@ -903,7 +903,7 @@
       <LibOptionChangeMessageError-DefaultValue>None</LibOptionChangeMessageError-DefaultValue>
       <LibOptionChangeMessageErrorNumber-DefaultValue />
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8584357183795978802</TimeTagModified--0>
+      <TimeTagModified--0>-8584355625477354116</TimeTagModified--0>
       <LibOptionDebug-0>Debug</LibOptionDebug-0>
       <LibOptionForm-0>LibraryU</LibOptionForm-0>
       <LibOptionInput-0 />
@@ -979,8 +979,8 @@
       <ItemAddTime>639012367951642170</ItemAddTime>
       <ItemAddTimeCount>1</ItemAddTimeCount>
     </Instance>
-    <Instance Guid="99e62af9-8841-4569-9bdd-53950a803b7e">
-      <ItemAddTime>639012367951642170</ItemAddTime>
+    <Instance Guid="96209cab-cb10-4563-87b2-6d0db8445f0d">
+      <ItemAddTime>639016750397762326</ItemAddTime>
       <ItemAddTimeCount>0</ItemAddTimeCount>
     </Instance>
     <Instance Guid="a9375530-7a82-4367-b8ac-4107155dad6a">
@@ -1126,7 +1126,7 @@
       <SourceItem5-IsLockedByUser>False</SourceItem5-IsLockedByUser>
       <SourceItem5-BuildingTarget-0>True</SourceItem5-BuildingTarget-0>
       <SourceItem5-IndividualCompileOption-0>False</SourceItem5-IndividualCompileOption-0>
-      <TimeTagModified-SourceItem6--0>-8584359866903133638</TimeTagModified-SourceItem6--0>
+      <TimeTagModified-SourceItem6--0>-8584355484457013482</TimeTagModified-SourceItem6--0>
       <SourceItem6-IsLockedByUser>False</SourceItem6-IsLockedByUser>
       <SourceItem6-BuildingTarget-0>True</SourceItem6-BuildingTarget-0>
       <SourceItem6-IndividualCompileOption-0>False</SourceItem6-IndividualCompileOption-0>
@@ -3403,7 +3403,7 @@
         &lt;ADC /&gt;
       &lt;/Effect&gt;
     &lt;/VDDValue&gt;
-    &lt;COMP_ADPC_USEDPIN Name="COMP_ADPC_USEDPIN" Text="false" /&gt;
+    &lt;COMP_ADPC_USEDPIN Name="COMP_ADPC_USEDPIN" Text="" /&gt;
     &lt;DA_ADPC_USEDPIN Name="DA_ADPC_USEDPIN" Text="" /&gt;
     &lt;DA_INUSE Name="DA_INUSE" Text="false" /&gt;
     &lt;AD_ADPC_USEDPIN Name="AD_ADPC_USEDPIN" Text="ANI0,ANI1,ANI2,ANI3,ANI4," /&gt;
@@ -5078,22 +5078,22 @@
         &lt;r_cg_pclbuz.h UserName="r_cg_pclbuz.h" LibName=".h" InUse="" /&gt;
       &lt;/PCLBUZ&gt;
       &lt;COMP&gt;
-        &lt;r_cg_comp.c UserName="r_cg_comp.c" LibName=".c" InUse=""&gt;
+        &lt;r_cg_comp.c UserName="r_cg_comp.c" LibName=".c" InUse="0"&gt;
           &lt;Type R_COMP_Create="void R_COMP_Create(void)" R_COMP0_Start="void R_COMP0_Start(void)" R_COMP0_Stop="void R_COMP0_Stop(void)" /&gt;
-          &lt;R_COMP_Create UserName="R_COMP_Create" LibName="R_COMP_Create" InUse="" Init="1" InitMode="" /&gt;
+          &lt;R_COMP_Create UserName="R_COMP_Create" LibName="R_COMP_Create" InUse="0" Init="1" InitMode="" /&gt;
           &lt;COMP0 InUse=""&gt;
-            &lt;R_COMP0_Start UserName="R_COMP0_Start" NotSubMacro="" LibName="R_COMP0_Start" InUse="" /&gt;
-            &lt;R_COMP0_Stop UserName="R_COMP0_Stop" NotSubMacro="" LibName="R_COMP0_Stop" InUse="" /&gt;
+            &lt;R_COMP0_Start UserName="R_COMP0_Start" NotSubMacro="" LibName="R_COMP0_Start" InUse="0" /&gt;
+            &lt;R_COMP0_Stop UserName="R_COMP0_Stop" NotSubMacro="" LibName="R_COMP0_Stop" InUse="0" /&gt;
           &lt;/COMP0&gt;
         &lt;/r_cg_comp.c&gt;
-        &lt;r_cg_comp_user.c UserName="r_cg_comp_user.c" LibName="_user.c" InUse=""&gt;
+        &lt;r_cg_comp_user.c UserName="r_cg_comp_user.c" LibName="_user.c" InUse="0"&gt;
           &lt;Type R_COMP_Create_UserInit="void R_COMP_Create_UserInit(void)" r_comp0_interrupt="__interrupt static void r_comp0_interrupt(void)" /&gt;
-          &lt;R_COMP_Create_UserInit UserName="R_COMP_Create_UserInit" LibName="R_COMP_Create_UserInit" InUse="" /&gt;
+          &lt;R_COMP_Create_UserInit UserName="R_COMP_Create_UserInit" LibName="R_COMP_Create_UserInit" InUse="0" /&gt;
           &lt;COMP0 InUse=""&gt;
-            &lt;r_comp0_interrupt UserName="r_comp0_interrupt" NotSubMacro="" LibName="r_comp0_interrupt" INTHandle="" InUse="" /&gt;
+            &lt;r_comp0_interrupt UserName="r_comp0_interrupt" NotSubMacro="" LibName="r_comp0_interrupt" INTHandle="" InUse="0" /&gt;
           &lt;/COMP0&gt;
         &lt;/r_cg_comp_user.c&gt;
-        &lt;r_cg_comp.h UserName="r_cg_comp.h" LibName=".h" InUse="" /&gt;
+        &lt;r_cg_comp.h UserName="r_cg_comp.h" LibName=".h" InUse="0" /&gt;
       &lt;/COMP&gt;
       &lt;ELC&gt;
         &lt;r_cg_elc.c UserName="r_cg_elc.c" LibName=".c" InUse=""&gt;
@@ -5204,8 +5204,8 @@
     &lt;PCLBUZ Chip="RL78F14_48pin,RL78F14_64pin,RL78F14_80pin,RL78F14_100pin" SetFlag="" HelpID="PCLBUZ" NeedRefresh="False"&gt;
       &lt;PCLBUZ0 MacroName="PCLBUZ" Channel="0" /&gt;
     &lt;/PCLBUZ&gt;
-    &lt;COMP SetFlag="" HelpID="comparator" NeedRefresh="False"&gt;
-      &lt;COMP SetFlag="" MacroName="COMP" /&gt;
+    &lt;COMP SetFlag="False" HelpID="comparator" NeedRefresh="False"&gt;
+      &lt;COMP SetFlag="False" MacroName="COMP" /&gt;
     &lt;/COMP&gt;
     &lt;ELC SetFlag="" HelpID="elc" NeedRefresh="False"&gt;
       &lt;ELC Accelerate="No" MacroName="ELC" /&gt;
@@ -6778,7 +6778,7 @@
       &lt;setting name="COMPARATOR_STOPMODE_DISABLE" value="true" /&gt;
       &lt;setting name="COMPARATOR_STOPMODE_ENABLE" value="false" /&gt;
       &lt;setting name="COMPARATOR_NEGATIVE_INPUT" value="0" /&gt;
-      &lt;setting name="COMPARATOR_POSITIVE_INPUT" value="0" /&gt;
+      &lt;setting name="COMPARATOR_POSITIVE_INPUT" value="1" /&gt;
     &lt;/COMP&gt;
     &lt;ELC&gt;
       &lt;ELSELR0&gt;
@@ -6832,6 +6832,7 @@
 &lt;/RL78F14&gt;</CodeGenerator>
       <FormatVersion>1.0</FormatVersion>
       <ToolGUID>f9ccde76-bc96-44ff-8da5-476333716648</ToolGUID>
+      <CodeGeneratorItem>40b0e0c8-7f4f-4795-bc34-d8ff5f042ef9</CodeGeneratorItem>
     </Instance>
   </Class>
   <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">

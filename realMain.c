@@ -13,9 +13,11 @@
 #include "rscan_a.h"
 #include "rscan_p.h"
 #include "rscan.h"
-#include "standard_ports.h"
 #include "realMain.h"
-//#include "rscan_s.h"
+//#include "rscan_s.h";
+
+uint8_t test_mode_button69420 = 0U;
+
 
 // FUNCTION TO READ POSITIVE ISOLATION VALUE
 uint16_t ADC_Read_ISO_POS(void)
@@ -96,7 +98,8 @@ uint16_t ADC_Read_V_BATT(void)
     R_ADC_Get_Result(&adc_result);
     
     /* Multiply with coefficient */
-    adc_result *= 19.243;
+    adc_result = (uint16_t)((float)adc_result * 19.243f);
+
     
     /* Return the value */
     
@@ -143,11 +146,11 @@ void TestMode_Update(void)
 {
     if (TEST_MODE_PIN_READ())
     {
-        test_mode_button = 1U;
+        test_mode_button69420 = 1U;
     }
     else
     {
-        test_mode_button = 0U;
+        test_mode_button69420 = 0U;
     }
 }
 
@@ -263,7 +266,7 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
         LED_IndicateIsolationStatus(ISO_STATUS_FAULT);
 
         UART_SendStatus("ISOLATION FAULT DETECTED\r\n");
-        EE_RSCAN_SendMessage(); // YOO ADD PARAMETERS
+        //EE_RSCAN_SendMessage(); // YOO ADD PARAMETERS
     }
     else
     {
@@ -276,115 +279,120 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
 
 
 
-==============================MAIN STARTS HERE===============================
+==============================MAIN STARTS HERE==============================
 
 
 
 *************************************************************************** */
 
 
-void realMain(void)
+void main(void)
 {
-    uint16_t iso_pos_val;
-    uint16_t iso_neg_val;
-    uint16_t vbatt_val;  
-    
-
-    // 1. initialise ADC ports
-    R_ADC_Create();
-
-    // 2. initialise GPIO ports 
-    R_PORT_Create();
-    TestMode_Update();
-
-    // 3. initialise CAN peripheral
-    EE_RSCAN_PortEnable();            /// ADD PARAMETERS TO PASS!
-    EE_RSCAN_Start();         
-    EE_RSCAN_SetGlobalConfiguration();
-    EE_RSCAN_SetBittiming();
-    EE_RSCAN_SetChannelConfiguration();
-    
-    // 4. initialise UART peripheral
-    R_UART0_Create();
-    R_UART0_Start();
-    TestMode_Update();
-    Contactor_Read_Feedback();
-
-    UART_SendStatus("System init complete\r\n");
-
-    while (1)
-    {
-        // 5. measure ISO_POS 
-        iso_pos_val = ADC_Read_ISO_POS();
-        UART_SendStatus("ISO_POS read\r\n");
-	TestMode_Update();
-	Contactor_Read_Feedback();
+	EI();
 	
-
-        // 6. measure ISO_NEG
-        iso_neg_val = ADC_Read_ISO_NEG();
-        UART_SendStatus("ISO_NEG read\r\n");
-	TestMode_Update();
-	Contactor_Read_Feedback();
-
-        // 7. measure V_BATT
-	if (test_mode_button != 1)
+	uint16_t iso_pos_val;
+	uint16_t iso_neg_val;
+	uint16_t vbatt_val;  
+	while(1)
+	
 	{
-	        vbatt_val = ADC_Read_V_BATT();
-	        UART_SendStatus("VBATT read, reading = vbatt_val\r\n");
-	}
-	else
-	{
-		UART_SendStatus("Testing Mode ON, VBATT reading paused");
-	}
-	
-        // 8. send GPIO out to RELAY_POS enable pin 
-        Relay_On(RELAY_ISO_POS);
-        UART_SendStatus("Relay POS ON\r\n");
-	TestMode_Update();
-	Contactor_Read_Feedback();
-	
-        // 9. run the values through comparator 
-        Comparator_Check(iso_pos_val, iso_neg_val);
-	TestMode_Update();
-	Contactor_Read_Feedback();
-	
-        // 10. send GPIO out to RELAY_NEG enable pin 
-        Relay_On(RELAY_ISO_NEG);
-        UART_SendStatus("Relay NEG ON\r\n");
-	TestMode_Update();
-	Contactor_Read_Feedback();
-	
-        // 11. run the values through comparator function 
-        Comparator_Check(iso_pos_val, iso_neg_val);
-	TestMode_Update();
-	Contactor_Read_Feedback();
+		
 
-        // 12. send GPIO out to RELAY_POS (relay pos off) 
-        Relay_Off(RELAY_ISO_POS);
-        UART_SendStatus("Relay POS OFF\r\n");
-	TestMode_Update();
-	Contactor_Read_Feedback();
+		// 1. initialise ADC ports
+		R_ADC_Create();
 
-        // 13. run the values through the comparator function 
-        Comparator_Check(iso_pos_val, iso_neg_val);
-	TestMode_Update();
-	Contactor_Read_Feedback();
+		// 2. initialise GPIO ports 
+		R_PORT_Create();
+		TestMode_Update();
 
-        /* 14. called by the main program to loop all over again forever*/
-    }
+		// 3. initialise CAN peripheral
+		//EE_RSCAN_PortEnable();            /// ADD PARAMETERS TO PASS!
+		//EE_RSCAN_Start();         
+		//EE_RSCAN_SetGlobalConfiguration();
+		//EE_RSCAN_SetBittiming();
+		//EE_RSCAN_SetChannelConfiguration();
+
+		// 4. initialise UART peripheral
+		R_UART0_Create();
+		R_UART0_Start();
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		UART_SendStatus("System init complete\r\n");
+
+
+
+		// 5. measure ISO_POS 
+		iso_pos_val = ADC_Read_ISO_POS();
+		UART_SendStatus("ISO_POS read\r\n");
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+
+		// 6. measure ISO_NEG
+		iso_neg_val = ADC_Read_ISO_NEG();
+		UART_SendStatus("ISO_NEG read\r\n");
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		// 7. measure V_BATT
+		if (test_mode_button69420 != 1)
+		{
+		        vbatt_val = ADC_Read_V_BATT();
+		        UART_SendStatus("VBATT read, reading = vbatt_val\n");
+		}
+		else
+		{
+			UART_SendStatus("Testing Mode ON, VBATT reading paused\n");
+		}
+
+		// 8. send GPIO out to RELAY_POS enable pin 
+		Relay_On(RELAY_ISO_POS);
+		UART_SendStatus("Relay POS ON\r\n");
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		// 9. run the values through comparator 
+		Comparator_Check(iso_pos_val, iso_neg_val);
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		// 10. send GPIO out to RELAY_NEG enable pin 
+		Relay_On(RELAY_ISO_NEG);
+		UART_SendStatus("Relay NEG ON\r\n");
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		// 11. run the values through comparator function 
+		Comparator_Check(iso_pos_val, iso_neg_val);
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		// 12. send GPIO out to RELAY_POS (relay pos off) 
+		Relay_Off(RELAY_ISO_POS);
+		UART_SendStatus("Relay POS OFF\r\n");
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		// 13. run the values through the comparator function 
+		Comparator_Check(iso_pos_val, iso_neg_val);
+		TestMode_Update();
+		Contactor_Read_Feedback();
+
+		/* 14. called by the main program to loop all over again forever*/
+	    }
 }
 
 
-void main(void)
+/*void main(void)
 {
-    EI();   /* enables interrupts */
+    EI();   // enables interrupts 
 
     while (1)
     {
         realMain();
     }
 }
-
+*/
 	
 	
