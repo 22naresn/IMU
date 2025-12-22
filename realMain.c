@@ -308,14 +308,15 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
 	{
 		/* Isolation fault */
 		LED_IndicateIsolationStatus(ISO_STATUS_FAULT);
-
 		UART_SendStatus("ISOLATION FAULT DETECTED\r\n");
-		//EE_RSCAN_SendMessage(); // YOO ADD PARAMETERS
+		CAN_SendIsolationGood()
 	}
 	else
 	{
 		/* Isolation OK */
 		LED_IndicateIsolationStatus(ISO_STATUS_GOOD);
+		UART_SendStatus("ISOLATION GOOD\r\n");
+		CAN_SendIsolationBad()
 	}
 }
 
@@ -339,12 +340,6 @@ void main(void)
 	uint16_t iso_neg_val;
 	uint16_t vbatt_val;
 	
-	// CAN Config variables:
-	uint16_t can0_brp;
-	uint8_t  can0_tseg1;
-	uint8_t  can0_tseg2;
-	uint8_t  can0_sjw;
-	
 	// 1. initialise ADC ports
 	R_ADC_Create();
 	
@@ -354,13 +349,13 @@ void main(void)
 	// 3. initialise CAN 
 	EE_RSCAN_PortEnable( EE_RSCAN_0, EE_RSCAN_CHANNEL0 );
 	
-	EE_RSCAN_Start( EE_RSCAN_0, EE_RSCAN_CHANNEL0, EE_RSCAN_OPMODE_RESET, 1, 0 );  // Clears errors if any and starts the timestamps from 0.
+	EE_RSCAN_Start( EE_RSCAN_0, EE_RSCAN_CHANNEL0, EE_RSCAN_OPMODE_RESET, 1, 0 );  // Boots the CAN peripheral in RESET mode for the config.
 	
 	EE_RSCAN_SetGlobalConfiguration(EE_RSCAN_0, &EE_RSCAN_A_GCFG_BASIC);
 	
 	EE_RSCAN_SetChannelConfiguration( EE_RSCAN_0, EE_RSCAN_CHANNEL0, &EE_RSCAN_A_CHCFG_BASIC);
 	
-	EE_RSCAN_Start( EE_RSCAN_0, EE_RSCAN_CHANNEL0, EE_RSCAN_OPMODE_OPER, 1, 0 );
+	EE_RSCAN_Start( EE_RSCAN_0, EE_RSCAN_CHANNEL0, EE_RSCAN_OPMODE_OPER, 1, 0 );  // 1, 0 lears errors if any and starts the timestamps from 0.
 	
 	// 4. initialise UART 
 	R_UART0_Create();
