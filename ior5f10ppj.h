@@ -1,16 +1,3 @@
-/*-------------------------------------------------------------------------
- *      Declarations of SFR registers, interrupt and callt vector addresses
- *      for RL78 microcontroller R5F10PPJ.
- *
- *      This file can be used by both the RL78,
- *      Assembler, ARL78, and the C/C++ compiler, ICCRL78.
- *
- *      This header file is generated from the device file:
- *          DR5F10PPJ.DVF
- *          Copyright(C) 2015 Renesas
- *          Format version V3.00, File version V1.11
- *-------------------------------------------------------------------------*/
-
 #ifndef __IOR5F10PPJ_H__
 #define __IOR5F10PPJ_H__
 
