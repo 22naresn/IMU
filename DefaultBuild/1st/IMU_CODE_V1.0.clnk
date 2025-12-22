@@ -1,0 +1,44 @@
+-Input=DefaultBuild\cstart.obj
+-Input=DefaultBuild\stkinit.obj
+-Input=DefaultBuild\1st\r_systeminit.obj
+-Input=DefaultBuild\1st\r_cg_cgc.obj
+-Input=DefaultBuild\1st\r_cg_cgc_user.obj
+-Input=DefaultBuild\1st\r_cg_port.obj
+-Input=DefaultBuild\1st\r_cg_port_user.obj
+-Input=DefaultBuild\1st\r_cg_serial.obj
+-Input=DefaultBuild\1st\r_cg_serial_user.obj
+-Input=DefaultBuild\1st\r_cg_adc.obj
+-Input=DefaultBuild\1st\r_cg_adc_user.obj
+-Input=DefaultBuild\1st\can_user.obj
+-Input=DefaultBuild\1st\realMain.obj
+-Input=DefaultBuild\1st\rscan_a.obj
+-Input=DefaultBuild\1st\rscan_p.obj
+-Input=DefaultBuild\1st\standardports_p.obj
+-Input=DefaultBuild\1st\franken_functions.obj
+-SECURITY_ID=00000000000000000000
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF
+-NODEBug
+-NOOPtimize
+-OUtput=DefaultBuild\1st\IMU_CODE_V1.0.abs
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\rl78em4s99.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\malloc_n.lib
+-LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\rl78em4r.lib
+-OCDBG=84
+-USER_OPT_BYTE=E9FFF8
+-OCDTR
+-LISt=DefaultBuild\1st\IMU_CODE_V1.0.map
+-VFINFO=DefaultBuild\IMU_CODE_V1.0_vfi.h(callt,near,rom_forbid,far_forbid)
+-AUTO_SECTION_LAYOUT
+-ROm=.data=.dataR
+-ROm=.sdata=.sdataR
+-NOMessage
+-MEMory=High
+-NOLOgo
+-end
+-Input=DefaultBuild\1st\IMU_CODE_V1.0.abs
+-DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF
+-OUtput=DefaultBuild\1st\IMU_CODE_V1.0.mot
+-FOrm=Stype
+-NOMessage
+-exit
+

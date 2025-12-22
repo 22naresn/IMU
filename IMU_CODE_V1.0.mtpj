@@ -725,7 +725,7 @@
       <LinkOptionRrm-DefaultValue>False</LinkOptionRrm-DefaultValue>
       <LinkOptionShowCFI-DefaultValue>False</LinkOptionShowCFI-DefaultValue>
       <LinkOptionRrmValue-DefaultValue />
-      <IsLockedByUser>False</IsLockedByUser>
+      <IsLockedByUser>True</IsLockedByUser>
       <TimeTagModified--0>-8584354784067078071</TimeTagModified--0>
       <LinkOptionAutoSectionLayout-0>True</LinkOptionAutoSectionLayout-0>
       <LinkOptionCpu-0>False</LinkOptionCpu-0>

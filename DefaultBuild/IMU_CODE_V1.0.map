@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.07.00 )             19-Dec-2025 14:12:43
+Renesas Optimizing Linker (W3.07.00 )             22-Dec-2025 11:02:22
 
 *** Options ***
 
@@ -31,7 +31,6 @@ Renesas Optimizing Linker (W3.07.00 )             19-Dec-2025 14:12:43
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\malloc_n.lib
 -LIBrary=C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\lib\rl78em4r.lib
 -OCDBG=84
--DEBUG_MONITOR=3FE00-3FFFF
 -USER_OPT_BYTE=E9FFF8
 -OCDTR
 -LISt=DefaultBuild\IMU_CODE_V1.0.map
@@ -50,9 +49,9 @@ Renesas Optimizing Linker (W3.07.00 )             19-Dec-2025 14:12:43
 SECTION                            START      END         SIZE   ALIGN
 .vect
                                   00000000  0000007f        80   0
+.callt0
+                                  00000080  000000bd        3e   2
 .constf
-                                  00000080  00000080         0   2
-.sdata
                                   00000080  00000080         0   2
 .option_byte
                                   000000c0  000000c3         4   1
@@ -60,25 +59,23 @@ SECTION                            START      END         SIZE   ALIGN
                                   000000c4  000000cd         a   1
 .SLIB
                                   000000c4  000000c4         0   1
-.monitor1
-                                  000000ce  000000d7         a   1
 .data
-                                  000000d8  0000016f        98   2
-.text
-                                  00000170  00000259        ea   1
-.RLIB
-                                  0000025a  0000048d       234   1
-.const
-                                  00003000  00003126       127   2
+                                  000000ce  0000012d        60   2
+.sdata
+                                  0000012e  00000167        3a   2
 .textf
-                                  00003127  00006771      364b   1
-.monitor2
-                                  0003fe00  0003ffff       200   1
+                                  00000168  0000217a      2013   1
+.RLIB
+                                  0000217b  000023bf       245   1
+.const
+                                  00003000  0000317b       17c   2
+.text
+                                  0000317c  000062d3      3158   1
 .bss
-                                  000fb500  000fb509         a   2
+                                  000fb500  000fb500         1   2
 .dataR
-                                  000fb50a  000fb5a1        98   2
+                                  000fb502  000fb561        60   2
 .sbss
-                                  000ffe20  000ffe20         0   2
+                                  000ffe20  000ffe29         a   2
 .sdataR
-                                  000ffe20  000ffe20         0   2
+                                  000ffe2a  000ffe63        3a   2
