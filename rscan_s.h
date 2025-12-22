@@ -78,7 +78,7 @@
 
 /* Default configurations */
 
-const struct ee_rscan_cfg_channel EE_RSCAN_A_CHCFG_BASIC = 
+static const struct ee_rscan_cfg_channel EE_RSCAN_A_CHCFG_BASIC = 
 {
   100000, 0, 0, 0.0,                /* bitrate 100 kbit/s, default bit-timing */
   
@@ -101,7 +101,7 @@ const struct ee_rscan_cfg_channel EE_RSCAN_A_CHCFG_BASIC =
   }
 };
 
-const struct ee_rscan_cfg_global EE_RSCAN_A_GCFG_BASIC = 
+static const struct ee_rscan_cfg_global EE_RSCAN_A_GCFG_BASIC = 
 {
   {
     EE_RSCAN_TXPRIO_ID,                      /* TX priority by ID (standard) */
@@ -135,7 +135,7 @@ const struct ee_rscan_cfg_global EE_RSCAN_A_GCFG_BASIC =
   }
 };
 
-struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXBOX_ANY = 
+static struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXBOX_ANY = 
 {
   {
     0x00000000,              /* Default ID, not relevant because mask is open */
@@ -168,7 +168,7 @@ struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXBOX_ANY =
                                    0, EE_RSCAN_FIFO_INT_ONEVERY, \
                                    0 } /* RX FIFO enabled */
 
-const struct ee_rscan_cfg_channel EE_RSCAN_A_CHCFG_FDPNW = 
+static const struct ee_rscan_cfg_channel EE_RSCAN_A_CHCFG_FDPNW = 
 {
   500000, 0, 0, 0.0,                /* bitrate 500 kbit/s, default bit-timing */
   
@@ -194,41 +194,8 @@ const struct ee_rscan_cfg_channel EE_RSCAN_A_CHCFG_FDPNW =
   }
 };
 
-extern const struct ee_rscan_cfg_global EE_RSCAN_A_GCFG_FDPNW = 
-{
-  {
-    EE_RSCAN_TXPRIO_ID,                      /* TX priority by ID (standard) */
-    EE_RSCAN_DLCCHECK_DISABLE, 
-    EE_RSCAN_DLCREPL_DISABLE,                 /* no DLC check or replacement */
-    EE_RSCAN_MIRROR_DISABLE,                               /* no Mirror Mode */
-    EE_RSCAN_CLOCK_SYS,                              /* use peripheral clock */
-    0, EE_RSCAN_CLOCK_TSBIT, 
-    EE_RSCAN_CHANNEL0, 0        /* Use 1TQ Bit-Timing clock 0 for Timestamps */
-  },
-  {
-    EE_RSCAN_CLOCK_FIFO_OFF               /* interval timer of FIFO disabled */
-  },
-  {
-    EE_RSCAN_OPMODE_KEEP, 
-    EE_RSCAN_SLEEP_DISABLE,          /* No implicit change of Operation Mode */
-    0, EE_RSCAN_GINT_MSGLOST, 0       /* Message Lost Error Interrupt active */
-  },
-  {
-    EE_RSCAN_TIMESTAMP_RESET, 0                           /* Timestamp reset */
-  },
-  0,                                     /* no usage of classical RX buffers */
-  {             
-	  2, 2              				             /* two AFL entries on any channel */
-  },
-  {
-    EE_RSCAN_A_RXFIFO_FDPNW,                       /* activate two RX FIFOs */
-    EE_RSCAN_A_RXFIFO_FDPNW,
-    EE_RSCAN_A_RXFIFO_OFF,
-    EE_RSCAN_A_RXFIFO_OFF
-  }
-};
 
-struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXFIFO_FDPNW_ANY = 
+static struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXFIFO_FDPNW_ANY = 
 {
   {
     0x00000000,              /* Default ID, not relevant because mask is open */
@@ -253,7 +220,7 @@ struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXFIFO_FDPNW_ANY =
   }
 };
 
-struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXFIFO_FDPNW_SWITCH = 
+static struct ee_rscan_a_afl EE_RSCAN_A_AFL_RXFIFO_FDPNW_SWITCH = 
 {
   {
     0x0000000,                  /* ID=0, switching must have highest priority 

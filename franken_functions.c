@@ -2,8 +2,9 @@
 #include "addl_types.h"
 #include "standardports.h"
 #include <stdbool.h>
+#include <stddef.h>
 #include "iodefine.h"
-
+#include "rscan.h"
 
 uint8_t PORT_Enable( uint16_t port,
                      uint16_t bitmask,

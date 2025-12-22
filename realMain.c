@@ -12,6 +12,7 @@
 #include "addl_types.h"
 #include "rscan_a.h"
 #include "rscan_p.h"
+#include "rscan_s.h"
 #include "rscan.h"
 #include "realMain.h"
 //#include "rscan_s.h";
@@ -22,54 +23,53 @@ uint8_t test_mode_button69420 = 0U;
 // FUNCTION TO READ POSITIVE ISOLATION VALUE
 uint16_t ADC_Read_ISO_POS(void)
 {
-    uint16_t adc_result;
+	uint16_t adc_result;
 
-    /* Select ANI0 (ISO_POS) */
-    ADS = _00_AD_INPUT_CHANNEL_0_3;
+	/* Select ANI0 (ISO_POS) */
+	ADS = _00_AD_INPUT_CHANNEL_0_3;
 
-    /* Start conversion */
-    R_ADC_Start();
-    R_ADC_Set_OperationOn();
+	/* Start conversion */
+	R_ADC_Start();
+	R_ADC_Set_OperationOn();
 
-    /* Wait until conversion completes */
-    while (ADIF == 0U)
-    {
-        ;
-    }
+	/* Wait until conversion completes */
+	while (ADIF == 0U)
+	{
+		;
+	}
 
-    R_ADC_Set_OperationOff();
-    R_ADC_Stop();
+	R_ADC_Set_OperationOff();
+	R_ADC_Stop();
 
-    /* Read result */
-    R_ADC_Get_Result(&adc_result);
+	/* Read result */
+	R_ADC_Get_Result(&adc_result);
 
-    return adc_result;
+	return adc_result;
 }
 
 //FUNCTION TO READ NEGATIVE ISOLATION VALUE
 uint16_t ADC_Read_ISO_NEG(void)
 {
-    uint16_t adc_result;
+	 uint16_t adc_result;
 
-    /* Select ANI1 (ISO_NEG) */
-    ADS = _04_AD_INPUT_CHANNEL_4;
+	 /* Select ANI1 (ISO_NEG) */
+	ADS = _04_AD_INPUT_CHANNEL_4;
 
-    /* Start conversion */
-    R_ADC_Start();
+	/* Start conversion */
+	R_ADC_Start();
+	/* Wait until conversion completes */
+	while (ADIF == 0U)
+	{
+		;
+	}
 
-    /* Wait until conversion completes */
-    while (ADIF == 0U)
-    {
-        ;
-    }
+	/* Stop ADC */
+	R_ADC_Stop();
 
-    /* Stop ADC */
-    R_ADC_Stop();
+	/* Read result */
+	R_ADC_Get_Result(&adc_result);
 
-    /* Read result */
-    R_ADC_Get_Result(&adc_result);
-
-    return adc_result;
+	return adc_result;
 }
 
 
@@ -77,81 +77,77 @@ uint16_t ADC_Read_ISO_NEG(void)
 // TO RETURN THE VOLTAGE OF THE BATTERY (2ND PART PENDING)!!
 uint16_t ADC_Read_V_BATT(void)
 {
-    uint16_t adc_result;
+	uint16_t adc_result;
 
-    /* Select ANI2 (V_BATT) */
-    ADS = _08_AD_INPUT_CHANNEL_8_11;
+	/* Select ANI2 (V_BATT) */
+	ADS = _08_AD_INPUT_CHANNEL_8_11;
 
-    /* Start conversion */
-    R_ADC_Start();
+	/* Start conversion */
+	R_ADC_Start();
 
-    /* Wait until conversion completes */
-    while (ADIF == 0U)
-    {
-        ;
-    }
+	/* Wait until conversion completes */
+	while (ADIF == 0U)
+	{
+		;
+	}
 
-    /* Stop ADC */
-    R_ADC_Stop();
+	/* Stop ADC */
+	R_ADC_Stop();
 
-    /* Read result */
-    R_ADC_Get_Result(&adc_result);
-    
-    /* Multiply with coefficient */
-    adc_result = (uint16_t)((float)adc_result * 19.243f);
+	/* Read result */
+	R_ADC_Get_Result(&adc_result);
+	    
+	/* Multiply with coefficient */
+	adc_result = (uint16_t)((float)adc_result * 19.243f);
 
-    
-    /* Return the value */
-    
-    return adc_result;
+	    
+	/* Return the value */
+	    
+	return adc_result;
 }
 
 // Contactor read function (Digital)
 uint8_t Contactor_Read_Feedback(void)
 {
-    /* Read P12.0 */
-    if (CONTACTOR_PIN_READ())
-    {
-        return 1U;   /* Contactor closed */
-    }
-    else
-    {
-        return 0U;   /* Contactor open */
-    }
+	/* Read P12.0 */
+	if (CONTACTOR_PIN_READ())
+	{
+	return 1U;   /* Contactor closed */
+	}
+	else
+	{
+	return 0U;   /* Contactor open */
+	}
 }
 
 // UART send function (boutta be called to the ground)
 void UART_SendStatus(const char *str)
 {
-    uint16_t length = 0U;
+	uint16_t length = 0U;
 
-    /* Calculate string length */
-    while (str[length] != '\0')
-    {
-        length++;
-    }
+	/* Calculate string length */
+	while (str[length] != '\0')
+	{
+	length++;
+	}
 
-    /* Send string */
-    R_UART0_Send((uint8_t *)str, length);
+	/* Send string */
+	R_UART0_Send((uint8_t *)str, length);
 }
 
-
-// CAN send frame function: (pending)
-/************
-*************/
 
 // Test mode function
 
 void TestMode_Update(void)
 {
-    if (TEST_MODE_PIN_READ())
-    {
-        test_mode_button69420 = 1U;
-    }
-    else
-    {
-        test_mode_button69420 = 0U;
-    }
+	if (TEST_MODE_PIN_READ())
+	{
+	test_mode_button69420 = 1U;
+	}
+	else
+	{
+	test_mode_button69420 = 0U;
+	}
 }
 
 
@@ -159,75 +155,123 @@ void TestMode_Update(void)
 
 void Relay_On(relay_t relay)
 {
-    switch (relay)
-    {
-        case RELAY_ISO_POS:
-            P3 |= _01_Pn0_OUTPUT_1;   /* P3.0 HIGH */
-            break;
+	switch (relay)
+	{
+	case RELAY_ISO_POS:
+	P3 |= _01_Pn0_OUTPUT_1;   /* P3.0 HIGH */
+	break;
 
-        case RELAY_ISO_NEG:
-            P3 |= _04_Pn2_OUTPUT_1;   /* P3.2 HIGH */
-            break;
+	P3 |= _04_Pn2_OUTPUT_1;   /* P3.2 HIGH */
+	break;
 
-        default:
-            /* do nothing */
-            break;
-    }
+	default:
+	/* do nothing */
+	break;
+	}
 }
 
 // Relay OFF function:
 
 void Relay_Off(relay_t relay)
 {
-    switch (relay)
-    {
-        case RELAY_ISO_POS:
-            P3 &= (uint8_t) ~ _01_Pn0_OUTPUT_1;   /* P3.0 LOW */
-            break;
+	switch (relay)
+	{
+	case RELAY_ISO_POS:
+		P3 &= (uint8_t) ~ _01_Pn0_OUTPUT_1;   /* P3.0 LOW */
+		break;
 
-        case RELAY_ISO_NEG:
-            P3 &= (uint8_t)~_04_Pn2_OUTPUT_1;   /* P3.2 LOW */
-            break;
+	case RELAY_ISO_NEG:
+		P3 &= (uint8_t)~_04_Pn2_OUTPUT_1;   /* P3.2 LOW */
+		break;
 
-        default:
-            /* do nothing */
-            break;
-    }
+	default:
+		/* do nothing */
+		break;
+	}
 }
 
 // Delay function for LED:
 static void LED_Delay(void)
 {
-    volatile uint32_t i;
-    for (i = 0; i < 50000UL; i++)
-    {
-        __nop();
-    }
-}
+	volatile uint32_t i;
+	for (i = 0; i < 50000UL; i++)
+	{
+		__nop();
+		}
+	}
 
 // LED Red/Green Status Blink
 void LED_IndicateIsolationStatus(iso_status_t status)
+	{
+	if (status == ISO_STATUS_GOOD)
+	{
+		/* Green blink */
+		RED_LED_OFF();
+
+		GREEN_LED_ON();
+		LED_Delay();
+		GREEN_LED_OFF();
+		LED_Delay();
+	}
+	else
+	{
+		/* Red blink */
+		GREEN_LED_OFF();
+
+		RED_LED_ON();
+		LED_Delay();
+		RED_LED_OFF();
+		LED_Delay();
+	}
+}
+
+
+// CAN Tx helper function:
+
+static uint8_t CAN_SendIsolation(uint8_t status_byte)
 {
-    if (status == ISO_STATUS_GOOD)
-    {
-        /* Green blink */
-        RED_LED_OFF();
+	ee_rscan_message msg;
+	uint8_t tx_status;
 
-        GREEN_LED_ON();
-        LED_Delay();
-        GREEN_LED_OFF();
-        LED_Delay();
-    }
-    else
-    {
-        /* Red blink */
-        GREEN_LED_OFF();
+	/* ---- Header ---- */
+	msg.hdr.id    = CAN_ID_ISOLATION_STATUS;
+	msg.hdr.ide   = 0;   /* Standard ID */
+	msg.hdr.rtr   = 0;   /* Data frame */
+	msg.hdr.thlen = 0;
+		
+	/* ---- Pointer / DLC ---- */
+	msg.flag.ptr = 0;
+	msg.flag.ts  = 0;
+	msg.flag.dlc = 1;
 
-        RED_LED_ON();
-        LED_Delay();
-        RED_LED_OFF();
-        LED_Delay();
-    }
+	/* ---- Payload ---- */
+	msg.data[0] = status_byte;
+
+	/* ---- Routing ---- */
+	msg.path       = EE_RSCAN_PATH_MSGBOX;
+	msg.pathdetail = EE_RSCAN_PATHDETAIL_ANY;
+
+	return EE_RSCAN_SendMessage(
+	EE_RSCAN_0,          /* Unit */
+	EE_RSCAN_CHANNEL0,   /* Channel */
+	&tx_status,
+	&msg
+	);
+}
+
+
+// CAN Isolation Good Status:
+
+uint8_t CAN_SendIsolationGood(void)
+{
+	return CAN_SendIsolation(CAN_ISOLATION_GOOD);
+}
+
+// CAN Isolation BAd Status:
+
+uint8_t CAN_SendIsolationBad(void)
+{
+	return CAN_SendIsolation(CAN_ISOLATION_BAD);
 }
 
 
@@ -235,44 +279,44 @@ void LED_IndicateIsolationStatus(iso_status_t status)
 
 static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
 {
-    uint16_t delta_pos;
-    uint16_t delta_neg;
+	uint16_t delta_pos;
+	uint16_t delta_neg;
 
 
-    /* Compute absolute deltas from 2.5 V reference */
-    if (iso_pos > ISO_REF_ADC_COUNTS)
-    {
-        delta_pos = iso_pos - ISO_REF_ADC_COUNTS;
-    }
-    else
-    {
-        delta_pos = ISO_REF_ADC_COUNTS - iso_pos;
-    }
+	/* Compute absolute deltas from 2.5 V reference */
+	if (iso_pos > ISO_REF_ADC_COUNTS)
+	{
+		delta_pos = iso_pos - ISO_REF_ADC_COUNTS;
+	}
+	else
+	{
+		delta_pos = ISO_REF_ADC_COUNTS - iso_pos;
+	}
 
-    if (iso_neg > ISO_REF_ADC_COUNTS)
-    {
-        delta_neg = iso_neg - ISO_REF_ADC_COUNTS;
-    }
-    else
-    {
-        delta_neg = ISO_REF_ADC_COUNTS - iso_neg;
-    }
+	if (iso_neg > ISO_REF_ADC_COUNTS)
+	{
+		delta_neg = iso_neg - ISO_REF_ADC_COUNTS;
+	}
+	else
+	{
+		delta_neg = ISO_REF_ADC_COUNTS - iso_neg;
+	}
 
-    /* Check against threshold */
-    if ((delta_pos > ISO_THRESHOLD_COUNTS) ||
-        (delta_neg > ISO_THRESHOLD_COUNTS))
-    {
-        /* Isolation fault */
-        LED_IndicateIsolationStatus(ISO_STATUS_FAULT);
+	/* Check against threshold */
+	if ((delta_pos > ISO_THRESHOLD_COUNTS) ||
+	(delta_neg > ISO_THRESHOLD_COUNTS))
+	{
+		/* Isolation fault */
+		LED_IndicateIsolationStatus(ISO_STATUS_FAULT);
 
-        UART_SendStatus("ISOLATION FAULT DETECTED\r\n");
-        //EE_RSCAN_SendMessage(); // YOO ADD PARAMETERS
-    }
-    else
-    {
-        /* Isolation OK */
-        LED_IndicateIsolationStatus(ISO_STATUS_GOOD);
-    }
+		UART_SendStatus("ISOLATION FAULT DETECTED\r\n");
+		//EE_RSCAN_SendMessage(); // YOO ADD PARAMETERS
+	}
+	else
+	{
+		/* Isolation OK */
+		LED_IndicateIsolationStatus(ISO_STATUS_GOOD);
+	}
 }
 
 /* *************************************************************************
@@ -290,36 +334,46 @@ void main(void)
 {
 	EI();
 	
+	//ISO TEST variables:
 	uint16_t iso_pos_val;
 	uint16_t iso_neg_val;
-	uint16_t vbatt_val;  
+	uint16_t vbatt_val;
+	
+	// CAN Config variables:
+	uint16_t can0_brp;
+	uint8_t  can0_tseg1;
+	uint8_t  can0_tseg2;
+	uint8_t  can0_sjw;
+	
 	// 1. initialise ADC ports
 	R_ADC_Create();
-
+	
 	// 2. initialise GPIO ports 
 	R_PORT_Create();
 	
-	// 3. initialise CAN peripheral
-	//EE_RSCAN_PortEnable();            /// ADD PARAMETERS TO PASS!
-	//EE_RSCAN_Start();         
-	//EE_RSCAN_SetGlobalConfiguration();
-	//EE_RSCAN_SetBittiming();
-	//EE_RSCAN_SetChannelConfiguration();
-
-	// 4. initialise UART peripheral
+	// 3. initialise CAN 
+	EE_RSCAN_PortEnable( EE_RSCAN_0, EE_RSCAN_CHANNEL0 );
+	
+	EE_RSCAN_Start( EE_RSCAN_0, EE_RSCAN_CHANNEL0, EE_RSCAN_OPMODE_RESET, 1, 0 );  // Clears errors if any and starts the timestamps from 0.
+	
+	EE_RSCAN_SetGlobalConfiguration(EE_RSCAN_0, &EE_RSCAN_A_GCFG_BASIC);
+	
+	EE_RSCAN_SetChannelConfiguration( EE_RSCAN_0, EE_RSCAN_CHANNEL0, &EE_RSCAN_A_CHCFG_BASIC);
+	
+	EE_RSCAN_Start( EE_RSCAN_0, EE_RSCAN_CHANNEL0, EE_RSCAN_OPMODE_OPER, 1, 0 );
+	
+	// 4. initialise UART 
 	R_UART0_Create();
 	R_UART0_Start();
 	
+	// 5. send UART out that system initialisation is complete 
+	UART_SendStatus("System init complete\r\n");
 	while(1)
 	
 	{
 		
-
 		TestMode_Update();
 		Contactor_Read_Feedback();
-
-		UART_SendStatus("System init complete\r\n");
-
 
 
 		// 5. measure ISO_POS 

@@ -27,6 +27,10 @@ typedef enum {ISO_STATUS_GOOD = 0U, ISO_STATUS_FAULT = 1U} iso_status_t;
 #define RED_LED_ON()      (P15 |=  (1U << 7))
 #define RED_LED_OFF()     (P15 &= ~(1U << 7))
 
+/* Defining CAN ID and Isolation GOOD or BAD status bit */
+#define CAN_ID_ISOLATION_STATUS   0x120  /* pick something sane */
+#define CAN_ISOLATION_GOOD        0x00
+#define CAN_ISOLATION_BAD         0x01
     
 /* Allowed delta from 2.5 V (example: ±100 counts) */
 #define ISO_THRESHOLD_COUNTS  100U

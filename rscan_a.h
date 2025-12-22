@@ -73,9 +73,6 @@ extern uint8_t EE_RSCAN_BasicTest_Tx( uint8_t Unit1_uint8_t,
 
 extern uint8_t EE_RSCAN_BasicTest_Rx( uint8_t Unit1_uint8_t,
                                   uint8_t Channel1_uint8_t );
-
-extern uint8_t EE_RSCAN_CANFD_PNW_Test( uint8_t Unit1_uint8_t,
-                                    uint8_t Channel1_uint8_t );
                              
 extern uint8_t EE_RSCAN_RAMTestApp( uint8_t Unit_uint8_t );
 
