@@ -27,7 +27,6 @@
         <Path>r_cg_serial.h</Path>
         <Path>r_cg_adc.h</Path>
       </Category>
-      <Path>can_user.c</Path>
       <Path>map_rscan.h</Path>
       <Path>map_device.h</Path>
       <Path>ior5f10ppj.h</Path>
@@ -41,9 +40,9 @@
       <Path>rscan_a.c</Path>
       <Path>rscan_p.c</Path>
       <Path>rscan_s.h</Path>
-      <Path>standardports_p.c</Path>
       <Path>franken_functions.c</Path>
       <Path>franken_functions.h</Path>
+      <Path>DefaultBuild\IMU_CODE_V1.0_vfi.h</Path>
     </Files>
     <DebugOptions>
       <DebugTool>Simulator</DebugTool>
@@ -67,14 +66,13 @@
           <Path>DefaultBuild\r_cg_serial_user.obj</Path>
           <Path>DefaultBuild\r_cg_adc.obj</Path>
           <Path>DefaultBuild\r_cg_adc_user.obj</Path>
-          <Path>DefaultBuild\can_user.obj</Path>
           <Path>DefaultBuild\realMain.obj</Path>
           <Path>DefaultBuild\rscan_a.obj</Path>
           <Path>DefaultBuild\rscan_p.obj</Path>
-          <Path>DefaultBuild\standardports_p.obj</Path>
           <Path>DefaultBuild\franken_functions.obj</Path>
         </LinkOrder>
         <CommonOptions>
+          <IncludePathForC>DefaultBuild</IncludePathForC>
           <IncludePathForC>D:\Renesas C Code\IMU_CODE_V1.0</IncludePathForC>
           <IncludePathForAsm>D:\Renesas C Code\IMU_CODE_V1.0</IncludePathForAsm>
         </CommonOptions>
@@ -87,6 +85,8 @@
           <Option>-dev=%MicomToolPath%\Device\RL78\Devicefile\DR5F10PPJ.DVF</Option>
           <Option>-g</Option>
           <Option>-g_line</Option>
+          <Option>-Onothing</Option>
+          <Option>-I DefaultBuild</Option>
           <Option>-I "D:\Renesas C Code\IMU_CODE_V1.0"</Option>
           <Option>-lang=c99</Option>
           <Option>-c</Option>
@@ -110,7 +110,6 @@
           <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.15.01\lib\malloc_n.lib</Option>
           <Option>-LIBrary=%MicomToolPath%\CC-RL\V1.15.01\lib\rl78em4r.lib</Option>
           <Option>-OCDBG=84</Option>
-          <Option>-DEBUG_MONITOR=3FE00-3FFFF</Option>
           <Option>-USER_OPT_BYTE=E9FFF8</Option>
           <Option>-OCDTR</Option>
           <Option>-LISt=%BuildModeName%\%ProjectName%.map</Option>
@@ -120,6 +119,7 @@
           <Option>-NOMessage</Option>
           <Option>-MEMory=High</Option>
           <Option>-NOLOgo</Option>
+          <Option>-VFINFO=%BuildModeName%\%ProjectName%_vfi.h(callt,near,rom_forbid,far_forbid)</Option>
           <Option>-END</Option>
           <Option>-Input=%BuildModeName%\%ProjectName%.abs</Option>
           <Option>-DEVICE=%MicomToolPath%\Device\RL78\Devicefile\DR5F10PPJ.DVF</Option>

@@ -45,8 +45,8 @@
 #pragma callt EE_RSCAN_SetChannelConfiguration /* count:8,far,rscan_p.obj */
 #pragma callt EE_RSCAN_PortEnable /* count:7,far,rscan_p.obj */
 #pragma callt EE_RSCAN_SetGlobalConfiguration /* count:7,far,rscan_p.obj */
-#pragma callt EE_RSCAN_SendMessage /* count:6,far,rscan_p.obj */
 #pragma callt EE_RSCAN_Shutdown /* count:5,far,rscan_a.obj */
+#pragma callt EE_RSCAN_SendMessage /* count:5,far,rscan_p.obj */
 /* #pragma near LED_Delay@1 */ /* count:4,far,static,realMain.obj */
 #pragma callt EE_RSCAN_GetTxBuffer /* count:4,far,rscan_p.obj */
 #pragma callt EE_RSCAN_GetComFIFOIntStatus /* count:4,far,rscan_p.obj */
@@ -106,7 +106,6 @@
 /* #pragma near EE_RSCAN_RAMTestApp */ /* count:0,far,unref,rscan_a.obj */
 /* #pragma near RSCAN_A_PNWGlobalErrorIRQ */ /* count:0,far,unref,rscan_a.obj */
 /* #pragma near r_uart0_interrupt_receive@1 */ /* count:0,near,unref,interrupt,static,r_cg_serial_user.obj */
-/* #pragma near CAN_SendStatus */ /* count:0,far,unref,can_user.obj */
 /* #pragma near EE_RSCAN_EnableCOMFIFO */ /* count:0,far,unref,rscan_p.obj */
 /* #pragma near EE_RSCAN_GetError */ /* count:0,far,unref,rscan_p.obj */
 /* #pragma near EE_RSCAN_SetGlobalFIFOConfiguration */ /* count:0,far,unref,rscan_p.obj */

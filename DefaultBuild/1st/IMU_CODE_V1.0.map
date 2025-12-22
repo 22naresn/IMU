@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.07.00 )             22-Dec-2025 14:23:55
+Renesas Optimizing Linker (W3.07.00 )             22-Dec-2025 14:37:26
 
 *** Options ***
 
@@ -14,11 +14,9 @@ Renesas Optimizing Linker (W3.07.00 )             22-Dec-2025 14:23:55
 -Input=DefaultBuild\1st\r_cg_serial_user.obj
 -Input=DefaultBuild\1st\r_cg_adc.obj
 -Input=DefaultBuild\1st\r_cg_adc_user.obj
--Input=DefaultBuild\1st\can_user.obj
 -Input=DefaultBuild\1st\realMain.obj
 -Input=DefaultBuild\1st\rscan_a.obj
 -Input=DefaultBuild\1st\rscan_p.obj
--Input=DefaultBuild\1st\standardports_p.obj
 -Input=DefaultBuild\1st\franken_functions.obj
 -SECURITY_ID=00000000000000000000
 -DEVICE=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF
@@ -67,7 +65,7 @@ SECTION                            START      END         SIZE   ALIGN
 .const
                                   00003000  0000317b       17c   2
 .textf
-                                  0000317c  00008076      4efb   1
+                                  0000317c  00007ff4      4e79   1
 .bss
                                   000fb500  000fb50a         b   2
 .dataR
