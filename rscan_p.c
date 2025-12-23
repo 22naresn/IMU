@@ -28,7 +28,7 @@ extern void EE_RSCAN_INT_BUNDLINGHOOK( uint8_t,
  * CreateInterrupt() Jump Vector Table
  */
  
-void EE_RSCAN_IRQDefault( );
+void EE_RSCAN_IRQDefault(void);
 
 #if( EE_RSCAN_MACROS == 1 )
 
@@ -89,7 +89,7 @@ uint8_t EE_RSCAN_LastTxObjectChannel1_u08   = EE_RSCAN_INT_NOINT;
  * Internal Support Functions
  */
  
-void EE_RSCAN_IRQDefault( )
+void EE_RSCAN_IRQDefault(void)
 {
 }
 
@@ -294,7 +294,7 @@ void EE_RSCAN_GetMessageCF( struct ee_rscan_r_cmsg  *Buffer,
 // Description : Central Interrupt Entry, clears pending bits and stores status
 // 
 //=============================================================================
-void EE_RSCAN_Interrupt( )
+void EE_RSCAN_Interrupt(void)
 {     
 	uint8_t FIFONumber_u08;
 	uint8_t UnitNumber_u08;

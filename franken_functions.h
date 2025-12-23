@@ -1,32 +1,33 @@
 #ifndef FRANKEN_FUNCTIONS_H
 #define FRANKEN_FUNCTIONS_H
 
-#include <stdint.h>
+#include "r_cg_macrodriver.h"
+#include "addl_types.h"
 
 /* --------------------------------------------------------------------------
  * Common return values
  * -------------------------------------------------------------------------- */
-#define PORT_OK     ((uint8_t)1U)
-#define PORT_ERROR  ((uint8_t)0U)
+//#define PORT_OK     ((uint8_t)1U)
+//#define PORT_ERROR  ((uint8_t)0U)
 
 /* --------------------------------------------------------------------------
  * Port direction
  * -------------------------------------------------------------------------- */
-#define PORT_DIR_INPUT   ((uint8_t)1U)
-#define PORT_DIR_OUTPUT  ((uint8_t)0U)
+//#define PORT_DIR_INPUT   ((uint8_t)1U)
+//#define PORT_DIR_OUTPUT  ((uint8_t)0U)
 
 /* --------------------------------------------------------------------------
  * Port mode
  * -------------------------------------------------------------------------- */
-#define PORT_MODE_IO          ((uint8_t)1U)
-#define PORT_MODE_PERIPHERAL  ((uint8_t)0U)
+//#define PORT_MODE_IO          ((uint8_t)1U)
+//#define PORT_MODE_PERIPHERAL  ((uint8_t)0U)
 
 /* --------------------------------------------------------------------------
  * Port function selection
  * -------------------------------------------------------------------------- */
-#define PORT_FUNCTION_KEEP    ((uint8_t)0U)
-#define PORT_FUNCTION_NORMAL  ((uint8_t)1U)
-#define PORT_FUNCTION_ALTERN  ((uint8_t)2U)
+//#define PORT_FUNCTION_KEEP    ((uint8_t)0U)
+//#define PORT_FUNCTION_NORMAL  ((uint8_t)1U)
+//#define PORT_FUNCTION_ALTERN  ((uint8_t)2U)
 
 /* --------------------------------------------------------------------------
  * Function prototypes

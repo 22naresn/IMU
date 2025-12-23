@@ -4,8 +4,8 @@
 #include "r_cg_macrodriver.h"
 #include "addl_types.h"
              
-#define PORT_OK      true
-#define PORT_ERROR   false
+#define PORT_OK      ((uint8_t)1U)
+#define PORT_ERROR   ((uint8_t)0U)
 
 #define PORT_NUMERIC            /* PORT DEFINITIONS */
 
@@ -92,13 +92,13 @@
 #define BIT_15_P 15
 
 
-#define PORT_DIR_INPUT  1       /* Port Direction */
-#define PORT_DIR_OUTPUT 0
-#define PORT_DIR_KEEP   2
+#define PORT_DIR_INPUT  ((uint8_t)1U)       /* Port Direction */
+#define PORT_DIR_OUTPUT ((uint8_t)0U)
+#define PORT_DIR_KEEP   ((uint8_t)2U)
 
-#define PORT_MODE_IO         0  /* Port Mode Control */
-#define PORT_MODE_PERIPHERAL 1
-#define PORT_MODE_KEEP       2
+#define PORT_MODE_IO         ((uint8_t)0U)  /* Port Mode Control */
+#define PORT_MODE_PERIPHERAL ((uint8_t)1U)
+#define PORT_MODE_KEEP       ((uint8_t)2U)
 
 #define PORT_FUNCTION_NORMAL  0x00 /* Port Function Control */
 #define PORT_FUNCTION_ALTERN  0x01

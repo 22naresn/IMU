@@ -72,6 +72,8 @@ Macro definitions
 Typedef definitions
 ***********************************************************************************************************************/
 #ifndef __TYPEDEF__
+
+// Commenting out the stuff already defined in stdint.h
 typedef signed char         int8_t;
 typedef unsigned char       uint8_t;
 typedef signed short        int16_t;

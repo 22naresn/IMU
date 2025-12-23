@@ -1,4 +1,4 @@
-  /* RENESAS OPTIMIZING LINKER GENERATED FILE 2025.12.22 */
+/* RENESAS OPTIMIZING LINKER GENERATED FILE 2025.12.23 */
 /*** variable information ***/
 /* #pragma saddr ee_rscan_common_p@2 */ /* count:208,size:2,near,static,rscan_p.obj */
 /* #pragma saddr ee_rscan_channels@1 */ /* count:37,size:1,near,const,static,rscan_p.obj */
@@ -38,11 +38,11 @@
 #pragma callt EE_RSCAN_IRQDefault /* count:24,far,rscan_p.obj */
 #pragma callt EE_RSCAN_Start /* count:19,far,rscan_p.obj */
 #pragma callt RSCAN_A_UnitChannel1TransmitIRQ /* count:12,far,rscan_a.obj */
-#pragma callt UART_SendStatus /* count:10,far,realMain.obj */
 #pragma callt TestMode_Update /* count:9,far,realMain.obj */
 #pragma callt Contactor_Read_Feedback /* count:9,far,realMain.obj */
 #pragma callt EE_RSCAN_Stop /* count:9,far,rscan_p.obj */
 #pragma callt EE_RSCAN_SetChannelConfiguration /* count:8,far,rscan_p.obj */
+#pragma callt UART_SendStatus /* count:7,far,realMain.obj */
 #pragma callt EE_RSCAN_PortEnable /* count:7,far,rscan_p.obj */
 #pragma callt EE_RSCAN_SetGlobalConfiguration /* count:7,far,rscan_p.obj */
 #pragma callt EE_RSCAN_Shutdown /* count:5,far,rscan_a.obj */
@@ -57,18 +57,20 @@
 #pragma callt R_ADC_Start /* count:3,far,r_cg_adc.obj */
 #pragma callt R_ADC_Stop /* count:3,far,r_cg_adc.obj */
 #pragma callt R_ADC_Get_Result /* count:3,far,r_cg_adc.obj */
+#pragma callt UART_SendStatus_U16 /* count:3,far,realMain.obj */
 /* #pragma near Comparator_Check@1 */ /* count:3,far,static,realMain.obj */
-#pragma callt PORT_Enable /* count:3,far,franken_functions.obj */
-#pragma callt PORT_Disable /* count:2,far,franken_functions.obj */
-#pragma callt Relay_On /* count:2,far,realMain.obj */
-#pragma callt R_PORT_Create /* count:2,far,r_cg_port.obj */
-#pragma callt LED_IndicateIsolationStatus /* count:2,far,realMain.obj */
+#pragma near PORT_Enable /* count:3,far,franken_functions.obj */
+#pragma near PORT_Disable /* count:2,far,franken_functions.obj */
+#pragma near Relay_On /* count:2,far,realMain.obj */
+#pragma near R_PORT_Create /* count:2,far,r_cg_port.obj */
+#pragma near LED_IndicateIsolationStatus /* count:2,far,realMain.obj */
 /* #pragma near CAN_SendIsolation@1 */ /* count:2,far,static,realMain.obj */
-#pragma callt R_ADC_Create /* count:2,far,r_cg_adc.obj */
-#pragma callt R_UART0_Create /* count:2,far,r_cg_serial.obj */
-#pragma callt EE_RSCAN_PortDisable /* count:2,far,rscan_p.obj */
-#pragma callt EE_RSCAN_GetFIFOStatus /* count:2,far,rscan_p.obj */
-#pragma callt EE_RSCAN_GetMessage /* count:2,far,rscan_p.obj */
+#pragma near R_ADC_Create /* count:2,far,r_cg_adc.obj */
+#pragma near R_UART0_Send /* count:2,far,r_cg_serial.obj */
+#pragma near R_UART0_Create /* count:2,far,r_cg_serial.obj */
+#pragma near EE_RSCAN_PortDisable /* count:2,far,rscan_p.obj */
+#pragma near EE_RSCAN_GetFIFOStatus /* count:2,far,rscan_p.obj */
+#pragma near EE_RSCAN_GetMessage /* count:2,far,rscan_p.obj */
 /* #pragma near r_uart0_callback_receiveend@1 */ /* count:1,far,static,r_cg_serial_user.obj */
 /* #pragma near r_uart0_callback_sendend@1 */ /* count:1,far,static,r_cg_serial_user.obj */
 #pragma near R_ADC_Set_OperationOn /* count:1,far,r_cg_adc.obj */
@@ -86,11 +88,10 @@
 #pragma near R_UART0_Start /* count:1,far,r_cg_serial.obj */
 #pragma near R_CGC_Create /* count:1,far,r_cg_cgc.obj */
 #pragma near R_Systeminit /* count:1,far,r_systeminit.obj */
-#pragma near R_UART0_Send /* count:1,far,r_cg_serial.obj */
 #pragma near ADC_Read_V_BATT /* count:1,far,realMain.obj */
 #pragma near EE_RSCAN_IntCANBusActivate /* count:1,far,rscan_p.obj */
-#pragma near main /* count:1,far,realMain.obj */
 #pragma near EE_RSCAN_GetMessageCF /* count:1,far,rscan_p.obj */
+#pragma near main /* count:1,far,realMain.obj */
 #pragma near EE_RSCAN_SetIDDataCFIFO /* count:1,far,rscan_p.obj */
 #pragma near EE_RSCAN_SetIDData /* count:1,far,rscan_p.obj */
 #pragma near EE_RSCAN_RAMTest /* count:1,far,rscan_p.obj */
