@@ -1,8 +1,7 @@
 QualityReport
-Tuesday, 23 December 2025 12:50:04 PM
+Tuesday, 23 December 2025 1:17:16 PM
 
 ------ Start build(IMU_CODE_V1.0, DefaultBuild) ------
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_a.c -cpu=S3 -o DefaultBuild\1st\rscan_a.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -msg_lang=english
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\1st\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -msg_lang=english
 map_rscan.h(90):W0520171:Invalid type conversion
 map_rscan.h(96):W0520171:Invalid type conversion
@@ -10,18 +9,8 @@ map_rscan.h(102):W0520171:Invalid type conversion
 map_rscan.h(109):W0520171:Invalid type conversion
 map_rscan.h(116):W0520171:Invalid type conversion
 map_rscan.h(123):W0520171:Invalid type conversion
-map_rscan.h(90):W0520171:Invalid type conversion
-map_rscan.h(131):W0520171:Invalid type conversion
-map_rscan.h(96):W0520171:Invalid type conversion
-map_rscan.h(138):W0520171:Invalid type conversion
-map_rscan.h(102):W0520171:Invalid type conversion
-rscan_a.c(52):W0520177:Variable "PNWChannel_u08" was declared but never referenced
-map_rscan.h(109):W0520171:Invalid type conversion
-map_rscan.h(116):W0520171:Invalid type conversion
-map_rscan.h(123):W0520171:Invalid type conversion
 map_rscan.h(131):W0520171:Invalid type conversion
 map_rscan.h(138):W0520171:Invalid type conversion
-rscan_p.c(117):W0520177:Variable "FlagFirst_u08" was declared but never referenced
 rscan_p.c(340):W0523077:Called function should have prototype
 rscan_p.c(348):W0523077:Called function should have prototype
 rscan_p.c(370):W0523077:Called function should have prototype
@@ -38,8 +27,7 @@ rscan_p.c(463):W0523077:Called function should have prototype
 rscan_p.c(466):W0523077:Called function should have prototype
 rscan_p.c(473):W0523077:Called function should have prototype
 rscan_p.c(480):W0523077:Called function should have prototype
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_a.c -cpu=S3 -o DefaultBuild\rscan_a.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -preinclude=DefaultBuild\IMU_CODE_V1.0_vfi.h -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_5d6302d342144eeb9631fbfa22af3d05jf03s42t.dac -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -preinclude=DefaultBuild\IMU_CODE_V1.0_vfi.h -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_ec8df3ba5356430ab125a22126b1f5eejrkjbczy.kkq -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -preinclude=DefaultBuild\IMU_CODE_V1.0_vfi.h -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_a8c9f0fcb56d4f52bb31b9fc18210dba2jq40cry.rq4 -msg_lang=english
 map_rscan.h(90):W0520171:Invalid type conversion
 map_rscan.h(96):W0520171:Invalid type conversion
 map_rscan.h(102):W0520171:Invalid type conversion
@@ -48,16 +36,6 @@ map_rscan.h(116):W0520171:Invalid type conversion
 map_rscan.h(123):W0520171:Invalid type conversion
 map_rscan.h(131):W0520171:Invalid type conversion
 map_rscan.h(138):W0520171:Invalid type conversion
-rscan_a.c(52):W0520177:Variable "PNWChannel_u08" was declared but never referenced
-map_rscan.h(90):W0520171:Invalid type conversion
-map_rscan.h(96):W0520171:Invalid type conversion
-map_rscan.h(102):W0520171:Invalid type conversion
-map_rscan.h(109):W0520171:Invalid type conversion
-map_rscan.h(116):W0520171:Invalid type conversion
-map_rscan.h(123):W0520171:Invalid type conversion
-map_rscan.h(131):W0520171:Invalid type conversion
-map_rscan.h(138):W0520171:Invalid type conversion
-rscan_p.c(117):W0520177:Variable "FlagFirst_u08" was declared but never referenced
 rscan_p.c(340):W0523077:Called function should have prototype
 rscan_p.c(348):W0523077:Called function should have prototype
 rscan_p.c(370):W0523077:Called function should have prototype
@@ -78,7 +56,7 @@ C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\rlink.exe -
 W0561018:The evaluation period of CC-RL V1 is valid for the remaining 41 days. After that, functional limit will be applied. Please consider purchasing the product.
 W0561018:The evaluation period of CC-RL V1 is valid for the remaining 41 days. After that, functional limit will be applied. Please consider purchasing the product.
 Renesas Optimizing Linker Completed
------- Build ended(Error:0, Warning:70)(IMU_CODE_V1.0, DefaultBuild) ------
+------ Build ended(Error:0, Warning:50)(IMU_CODE_V1.0, DefaultBuild) ------
 
 --- CommandFile 1 ---
 DefaultBuild\IMU_CODE_V1.0.clnk :
@@ -151,11 +129,11 @@ DefaultBuild\IMU_CODE_V1.0.clnk :
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *Memory Usage
  *Private Working Set
-  481 MB
+  536 MB
  *Number of GDI Objects
-  2501
+  2535
  *Number of USER Objects
-  1646
+  1854
  *Opened Files
   18 editors, 18 files, 254 KB
 

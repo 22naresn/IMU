@@ -4,7 +4,7 @@
 #include "r_cg_macrodriver.h"
 #include "addl_types.h"
 
-#define OSCILLATOR_FREQUENCY     ( ( float )( 64.0E6 ) )
+#define OSCILLATOR_FREQUENCY     ( ( float )( 32.0E6 ) )
 
 extern uint8_t EE_RSCAN_PortEnable(  uint8_t UnitNumber_u08,
                                  uint8_t ChannelNumber_u08 );

@@ -1,7 +1,5 @@
 #define DRIVER_LOCAL
 
-
-
 #include <stddef.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -114,7 +112,7 @@ uint8_t EE_RSCAN_GetComFIFOIntStatus( uint8_t UnitNumber_u08,
                                   uint8_t InterruptType_u08 )
 {
   uint8_t FlagSet_u16;
-  uint8_t FlagFirst_u08;
+  //uint8_t FlagFirst_u08;
   
   switch( InterruptType_u08 )
   {

@@ -390,7 +390,7 @@ void main(void)
 		Contactor_Read_Feedback();
 
 
-		// 5. measure ISO_POS 
+		// 6. measure ISO_POS 
 		iso_pos_val = ADC_Read_ISO_POS();
 		iso_pos_real = iso_pos_val * 0.0048828125;
 		UART_SendStatus_U16("ISO_POS read with value:", iso_pos_real);
@@ -398,14 +398,14 @@ void main(void)
 		Contactor_Read_Feedback();
 
 
-		// 6. measure ISO_NEG
+		// 7. measure ISO_NEG
 		iso_neg_val = ADC_Read_ISO_NEG();
 		iso_neg_real = iso_neg_val * 0.0048828125;
 		UART_SendStatus_U16("ISO_NEG read with value:", iso_neg_real);
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
-		// 7. measure V_BATT
+		// 8. measure V_BATT
 		if (test_mode_button69420 != 1)
 		{
 		        vbatt_val = ADC_Read_V_BATT();
@@ -417,40 +417,40 @@ void main(void)
 			UART_SendStatus("Testing Mode ON, VBATT reading paused\n");
 		}
 
-		// 8. send GPIO out to RELAY_POS enable pin 
+		// 9. send GPIO out to RELAY_POS enable pin 
 		Relay_On(RELAY_ISO_POS);
 		UART_SendStatus("Relay POS ON\r\n");
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
-		// 9. run the values through comparator 
+		// 10. run the values through comparator 
 		Comparator_Check(iso_pos_val, iso_neg_val);
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
-		// 10. send GPIO out to RELAY_NEG enable pin 
+		// 11. send GPIO out to RELAY_NEG enable pin 
 		Relay_On(RELAY_ISO_NEG);
 		UART_SendStatus("Relay NEG ON\r\n");
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
-		// 11. run the values through comparator function 
+		// 12. run the values through comparator function 
 		Comparator_Check(iso_pos_val, iso_neg_val);
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
-		// 12. send GPIO out to RELAY_POS (relay pos off) 
+		// 13. send GPIO out to RELAY_POS (relay pos off) 
 		Relay_Off(RELAY_ISO_POS);
 		UART_SendStatus("Relay POS OFF\r\n");
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
-		// 13. run the values through the comparator function 
+		// 14. run the values through the comparator function 
 		Comparator_Check(iso_pos_val, iso_neg_val);
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
-		/* 14. called by the main program to loop all over again forever*/
+		/* 15. called by the main program to loop all over again forever*/
 	}
 }
 
