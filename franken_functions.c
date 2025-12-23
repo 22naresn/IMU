@@ -46,3 +46,4 @@ uint8_t PORT_Disable( uint16_t port,
                             PORT_MODE_IO,
                             PORT_FUNCTION_KEEP );
 }
+

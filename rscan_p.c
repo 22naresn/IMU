@@ -13,6 +13,7 @@
 #include "rscan_p.h"
 #include "rscan_a.h"
 #include "standard_ports.h"
+#include "franken_functions.h"
 
 #if( EE_RSCAN_MACROS > EE_RSCAN_MAXMACROS )
 #error "NUMBER OF UNITS NOT SUPPORTED"

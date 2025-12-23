@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <math.h>
+#include <stdio.h>
 #include "r_cg_macrodriver.h"
 #include "iodefine.h"
 #include "r_cg_userdefine.h"
@@ -120,7 +121,7 @@ uint8_t Contactor_Read_Feedback(void)
 	}
 }
 
-// UART send function (boutta be called to the ground)
+// UART send function FOR STRINGS
 void UART_SendStatus(const char *str)
 {
 	uint16_t length = 0U;
@@ -133,6 +134,19 @@ void UART_SendStatus(const char *str)
 
 	/* Send string */
 	R_UART0_Send((uint8_t *)str, length);
+}
+
+// UART send function FOR ONE STRING AND ONE VARIABLE:
+
+void UART_SendStatus_U16(const char *label, uint16_t value)
+{
+    char buffer[32];
+    uint16_t len;
+
+    /* Simple formatting */
+    len = sprintf(buffer, "%s %u\r\n", label, value);
+
+    R_UART0_Send((uint8_t *)buffer, len);
 }
 
 
@@ -160,7 +174,8 @@ void Relay_On(relay_t relay)
 	case RELAY_ISO_POS:
 	P3 |= _01_Pn0_OUTPUT_1;   /* P3.0 HIGH */
 	break;
-
+	
+	case RELAY_ISO_NEG:
 	P3 |= _04_Pn2_OUTPUT_1;   /* P3.2 HIGH */
 	break;
 
@@ -309,23 +324,24 @@ static void Comparator_Check(uint16_t iso_pos, uint16_t iso_neg)
 		/* Isolation fault */
 		LED_IndicateIsolationStatus(ISO_STATUS_FAULT);
 		UART_SendStatus("ISOLATION FAULT DETECTED\r\n");
-		CAN_SendIsolationGood()
+		CAN_SendIsolationGood();
 	}
 	else
 	{
 		/* Isolation OK */
 		LED_IndicateIsolationStatus(ISO_STATUS_GOOD);
 		UART_SendStatus("ISOLATION GOOD\r\n");
-		CAN_SendIsolationBad()
+		CAN_SendIsolationBad();
 	}
 }
+
+
+/// ADD RISO CALCULATION FUNCTION!!
 
 /* *************************************************************************
 
 
-
 ==============================MAIN STARTS HERE==============================
-
 
 
 *************************************************************************** */
@@ -335,10 +351,13 @@ void main(void)
 {
 	EI();
 	
-	//ISO TEST variables:
+	// ADC variables:
 	uint16_t iso_pos_val;
 	uint16_t iso_neg_val;
+	float    iso_pos_real;
+	float    iso_neg_real;
 	uint16_t vbatt_val;
+	float    vbatt_real;
 	
 	// 1. initialise ADC ports
 	R_ADC_Create();
@@ -373,14 +392,16 @@ void main(void)
 
 		// 5. measure ISO_POS 
 		iso_pos_val = ADC_Read_ISO_POS();
-		UART_SendStatus("ISO_POS read\r\n");
+		iso_pos_real = iso_pos_val * 0.0048828125;
+		UART_SendStatus_U16("ISO_POS read with value:", iso_pos_real);
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
 
 		// 6. measure ISO_NEG
 		iso_neg_val = ADC_Read_ISO_NEG();
-		UART_SendStatus("ISO_NEG read\r\n");
+		iso_neg_real = iso_neg_val * 0.0048828125;
+		UART_SendStatus_U16("ISO_NEG read with value:", iso_neg_real);
 		TestMode_Update();
 		Contactor_Read_Feedback();
 
@@ -388,7 +409,8 @@ void main(void)
 		if (test_mode_button69420 != 1)
 		{
 		        vbatt_val = ADC_Read_V_BATT();
-		        UART_SendStatus("VBATT read, reading = vbatt_val\n");
+			vbatt_real = vbatt_val * 0.0048828125;
+		        UART_SendStatus_U16("VBATT read, reading =", vbatt_real);
 		}
 		else
 		{
@@ -429,7 +451,7 @@ void main(void)
 		Contactor_Read_Feedback();
 
 		/* 14. called by the main program to loop all over again forever*/
-	    }
+	}
 }
 
 

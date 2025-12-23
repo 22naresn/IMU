@@ -1,142 +1,30 @@
 QualityReport
-Monday, 22 December 2025 3:20:41 PM
+Tuesday, 23 December 2025 12:23:00 PM
 
 ------ Start build(IMU_CODE_V1.0, DefaultBuild) ------
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe realMain.c -cpu=S3 -o DefaultBuild\1st\realMain.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_a.c -cpu=S3 -o DefaultBuild\1st\rscan_a.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\1st\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -lang=c99 -c -msg_lang=english
 map_rscan.h(90):W0520171:Invalid type conversion
 map_rscan.h(96):W0520171:Invalid type conversion
 map_rscan.h(102):W0520171:Invalid type conversion
-map_rscan.h(90):W0520171:Invalid type conversion
 map_rscan.h(109):W0520171:Invalid type conversion
-map_rscan.h(96):W0520171:Invalid type conversion
 map_rscan.h(116):W0520171:Invalid type conversion
-map_rscan.h(102):W0520171:Invalid type conversion
 map_rscan.h(123):W0520171:Invalid type conversion
-map_rscan.h(109):W0520171:Invalid type conversion
-map_rscan.h(90):W0520171:Invalid type conversion
 map_rscan.h(131):W0520171:Invalid type conversion
-map_rscan.h(116):W0520171:Invalid type conversion
-map_rscan.h(96):W0520171:Invalid type conversion
 map_rscan.h(138):W0520171:Invalid type conversion
-map_rscan.h(123):W0520171:Invalid type conversion
-map_rscan.h(102):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(18):W0520301:Typedef name has already been declared (with same type)
-map_rscan.h(131):W0520171:Invalid type conversion
-map_rscan.h(109):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(19):W0520301:Typedef name has already been declared (with same type)
-map_rscan.h(138):W0520171:Invalid type conversion
-map_rscan.h(116):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(20):W0520301:Typedef name has already been declared (with same type)
-realMain.c(164):W0520111:Statement is unreachable
-map_rscan.h(123):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(22):W0520301:Typedef name has already been declared (with same type)
-realMain.c(165):W0520111:Statement is unreachable
-map_rscan.h(131):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(25):W0520301:Typedef name has already been declared (with same type)
-realMain.c(340):W0520550:Variable "vbatt_val" was set but never used
-map_rscan.h(138):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(26):W0520301:Typedef name has already been declared (with same type)
-rscan_p.c(30):W0523076:Function declarations should have prototype
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(27):W0520301:Typedef name has already been declared (with same type)
-rscan_p.c(91):W0523076:Function declarations should have prototype
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(29):W0520301:Typedef name has already been declared (with same type)
-rscan_p.c(116):W0520177:Variable "FlagFirst_u08" was declared but never referenced
-rscan_a.c(52):W0520177:Variable "PNWChannel_u08" was declared but never referenced
-rscan_p.c(296):W0523076:Function declarations should have prototype
-rscan_p.c(339):W0523077:Called function should have prototype
-rscan_p.c(347):W0523077:Called function should have prototype
-rscan_p.c(369):W0523077:Called function should have prototype
-rscan_p.c(380):W0523077:Called function should have prototype
-rscan_p.c(387):W0523077:Called function should have prototype
-rscan_p.c(396):W0523077:Called function should have prototype
-rscan_p.c(399):W0523077:Called function should have prototype
-rscan_p.c(406):W0523077:Called function should have prototype
-rscan_p.c(413):W0523077:Called function should have prototype
-rscan_p.c(434):W0523077:Called function should have prototype
-rscan_p.c(446):W0523077:Called function should have prototype
-rscan_p.c(453):W0523077:Called function should have prototype
-rscan_p.c(462):W0523077:Called function should have prototype
-rscan_p.c(465):W0523077:Called function should have prototype
-rscan_p.c(472):W0523077:Called function should have prototype
-rscan_p.c(479):W0523077:Called function should have prototype
-rscan_p.c(516):W0520223:Function "PORT_Enable" declared implicitly
-rscan_p.c(518):W0523077:Called function should have prototype
-rscan_p.c(521):W0523077:Called function should have prototype
-rscan_p.c(627):W0520223:Function "PORT_Disable" declared implicitly
-rscan_p.c(627):W0523077:Called function should have prototype
-rscan_p.c(628):W0523077:Called function should have prototype
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe realMain.c -cpu=S3 -o DefaultBuild\realMain.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -preinclude=DefaultBuild\IMU_CODE_V1.0_vfi.h -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_a6cf0ddd46044240882a43a86395e215xnlatwyb.1x1 -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_a.c -cpu=S3 -o DefaultBuild\rscan_a.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -preinclude=DefaultBuild\IMU_CODE_V1.0_vfi.h -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_6809b69680704458853e7cc0cd5ed914kx0zb203.vtz -msg_lang=english
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe rscan_p.c -cpu=S3 -o DefaultBuild\rscan_p.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -preinclude=DefaultBuild\IMU_CODE_V1.0_vfi.h -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_a9ebd27cd9224c85ad63199b22b43aedpeih03to.wcs -msg_lang=english
+C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\ccrl.exe realMain.c -cpu=S3 -o DefaultBuild\realMain.obj "-dev=C:\Program Files (x86)\Renesas Electronics\CS+\CC\Device\RL78\Devicefile\DR5F10PPJ.DVF" -g -g_line -Onothing -I DefaultBuild -I "D:\Renesas C Code\IMU_CODE_V1.0" -preinclude=DefaultBuild\IMU_CODE_V1.0_vfi.h -lang=c99 -c -MAKEUD=DefaultBuild -exec_time=C:\Users\nithi\AppData\Local\Temp\CSPlusBuildTool_8dee2f8083c6488586faaffcae4a811cgvh23wma.2qm -msg_lang=english
 map_rscan.h(90):W0520171:Invalid type conversion
 map_rscan.h(96):W0520171:Invalid type conversion
 map_rscan.h(102):W0520171:Invalid type conversion
-map_rscan.h(90):W0520171:Invalid type conversion
 map_rscan.h(109):W0520171:Invalid type conversion
-map_rscan.h(96):W0520171:Invalid type conversion
 map_rscan.h(116):W0520171:Invalid type conversion
-map_rscan.h(102):W0520171:Invalid type conversion
 map_rscan.h(123):W0520171:Invalid type conversion
-map_rscan.h(109):W0520171:Invalid type conversion
 map_rscan.h(131):W0520171:Invalid type conversion
-map_rscan.h(116):W0520171:Invalid type conversion
 map_rscan.h(138):W0520171:Invalid type conversion
-map_rscan.h(123):W0520171:Invalid type conversion
-map_rscan.h(90):W0520171:Invalid type conversion
-realMain.c(164):W0520111:Statement is unreachable
-map_rscan.h(131):W0520171:Invalid type conversion
-map_rscan.h(96):W0520171:Invalid type conversion
-realMain.c(165):W0520111:Statement is unreachable
-map_rscan.h(138):W0520171:Invalid type conversion
-map_rscan.h(102):W0520171:Invalid type conversion
-realMain.c(340):W0520550:Variable "vbatt_val" was set but never used
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(18):W0520301:Typedef name has already been declared (with same type)
-map_rscan.h(109):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(19):W0520301:Typedef name has already been declared (with same type)
-map_rscan.h(116):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(20):W0520301:Typedef name has already been declared (with same type)
-map_rscan.h(123):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(22):W0520301:Typedef name has already been declared (with same type)
-map_rscan.h(131):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(25):W0520301:Typedef name has already been declared (with same type)
-map_rscan.h(138):W0520171:Invalid type conversion
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(26):W0520301:Typedef name has already been declared (with same type)
-rscan_p.c(30):W0523076:Function declarations should have prototype
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(27):W0520301:Typedef name has already been declared (with same type)
-rscan_p.c(91):W0523076:Function declarations should have prototype
-C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\inc\stdint.h(29):W0520301:Typedef name has already been declared (with same type)
-rscan_p.c(116):W0520177:Variable "FlagFirst_u08" was declared but never referenced
-rscan_a.c(52):W0520177:Variable "PNWChannel_u08" was declared but never referenced
-rscan_p.c(296):W0523076:Function declarations should have prototype
-rscan_p.c(339):W0523077:Called function should have prototype
-rscan_p.c(347):W0523077:Called function should have prototype
-rscan_p.c(369):W0523077:Called function should have prototype
-rscan_p.c(380):W0523077:Called function should have prototype
-rscan_p.c(387):W0523077:Called function should have prototype
-rscan_p.c(396):W0523077:Called function should have prototype
-rscan_p.c(399):W0523077:Called function should have prototype
-rscan_p.c(406):W0523077:Called function should have prototype
-rscan_p.c(413):W0523077:Called function should have prototype
-rscan_p.c(434):W0523077:Called function should have prototype
-rscan_p.c(446):W0523077:Called function should have prototype
-rscan_p.c(453):W0523077:Called function should have prototype
-rscan_p.c(462):W0523077:Called function should have prototype
-rscan_p.c(465):W0523077:Called function should have prototype
-rscan_p.c(472):W0523077:Called function should have prototype
-rscan_p.c(479):W0523077:Called function should have prototype
-rscan_p.c(516):W0520223:Function "PORT_Enable" declared implicitly
-rscan_p.c(518):W0523077:Called function should have prototype
-rscan_p.c(521):W0523077:Called function should have prototype
-rscan_p.c(627):W0520223:Function "PORT_Disable" declared implicitly
-rscan_p.c(627):W0523077:Called function should have prototype
-rscan_p.c(628):W0523077:Called function should have prototype
 C:\Program Files (x86)\Renesas Electronics\CS+\CC\CC-RL\V1.15.01\Bin\rlink.exe -MAKEUD=DefaultBuild\IMU_CODE_V1.0.lk.ud -subcommand=DefaultBuild\IMU_CODE_V1.0.clnk
-W0561018:The evaluation period of CC-RL V1 is valid for the remaining 42 days. After that, functional limit will be applied. Please consider purchasing the product.
-W0561018:The evaluation period of CC-RL V1 is valid for the remaining 42 days. After that, functional limit will be applied. Please consider purchasing the product.
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 41 days. After that, functional limit will be applied. Please consider purchasing the product.
+W0561018:The evaluation period of CC-RL V1 is valid for the remaining 41 days. After that, functional limit will be applied. Please consider purchasing the product.
 Renesas Optimizing Linker Completed
------- Build ended(Error:0, Warning:126)(IMU_CODE_V1.0, DefaultBuild) ------
+------ Build ended(Error:0, Warning:18)(IMU_CODE_V1.0, DefaultBuild) ------
 
 --- CommandFile 1 ---
 DefaultBuild\IMU_CODE_V1.0.clnk :
@@ -209,13 +97,13 @@ DefaultBuild\IMU_CODE_V1.0.clnk :
  C:\Program Files (x86)\Renesas Electronics\CS+\CC
 *Memory Usage
  *Private Working Set
-  483 MB
+  515 MB
  *Number of GDI Objects
-  2508
+  2475
  *Number of USER Objects
-  1629
+  1574
  *Opened Files
-  16 editors, 16 files, 239 KB
+  17 editors, 17 files, 249 KB
 
 --- Build Tool Plug-in Information ---
 RH850 Build tool CC-RH Plug-in(-)

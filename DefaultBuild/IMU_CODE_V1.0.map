@@ -1,4 +1,4 @@
-Renesas Optimizing Linker (W3.07.00 )             22-Dec-2025 15:20:41
+Renesas Optimizing Linker (W3.07.00 )             23-Dec-2025 12:22:59
 
 *** Options ***
 
@@ -49,30 +49,30 @@ SECTION                            START      END         SIZE   ALIGN
                                   00000000  0000007f        80   0
 .callt0
                                   00000080  000000bd        3e   2
-.constf
-                                  00000080  00000080         0   2
 .option_byte
                                   000000c0  000000c3         4   1
 .security_id
                                   000000c4  000000cd         a   1
-.SLIB
-                                  000000c4  000000c4         0   1
+.constf
+                                  000000ce  000000e1        14   2
 .data
-                                  000000ce  00000139        6c   2
+                                  000000e2  0000014d        6c   2
 .sdata
-                                  0000013a  00000149        10   2
+                                  0000014e  0000015d        10   2
 .textf
-                                  0000014a  00001fe4      1e9b   1
+                                  0000015e  00002045      1ee8   1
 .RLIB
-                                  00001fe5  00002229       245   1
+                                  00002046  000028c3       87e   1
 .const
-                                  00003000  0000317b       17c   2
+                                  00003000  0000319d       19e   2
 .text
-                                  0000317c  00006142      2fc7   1
+                                  0000319e  00006201      3064   1
+.SLIB
+                                  00006202  00007e84      1c83   1
 .bss
-                                  000fb500  000fb500         1   2
+                                  000fb500  000fb585        86   2
 .dataR
-                                  000fb502  000fb56d        6c   2
+                                  000fb586  000fb5f1        6c   2
 .sbss
                                   000ffe20  000ffe29         a   2
 .sdataR

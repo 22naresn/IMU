@@ -1,4 +1,4 @@
-/* RENESAS OPTIMIZING LINKER GENERATED FILE 2025.12.22 */
+  /* RENESAS OPTIMIZING LINKER GENERATED FILE 2025.12.22 */
 /*** variable information ***/
 /* #pragma saddr ee_rscan_common_p@2 */ /* count:208,size:2,near,static,rscan_p.obj */
 /* #pragma saddr ee_rscan_channels@1 */ /* count:37,size:1,near,const,static,rscan_p.obj */
@@ -38,9 +38,9 @@
 #pragma callt EE_RSCAN_IRQDefault /* count:24,far,rscan_p.obj */
 #pragma callt EE_RSCAN_Start /* count:19,far,rscan_p.obj */
 #pragma callt RSCAN_A_UnitChannel1TransmitIRQ /* count:12,far,rscan_a.obj */
+#pragma callt UART_SendStatus /* count:10,far,realMain.obj */
 #pragma callt TestMode_Update /* count:9,far,realMain.obj */
 #pragma callt Contactor_Read_Feedback /* count:9,far,realMain.obj */
-#pragma callt UART_SendStatus /* count:9,far,realMain.obj */
 #pragma callt EE_RSCAN_Stop /* count:9,far,rscan_p.obj */
 #pragma callt EE_RSCAN_SetChannelConfiguration /* count:8,far,rscan_p.obj */
 #pragma callt EE_RSCAN_PortEnable /* count:7,far,rscan_p.obj */
@@ -59,8 +59,8 @@
 #pragma callt R_ADC_Get_Result /* count:3,far,r_cg_adc.obj */
 /* #pragma near Comparator_Check@1 */ /* count:3,far,static,realMain.obj */
 #pragma callt PORT_Enable /* count:3,far,franken_functions.obj */
-#pragma callt Relay_On /* count:2,far,realMain.obj */
 #pragma callt PORT_Disable /* count:2,far,franken_functions.obj */
+#pragma callt Relay_On /* count:2,far,realMain.obj */
 #pragma callt R_PORT_Create /* count:2,far,r_cg_port.obj */
 #pragma callt LED_IndicateIsolationStatus /* count:2,far,realMain.obj */
 /* #pragma near CAN_SendIsolation@1 */ /* count:2,far,static,realMain.obj */
@@ -77,6 +77,8 @@
 /* #pragma near r_uart0_callback_error@1 */ /* count:1,far,static,r_cg_serial_user.obj */
 #pragma near hdwinit /* count:1,far,r_systeminit.obj */
 #pragma near R_CGC_Get_ResetSource /* count:1,far,r_cg_cgc_user.obj */
+#pragma near CAN_SendIsolationGood /* count:1,far,realMain.obj */
+#pragma near CAN_SendIsolationBad /* count:1,far,realMain.obj */
 #pragma near R_SAU0_Create /* count:1,far,r_cg_serial.obj */
 #pragma near Relay_Off /* count:1,far,realMain.obj */
 #pragma near ADC_Read_ISO_NEG /* count:1,far,realMain.obj */
@@ -97,8 +99,6 @@
 /* #pragma near RSCAN_A_UnitChannel1ReceiveIRQ */ /* count:0,far,unref,rscan_a.obj */
 /* #pragma near RSCAN_A_UnitChannel2ReceiveIRQ */ /* count:0,far,unref,rscan_a.obj */
 /* #pragma near RSCAN_A_DoNothing */ /* count:0,far,unref,rscan_a.obj */
-/* #pragma near CAN_SendIsolationGood */ /* count:0,far,unref,realMain.obj */
-/* #pragma near CAN_SendIsolationBad */ /* count:0,far,unref,realMain.obj */
 /* #pragma near R_UART0_Stop */ /* count:0,far,unref,r_cg_serial.obj */
 /* #pragma near R_UART0_Receive */ /* count:0,far,unref,r_cg_serial.obj */
 /* #pragma near EE_RSCAN_GetTimeStampCounter */ /* count:0,far,unref,rscan_p.obj */
